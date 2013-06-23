@@ -15,7 +15,7 @@ Apparmor interferes with some of our files, here is how to disable it:
 For the threaded scripts you will require the Python MySQLdb module:  
 `sudo apt-get install python-mysqldb`
 
-## Install and configure PHP
+##Install and configure PHP
 
 Install php5 by running:  
  `sudo apt-get install -y php5 php5-dev php-pear php5-gd php5-mysql php5-curl`
@@ -33,15 +33,15 @@ date.timezone = Europe/London
 
 Press control+o to save and control+x to exit when you are done.
 
-## Install a database
+##Install a database
 
 You can use a magnitude of database software including MySQL, Percona and MariaDB. If this is your first time MySQL is advised
 
-### MYSQL
+###MYSQL
 
 `sudo apt-get install mysql-server mysql-client libmysqlclient-dev`
 
-### Percona
+###Percona
 
 First you need to add Percona's repository to your machine:  
 `gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A`  
@@ -54,7 +54,7 @@ Then you can install it using:
 `sudo apt-get update` 
 `sudo apt-get install -y percona-server-client-5.5 \ percona-server-server-5.5 \ libmysqlclient-dev 
 
-### MariaDB
+###MariaDB
 
 `sudo apt-get install software-properties-common`  
 `sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db`  
@@ -64,11 +64,11 @@ You can then install it using
 `sudo apt-get update`  
 `sudo apt-get install mariadb-server`
 
-## Choose a webserver
+##Choose a webserver
 
 You can also use a magnitude of webservers. Apache is the worlds most popular and the easiest for beginners. Nginx will use less resources but requires additional setup.
 
-### Apache
+###Apache
 
 To install Apache:  
 `sudo apt-get install apache2`
@@ -111,7 +111,7 @@ If you get the following error:
 `sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name' && sudo service apache2 restart`   
 **********************************************
 
-### Nginx
+###Nginx
 
 To install Nginx:  
 `sudo apt-get install -y nginx`
@@ -185,59 +185,59 @@ Make nginx server nZEDb instead of the default site:
 `sudo unlink /etc/nginx/sites-enabled/default`  
 `sudo ln -s /etc/nginx/sites-available/nZEDb /etc/nginx/sites-enabled/nZEDb`
 
-## Post-Processing
+##Post-Processing
 
 If you want to run post-processing, you will need unrar, ffmpeg, media info and lame.
 
-### Unrar
+###Unrar
 
 Its best to grab it straight from rarlabs. Download from [http://www.rarlab.com/download.htm](http://www.rarlab.com/download.htm) and put it under `~\unrar`
 
-### Ffmpeg
+###Ffmpeg
 
 As Ubuntu no longer ships with a proper ffmpeg, you are best to compile it. A good guide is [http://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide](http://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide)
 
-### Media info
+###Media info
 `sudo add-apt-repository ppa:shiki/mediainfo`  
 `sudo apt-get update`   
 `sudo apt-get install mediainfo` 
 
-### Lame
+###Lame
 `sudo apt-get install lame`
 
-## Get nZEDb from github
+##Get nZEDb from github
 
 If you dont already have git installed:
 `sudo apt-get install git`
 
-(if the folder doesn't exist, make it)  
-cd /var/www/  
-sudo chmod 777 .  
+Now we can clone nZEDb:
+`cd /var/www`  
+`git clone https://github.com/nZEDb/nZEDb.git`
 
-git clone https://github.com/nZEDb/nZEDb.git
+You will also want to change some file permissions:
+`sudo chmod 777 nZEDb`  
+`cd nZEDb`  
+`sudo chmod -R 755`   
+`sudo chmod 777 /var/www/nZEDb/www/lib/smarty/templates_c`  
+`sudo chmod -R 777 /var/www/nZEDb/www/covers`  
+`sudo chmod 777 /var/www/nZEDb/www`  
+`sudo chmod 777 /var/www/nZEDb/www/install`  
+`sudo chmod -R 777 /var/www/nZEDb/nzbfiles`  
 
-sudo chmod 777 nZEDb  
-cd nZEDb  
-sudo chmod -R 755 .  
-sudo chmod 777 /var/www/nZEDb/www/lib/smarty/templates_c  
-sudo chmod -R 777 /var/www/nZEDb/www/covers  
-sudo chmod 777 /var/www/nZEDb/www  
-sudo chmod 777 /var/www/nZEDb/www/install  
-sudo chmod -R 777 /var/www/nZEDb/nzbfiles  
+##Run the installer.
 
-7. Run the installer.
+In your browser go to http://(nZEDb machine ip)/install  
 
-(change localhost for the server's IP if you are browsing on another computer)  
-http://localhost/install  
+##Configure the site.
 
-8. Configure the site.
+Enable some groups in view groups.  
+Change settings in edit site (set api keys, set paths to unrar etc..).  
+Change settings under tmux.
 
-Enable some groups in view groups.
+## Start indexing groups.
 
-Change settings in edit site (set api keys, set paths to unrar etc..)
+To start indexing using the tmux scripts:
+`cd /var/www/nZEDb/misc/update_scripts/nix_scripts/tmux`
+`php start.php`
 
-9. Start indexing groups.
-
-Use scripts in misc/update_scripts (update_binaries to get articles, update_releases to create releases).
-
-Use scripts in misc/update_scipts/nix_scripts to automate it.
+This guide is based on the Newznab Ubuntu 11.10 guide found [here](http://newznab.readthedocs.org/en/latest/guides/install_ubuntu-11.10/)
