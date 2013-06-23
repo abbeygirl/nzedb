@@ -57,6 +57,17 @@ To Update nZEDb (Ubuntu)
 3. cd /var/www/nZEDb/misc/testing/DB_scripts
 4. php patchmysql.php
 5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/*
+
+Admin of Site
+Q. How to change registration status 
+A. You will need to change in MySQL.
+update site set value = 0 where setting = 'registerstatus'; 
+
+Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ?? 
+A. Create new user, change role in db, reset password from webui
+
+
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
