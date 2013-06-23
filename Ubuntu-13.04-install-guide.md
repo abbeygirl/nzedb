@@ -87,7 +87,7 @@ date.timezone = Europe/London
 Create the site config:  
 `sudo nano /etc/apache2/sites-available/nZEDb`
 
-Paste the following:
+Paste the following:  
 <VirtualHost *:80>  
     ServerAdmin webmaster@localhost  
     ServerName localhost  
