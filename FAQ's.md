@@ -66,7 +66,11 @@ update site set value = 0 where setting = 'registerstatus';
 Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??  
 A. Create new user, change role in db, reset password from webui  
 
-
+Backfilling  
+Hanging on Backfilling  
+	If there is a bad nzb   
+Run this SQL command elect r.ID, r.guid, r.name, c.disablepreview, r.size, r.adddate from releases r left join category c on c.ID = r.categoryID where nzbstatus = 1 and (r.passwordstatus between -6 and -1) AND (r.haspreview = -1 and c.disablepreview = 0) order by adddate desc limit 1;   
+then delete the one it lists  
 
 ************************************************
 
