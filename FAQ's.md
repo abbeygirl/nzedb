@@ -72,6 +72,9 @@ Hanging on Backfilling
 Run this SQL command elect r.ID, r.guid, r.name, c.disablepreview, r.size, r.adddate from releases r left join category c on c.ID = r.categoryID where nzbstatus = 1 and (r.passwordstatus between -6 and -1) AND (r.haspreview = -1 and c.disablepreview = 0) order by adddate desc limit 1;   
 then delete the one it lists  
 
+Q. Should I run backfill and update binaries at the same time?   
+A. You can, but shouldn't if you have myisam tables  
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
