@@ -1,1 +1,0 @@
-Windows guide coming soon
