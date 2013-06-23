@@ -65,7 +65,8 @@ Then you can install it using:
 You can also use a magnitude of webservers. Apache is the worlds most popular and the easiest for beginners. Nginx will use less resources but requires additional setup.
 
 ### Apache
- To install Apache:  
+
+To install Apache:  
 `sudo apt-get install apache2`
 
 Configure the php file:
@@ -76,14 +77,13 @@ register_globals = Off
 max_execution_time = 120  
 (you can set 1024M to -1 if you have lots of RAM)  
 memory_limit = 1024M  
-(change Europe/London to your settings, see the php.net site for valid ones, remove the ; if there is one preceeding the date.timezone)  
+(change Europe/London to your settings, see [http://php.net/manual/en/timezones.php](http://php.net/manual/en/timezones.php) for valid ones, remove the ; if there is one preceeding the date.timezone)  
 date.timezone = Europe/London  
 
 Create the site config:  
-sudo nano /etc/apache2/sites-available/nZEDb
+`sudo nano /etc/apache2/sites-available/nZEDb`
 
 Paste the following:
-
 <VirtualHost *:80>  
     ServerAdmin webmaster@localhost  
     ServerName localhost  
@@ -95,17 +95,91 @@ Paste the following:
 </VirtualHost>  
 
 Enable the site/etc:
-
-sudo a2dissite default  
-sudo a2ensite nZEDb  
-sudo a2enmod rewrite  
-sudo service apache2 restart  
+`sudo a2dissite default`  
+`sudo a2ensite nZEDb`  
+`sudo a2enmod rewrite`  
+`sudo service apache2 restart`  
 
 *****If you get the following error:**********  
 (Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName)
 
-sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name' && sudo service apache2 restart  
+`sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name' && sudo service apache2 restart`   
 **********************************************
+
+### Nginx
+
+To install Nginx:  
+`sudo apt-get install -y nginx`
+
+You will also need a way to serve the php files to Nginx. To install php-fpm:  
+`sudo apt-get install -y php5-fpm`
+
+Configure the php file:
+`sudo nano /etc/php5/fpm/php.ini`
+
+Change the following settings:   
+register_globals = Off  
+max_execution_time = 120  
+(you can set 1024M to -1 if you have lots of RAM)  
+memory_limit = 1024M  
+(change Europe/London to your settings, see [http://php.net/manual/en/timezones.php](http://php.net/manual/en/timezones.php) for valid ones, remove the ; if there is one preceeding the date.timezone)  
+date.timezone = Europe/London 
+
+Then restart php-fpm:
+`sudo /etc/init.d/php5-fpm restart`
+
+Nginx site configuration file:
+`sudo nano /etc/nginx/sites-available/nZEDb`
+
+Add:
+server {
+    # Change these settings to match your machine
+    listen 80 default_server;
+    server_name localhost;
+
+    # Everything below here doesn't need to be changed
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    root /var/www/nZEDb/www/;
+    index index.html index.htm index.php;
+
+    location ~* \.(?:ico|css|js|gif|inc|txt|gz|xml|png|jpe?g) {
+            expires max;
+            add_header Pragma public;
+            add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+    }
+
+    location / { try_files $uri $uri/ @rewrites; }
+
+    location @rewrites {
+            rewrite ^/([^/\.]+)/([^/]+)/([^/]+)/? /index.php?page=$1&id=$2&subpage=$3 last;
+            rewrite ^/([^/\.]+)/([^/]+)/?$ /index.php?page=$1&id=$2 last;
+            rewrite ^/([^/\.]+)/?$ /index.php?page=$1 last;
+    }
+
+    location /admin { }
+    location /install { }
+
+    location ~ \.php$ {
+            include /etc/nginx/fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+
+            # The next two lines should go in your fastcgi_params
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}
+
+Make sure logs will write:
+`sudo mkdir -p /var/log/nginx`  
+`sudo chmod 755 /var/log/nginx` 
+
+Make nginx server nZEDb instead of the default site:
+`sudo unlink /etc/nginx/sites-enabled/default`  
+`sudo ln -s /etc/nginx/sites-available/nZEDb /etc/nginx/sites-enabled/nZEDb`
+
+
 
 5. Install unrar / ffmpeg / mediainfo / lame.
 
