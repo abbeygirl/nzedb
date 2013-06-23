@@ -4,14 +4,16 @@ Although windows is not offically supported, you can run it under the XAMMP stac
 * Download http://code.google.com/p/msysgit/downloads/list]Git for Windows and install to "C:\XAMPP\git\"  
 * Create file "C:\XAMPP\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github.
 
-```@echo off  
+```
+@echo off  
 C:\XAMPP\git\bin\git.exe clone git://github.com/nZEDb/nZEDb.git C:\XAMPP\htdocs\nZEDb  
 pause  
 ```
 
 * Create file "C:\XAMPP\htdocs\nZEDb\nzedb-update.bat", run this file in the future to update to the latest git version of nZEDb.
 
-```@echo off  
+```
+@echo off  
 C:\XAMPP\git\bin\git.exe pull  
 pause  
 ```
