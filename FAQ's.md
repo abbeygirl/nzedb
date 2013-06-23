@@ -75,6 +75,9 @@ then delete the one it lists
 Q. Should I run backfill and update binaries at the same time?   
 A. You can, but shouldn't if you have myisam tables  
 
+Q. I have groups activated and activated for backfill, but tmux still says no groups enabled for backfill.  I copied the setting from my desktop install which is working correctly.  
+A. You still have to run update_bins on them first or they fail the query  
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
