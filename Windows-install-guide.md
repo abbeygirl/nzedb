@@ -1,7 +1,7 @@
 Although windows is not offically supported, you can run it under the XAMMP stack. However you will not be able to utilize the tmux scripts.
 
 * Download http://www.apachefriends.org/en/xampp-windows.html]XAMPP 1.8.1 and install to "C:\XAMPP\"   
-* Download http://code.google.com/p/msysgit/downloads/list]Git for Windows and install to "C:\XAMPP\git\"  
+* Download http://code.google.com/p/msysgit/downloads/list Git for Windows and install to "C:\XAMPP\git\"  
 * Create file "C:\XAMPP\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github.
 
 ```
