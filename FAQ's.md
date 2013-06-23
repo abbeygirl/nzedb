@@ -63,7 +63,7 @@ Q. How to change registration status
 A. You will need to change in MySQL.
 update site set value = 0 where setting = 'registerstatus'; 
 
-Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ?? 
+Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??
 A. Create new user, change role in db, reset password from webui
 
 
