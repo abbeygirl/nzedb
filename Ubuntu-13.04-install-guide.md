@@ -88,15 +88,15 @@ Create the site config:
 `sudo nano /etc/apache2/sites-available/nZEDb`
 
 Paste the following:  
-{{{<VirtualHost *:80>  }}}
-{{{    ServerAdmin webmaster@localhost  }}}
-{{{    ServerName localhost  }}}
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost  
+    ServerName localhost  
 
-{{{    # These paths should be fine  }}}
-{{{    DocumentRoot /var/www/nZEDb/www  }}}
-{{{    ErrorLog /var/log/apache2/error.log  }}}
-{{{    LogLevel warn  }}}
-{{{</VirtualHost>}}}
+    # These paths should be fine  
+    DocumentRoot /var/www/nZEDb/www  
+    ErrorLog /var/log/apache2/error.log  
+    LogLevel warn  
+</VirtualHost>
 
 Enable the site/etc:
 `sudo a2dissite default`  
