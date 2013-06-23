@@ -1,6 +1,9 @@
 First thing you will need is a copy of Ubuntu. You can grab a copy of their server edition [here](http://www.ubuntu.com/download/server)
 
-From a command line:
+Once it is installed, ensure everything is up to date by running
+
+`sudo apt-get update`   
+`sudo apt-get -y upgrade`
 
 0. Misc :
 
