@@ -21,25 +21,25 @@ A: We will not support newznab + conversions, the script is there if you want to
 Q: I'm getting lots of spam, or small files.   
 A: Use blacklists. removeCrapReleases script, size settings for groups etc..
 
-Q: The scripts and my site is slow. 
+Q: The scripts and my site is slow.   
 A: You will need to tune MYSQL, there are many guides for this online, look at tools like mysqltuner.
    If your hardware is not powerful enough it will be slow regardless.
 
-Q: Sabnzbd says I have problems with extra lines in the NZB. 
+Q: Sabnzbd says I have problems with extra lines in the NZB.    
 A: There is a script in misc/testing/Dev_testing to fix those NZB files.
 
-Q: I'm getting many releases with unusable names. 
+Q: I'm getting many releases with unusable names.   
 A: There is a script in misc/testing/Release_scripts called fixReleaseNames.php
    Do not expect miracles...
-
-Q: How do I run x script? 
+ 
+Q: How do I run x script?   
 A: type php name-of-the-script.php , most of the scripts tell you how to use them if you run them like that.
 
-Q: My parts/binaries/collections tabls are very large. 
+Q: My parts/binaries/collections tabls are very large.    
 A: Article collections with poorly named subjects or incomplete collections are created 2 hours after the last time we have downloaded an article for that collection,
    if you keep backfilling, your parts/binaries/collections tables will get large obviously...
 
-Q: I'm having x issue not in the readme or FAQ. 
+Q: I'm having x issue not in the readme or FAQ.    
 A: Please do some research first. If you can't solve the issue, we have a channel on IRC, server : synirc, channel #nZEDB
 
 Q: I have converted my mysql tables to InnoDB and the ibdata file keeps getting bigger, even after I optimize the tables?    
