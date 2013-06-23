@@ -52,7 +52,7 @@ First you need to add Percona's repository to your machine:
 
 Then you can install it using:  
 `sudo apt-get update` 
-`sudo apt-get install -y percona-server-client-5.5 \ percona-server-server-5.5 \ libmysqlclient-dev 
+`sudo apt-get install -y percona-server-client-5.5 \ percona-server-server-5.5 \ libmysqlclient-dev` 
 
 ###MariaDB
 
