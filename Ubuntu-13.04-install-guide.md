@@ -88,7 +88,7 @@ Create the site config:
 `sudo nano /etc/apache2/sites-available/nZEDb`
 
 Paste the following:
-<VirtualHost *:80>  
+`<VirtualHost *:80>  
     ServerAdmin webmaster@localhost  
     ServerName localhost  
 
@@ -96,7 +96,7 @@ Paste the following:
     DocumentRoot /var/www/nZEDb/www  
     ErrorLog /var/log/apache2/error.log  
     LogLevel warn  
-</VirtualHost>  
+</VirtualHost>  `
 
 Enable the site/etc:
 `sudo a2dissite default`  
@@ -135,8 +135,8 @@ Then restart php-fpm:
 Nginx site configuration file:
 `sudo nano /etc/nginx/sites-available/nZEDb`
 
-Add:
-server {
+Add:  
+   server {
     # Change these settings to match your machine
     listen 80 default_server;
     server_name localhost;
@@ -173,7 +173,8 @@ server {
             fastcgi_index index.php;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
-}
+   }
+
 
 Make sure logs will write:
 `sudo mkdir -p /var/log/nginx`  
