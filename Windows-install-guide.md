@@ -21,7 +21,7 @@ pause
 * Open "C:\XAMPP\passwords.txt" and review default XAMPP passwords.  
 * Run XAMPP Control Panel and start Apache and MySQL.  
 * Open your browser and visit http://localhost/, follow on screen setup prompts.  
-* Download and install extras like http://www.rarlab.com/download for password detection and http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing if wanted.
+* Download and install extras like http://www.rarlab.com/download.htm for password detection and http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing if wanted.
 
 From there the work is just getting started but this will give you a working nZEDb site running under XAMPP on Windows. How you fine tune your site is up to you.
 
