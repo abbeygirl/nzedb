@@ -22,8 +22,7 @@ Q: I'm getting lots of spam, or small files.
 A: Use blacklists. removeCrapReleases script, size settings for groups etc..
 
 Q: The scripts and my site is slow.   
-A: You will need to tune MYSQL, there are many guides for this online, look at tools like mysqltuner.
-   If your hardware is not powerful enough it will be slow regardless.
+A: You will need to tune MYSQL, have a look at the [database tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning) page.
 
 Q: Sabnzbd says I have problems with extra lines in the NZB.    
 A: There is a script in misc/testing/Dev_testing to fix those NZB files.
