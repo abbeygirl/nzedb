@@ -1,7 +1,7 @@
 A quick and dirty guide to setting up nZEDb in XAMPP for Windows.
 
 1) Download http://www.apachefriends.org/en/xampp-windows.html]XAMPP 1.8.1 and install to "C:\XAMPP\"   
-2) Download http://code.google.com/p/msysgit/downloads/list]Git for Windows 1.8.1.2 and install to "C:\XAMPP\git\"  
+2) Download http://code.google.com/p/msysgit/downloads/list]Git for Windows and install to "C:\XAMPP\git\"  
 3) Create file "C:\XAMPP\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github.
 
 @echo off  
