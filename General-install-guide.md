@@ -1,5 +1,7 @@
-REQUIREMENTS  
-PHP  
+If you are a beginner, it is advised to use the  [Ubuntu 13.04 install guide](https://github.com/nZEDb/nZEDb/wiki/Ubuntu-13.04-install-guide). The info here is brief and intended for those who have their own preferred Linux flavor.
+
+## Requirements 
+### PHP  
 php version 5.4 or higher  
 sessions enabled  
 memory limit at 1024 or more  
@@ -9,45 +11,45 @@ OpenSSL (if connecting to ssl usenet provider)
 php register_globals off  
 exif support (check the ini file).  
 
-GD Imaging Library w/PHP integration  
+### GD Imaging Library w/PHP integration  
 
-PEAR
+### PEAR
 
-MySQL  
+### MySQL  
 max_allowed_packet=12582912  
 group_concat_max_len=8192  
 timezone set to php's 
 
-Apache  
+### Apache  
 script timeout of at least 60 seconds  
 mod_rewrite enabled  
 .htaccess allow override on  
 
-3rd Party API Keys (recommended to get your own api keys)  
+### 3rd Party API Keys (recommended to get your own api keys)  
 tmdb (signup @ http://api.themoviedb.org/2.1/)  
 amazon (signup @ https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html)  
 rottentomatoes (signup @ http://developer.rottentomatoes.com)  
 
-Deep rar password inspection  
+### Deep rar password inspection  
 unrar version 3.9 or higher  
 
-Thumbnailing and media info (if feep rar inspection is enabled)  
+### Thumbnailing and media info (if deep rar inspection is enabled)  
 ffmpeg  
 mediainfo  
+lame
 
-
-INSTALLATION  
-there is an installer in \install\ try it first by creating your website,  
+## INSTALLATION  
+There is an installer in \install\ try it first by creating your website,  
 copying the application files there, and browsing to http://yournewznabserver/install.  
 
-refer to the list of requirements above if you encounter any errors during install, or the FAQ in the README
+Refer to the list of requirements above if you encounter any errors during install, or the FAQ in the README
 
-once installed activate only one or two groups to test with first (a.b.teevee is a good choice), this
+Once installed activate only one or two groups to test with first (a.b.teevee is a good choice), this
 will save you time if it is not working correctly.
 
-run the update_binaries.php and update_releases.php scripts in \misc\update_scripts\ via command-line.
+Run the update_binaries.php and update_releases.php scripts in \misc\update_scripts\ via command-line.
 
-if updating was successful then you can continue to setup your site and configure the update scripts for
+If updating was successful then you can continue to setup your site and configure the update scripts for
 auto-updating.
 
 
@@ -58,6 +60,7 @@ set /.htaccess RewriteBase to your virtual directory
 SAMPLE APACHE VHOST CONFIG  
 add this to your existing VHOST file modifying your values for ServerName, Server Alias, and DocumentRoot.
 You should find this under /etc/apache2/sites-enabled/ (000-default).  
+```
 <VirtualHost *:80>   
 <Directory /domains/www/example.com/newz/www/>  
 Options FollowSymLinks  
@@ -73,3 +76,4 @@ DocumentRoot /domains/www/example.com/newz/www
 LogLevel warn  
 ServerSignature Off  
 </VirtualHost>  
+```
