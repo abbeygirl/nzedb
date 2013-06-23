@@ -1,4 +1,5 @@
 Welcome to the nZEDb wiki!
+![nZEDb logo](https://raw.github.com/nZEDb/nZEDb/master/www/themes/Default/images/logo.png)
 
 nZEDb is a fork of the open source usenet indexer newznab plus : https://github.com/anth0/nnplus
 
