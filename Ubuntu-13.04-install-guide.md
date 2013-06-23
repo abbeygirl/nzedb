@@ -88,17 +88,18 @@ Create the site config:
 `sudo nano /etc/apache2/sites-available/nZEDb`
 
 Paste the following:  
-<VirtualHost *:80>
-    ServerAdmin webmaster@localhost  
-    ServerName localhost  
+```<VirtualHost *:80>
+ServerAdmin webmaster@localhost  
+ServerName localhost  
 
-    # These paths should be fine  
-    DocumentRoot /var/www/nZEDb/www  
-    ErrorLog /var/log/apache2/error.log  
-    LogLevel warn  
+# These paths should be fine  
+DocumentRoot /var/www/nZEDb/www  
+ErrorLog /var/log/apache2/error.log  
+LogLevel warn  
 </VirtualHost>
+```
 
-Enable the site/etc:
+Enable the site/etc:   
 `sudo a2dissite default`  
 `sudo a2ensite nZEDb`  
 `sudo a2enmod rewrite`  
@@ -136,46 +137,46 @@ Then restart php-fpm:
 Nginx site configuration file:
 `sudo nano /etc/nginx/sites-available/nZEDb`
 
-Add:  
-   server {
-    # Change these settings to match your machine
-    listen 80 default_server;
-    server_name localhost;
+Add:   
+```server {
+# Change these settings to match your machine
+listen 80 default_server;
+server_name localhost;
 
-    # Everything below here doesn't need to be changed
-    access_log /var/log/nginx/access.log;
-    error_log /var/log/nginx/error.log;
+# Everything below here doesn't need to be changed
+access_log /var/log/nginx/access.log;
+error_log /var/log/nginx/error.log;
 
-    root /var/www/nZEDb/www/;
-    index index.html index.htm index.php;
+root /var/www/nZEDb/www/;
+index index.html index.htm index.php;
 
-    location ~* \.(?:ico|css|js|gif|inc|txt|gz|xml|png|jpe?g) {
-            expires max;
-            add_header Pragma public;
-            add_header Cache-Control "public, must-revalidate, proxy-revalidate";
-    }
+location ~* \.(?:ico|css|js|gif|inc|txt|gz|xml|png|jpe?g) {
+        expires max;
+        add_header Pragma public;
+        add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+}
 
-    location / { try_files $uri $uri/ @rewrites; }
+location / { try_files $uri $uri/ @rewrites; }
 
-    location @rewrites {
-            rewrite ^/([^/\.]+)/([^/]+)/([^/]+)/? /index.php?page=$1&id=$2&subpage=$3 last;
-            rewrite ^/([^/\.]+)/([^/]+)/?$ /index.php?page=$1&id=$2 last;
-            rewrite ^/([^/\.]+)/?$ /index.php?page=$1 last;
-    }
+location @rewrites {
+        rewrite ^/([^/\.]+)/([^/]+)/([^/]+)/? /index.php?page=$1&id=$2&subpage=$3 last;
+        rewrite ^/([^/\.]+)/([^/]+)/?$ /index.php?page=$1&id=$2 last;
+        rewrite ^/([^/\.]+)/?$ /index.php?page=$1 last;
+}
 
-    location /admin { }
-    location /install { }
+location /admin { }
+location /install { }
 
-    location ~ \.php$ {
-            include /etc/nginx/fastcgi_params;
-            fastcgi_pass 127.0.0.1:9000;
+location ~ \.php$ {
+        include /etc/nginx/fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
 
-            # The next two lines should go in your fastcgi_params
-            fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    }
-   }
-
+        # The next two lines should go in your fastcgi_params
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
+}
+```
 
 Make sure logs will write:
 `sudo mkdir -p /var/log/nginx`  
