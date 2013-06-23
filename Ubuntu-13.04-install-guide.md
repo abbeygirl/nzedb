@@ -232,8 +232,12 @@ In your browser go to `http://(nZEDb machine ip)/install`
 ##Configure the site.
 
 Enable some groups in view groups.  
-Change settings in edit site (set api keys, set paths to unrar etc..).  
-Change settings under tmux.
+Change settings in edit site:
+Make sure to set paths to unrar and ffmpeg if you installed them.  
+3rd Party API Keys (recommended to get your own api keys)  
+* tmdb (signup @ http://api.themoviedb.org/2.1/)
+* amazon (signup @ https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html)
+* rottentomatoes (signup @ http://developer.rottentomatoes.com) Change settings under tmux.
 
 ## Start indexing groups.
 
