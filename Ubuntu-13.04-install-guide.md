@@ -120,10 +120,10 @@ To install Nginx:
 You will also need a way to serve the php files to Nginx. To install php-fpm:  
 `sudo apt-get install -y php5-fpm`
 
-Configure the php file:
+Configure the php file:   
 `sudo nano /etc/php5/fpm/php.ini`
 
-Change the following settings:   
+Change the following settings:     
 register_globals = Off  
 max_execution_time = 120  
 (you can set 1024M to -1 if you have lots of RAM)  
@@ -131,10 +131,10 @@ memory_limit = 1024M
 (change Europe/London to your settings, see [http://php.net/manual/en/timezones.php](http://php.net/manual/en/timezones.php) for valid ones, remove the ; if there is one preceeding the date.timezone)  
 date.timezone = Europe/London 
 
-Then restart php-fpm:
+Then restart php-fpm:   
 `sudo /etc/init.d/php5-fpm restart`
 
-Nginx site configuration file:
+Nginx site configuration file:   
 `sudo nano /etc/nginx/sites-available/nZEDb`
 
 Add:   
@@ -178,11 +178,11 @@ location ~ \.php$ {
 }
 ```
 
-Make sure logs will write:
-`sudo mkdir -p /var/log/nginx`  
-`sudo chmod 755 /var/log/nginx` 
+Make sure logs will write:   
+`sudo mkdir -p /var/log/nginx`   
+`sudo chmod 755 /var/log/nginx`  
 
-Make nginx server nZEDb instead of the default site:
+Make nginx server nZEDb instead of the default site:   
 `sudo unlink /etc/nginx/sites-enabled/default`  
 `sudo ln -s /etc/nginx/sites-available/nZEDb /etc/nginx/sites-enabled/nZEDb`
 
