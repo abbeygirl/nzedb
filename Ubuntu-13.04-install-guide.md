@@ -60,6 +60,10 @@ Then you can install it using:
 `sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db`  
 `sudo add-apt-repository 'deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntu raring main'`  
 
+You can then install it using
+`sudo apt-get update`  
+`sudo apt-get install mariadb-server`
+
 ## Choose a webserver
 
 You can also use a magnitude of webservers. Apache is the worlds most popular and the easiest for beginners. Nginx will use less resources but requires additional setup.
@@ -179,18 +183,30 @@ Make nginx server nZEDb instead of the default site:
 `sudo unlink /etc/nginx/sites-enabled/default`  
 `sudo ln -s /etc/nginx/sites-available/nZEDb /etc/nginx/sites-enabled/nZEDb`
 
+## Post-Processing
 
+If you want to run post-processing, you will need unrar, ffmpeg, media info and lame.
 
-5. Install unrar / ffmpeg / mediainfo / lame.
+### Unrar
 
-sudo apt-get install software-properties-common  
-sudo apt-get install unrar python-software-properties lame  
-sudo add-apt-repository ppa:jon-severinsson/ffmpeg  
-sudo add-apt-repository ppa:shiki/mediainfo  
-sudo apt-get update  
-sudo apt-get install mediainfo ffmpeg x264  
+Its best to grab it straight from rarlabs. Download from [http://www.rarlab.com/download.htm](http://www.rarlab.com/download.htm) and put it under `~\unrar`
 
-6. Git clone the nZEDb source.  
+### Ffmpeg
+
+As Ubuntu no longer ships with a proper ffmpeg, you are best to compile it. A good guide is [http://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide](http://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide)
+
+### Media info
+`sudo add-apt-repository ppa:shiki/mediainfo`  
+`sudo apt-get update`   
+`sudo apt-get install mediainfo` 
+
+### Lame
+`sudo apt-get install lame`
+
+## Get nZEDb from github
+
+If you dont already have git installed:
+`sudo apt-get install git`
 
 (if the folder doesn't exist, make it)  
 cd /var/www/  
