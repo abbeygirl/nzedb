@@ -88,7 +88,7 @@ Create the site config:
 `sudo nano /etc/apache2/sites-available/nZEDb`
 
 Paste the following:
-`<VirtualHost *:80>  
+<VirtualHost *:80>  
     ServerAdmin webmaster@localhost  
     ServerName localhost  
 
@@ -96,7 +96,7 @@ Paste the following:
     DocumentRoot /var/www/nZEDb/www  
     ErrorLog /var/log/apache2/error.log  
     LogLevel warn  
-</VirtualHost>  `
+</VirtualHost>
 
 Enable the site/etc:
 `sudo a2dissite default`  
@@ -104,7 +104,8 @@ Enable the site/etc:
 `sudo a2enmod rewrite`  
 `sudo service apache2 restart`  
 
-*****If you get the following error:**********  
+**********************************************  
+If you get the following error:
 (Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName)
 
 `sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name' && sudo service apache2 restart`   
