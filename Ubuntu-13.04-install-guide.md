@@ -208,10 +208,10 @@ As Ubuntu no longer ships with a proper ffmpeg, you are best to compile it. A go
 
 ##Get nZEDb from github
 
-If you dont already have git installed:
+If you dont already have git installed:   
 `sudo apt-get install git`
 
-Now we can clone nZEDb:
+Now we can clone nZEDb:    
 `cd /var/www`  
 `git clone https://github.com/nZEDb/nZEDb.git`
 
@@ -227,7 +227,7 @@ You will also want to change some file permissions:
 
 ##Run the installer.
 
-In your browser go to http://(nZEDb machine ip)/install  
+In your browser go to `http://(nZEDb machine ip)/install`  
 
 ##Configure the site.
 
@@ -237,8 +237,8 @@ Change settings under tmux.
 
 ## Start indexing groups.
 
-To start indexing using the tmux scripts:
-`cd /var/www/nZEDb/misc/update_scripts/nix_scripts/tmux`
-`php start.php`
+To start indexing using the tmux scripts:   
+`cd /var/www/nZEDb/misc/update_scripts/nix_scripts/tmux`   
+`php start.php`   
 
 This guide is based on the Newznab Ubuntu 11.10 guide found [here](http://newznab.readthedocs.org/en/latest/guides/install_ubuntu-11.10/)
