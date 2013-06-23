@@ -51,7 +51,12 @@ Percona Server as of versions 5.1.56 and 5.5.11 allows utilizing fast index crea
 expand_fast_index_creation = 1   
 innodb_merge_sort_block_size = 1G
 ```
-
+To Update nZEDb (Ubuntu)
+1. cd /var/www/nZEDb
+2. sudo git pull
+3. cd /var/www/nZEDb/misc/testing/DB_scripts
+4. php patchmysql.php
+5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/*
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
