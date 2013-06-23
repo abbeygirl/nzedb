@@ -51,14 +51,14 @@ Percona Server as of versions 5.1.56 and 5.5.11 allows utilizing fast index crea
 expand_fast_index_creation = 1   
 innodb_merge_sort_block_size = 1G
 ```
-To Update nZEDb (Ubuntu)  
+**To Update nZEDb (Ubuntu)**  
 1. cd /var/www/nZEDb  
 2. sudo git pull  
 3. cd /var/www/nZEDb/misc/testing/DB_scripts  
 4. php patchmysql.php  
 5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/*  
 
-Admin of Site  
+**Admin of Site**  
 Q. How to change registration status  
 A. You will need to change in MySQL.  
 update site set value = 0 where setting = 'registerstatus';   
@@ -66,8 +66,8 @@ update site set value = 0 where setting = 'registerstatus';
 Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??  
 A. Create new user, change role in db, reset password from webui  
 
-Backfilling  
-Hanging on Backfilling  
+**Backfilling**  
+_Hanging on Backfilling_  
 	If there is a bad nzb   
 Run this SQL command elect r.ID, r.guid, r.name, c.disablepreview, r.size, r.adddate from releases r left join category c on c.ID = r.categoryID where nzbstatus = 1 and (r.passwordstatus between -6 and -1) AND (r.haspreview = -1 and c.disablepreview = 0) order by adddate desc limit 1;   
 then delete the one it lists  
