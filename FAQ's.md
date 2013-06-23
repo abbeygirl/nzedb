@@ -51,20 +51,20 @@ Percona Server as of versions 5.1.56 and 5.5.11 allows utilizing fast index crea
 expand_fast_index_creation = 1   
 innodb_merge_sort_block_size = 1G
 ```
-To Update nZEDb (Ubuntu)
-1. cd /var/www/nZEDb
-2. sudo git pull
-3. cd /var/www/nZEDb/misc/testing/DB_scripts
-4. php patchmysql.php
-5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/*
+To Update nZEDb (Ubuntu)  
+1. cd /var/www/nZEDb  
+2. sudo git pull  
+3. cd /var/www/nZEDb/misc/testing/DB_scripts  
+4. php patchmysql.php  
+5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/*  
 
-Admin of Site
-Q. How to change registration status 
-A. You will need to change in MySQL.
-update site set value = 0 where setting = 'registerstatus'; 
+Admin of Site  
+Q. How to change registration status  
+A. You will need to change in MySQL.  
+update site set value = 0 where setting = 'registerstatus';   
 
-Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??
-A. Create new user, change role in db, reset password from webui
+Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??  
+A. Create new user, change role in db, reset password from webui  
 
 
 
