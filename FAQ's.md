@@ -78,6 +78,10 @@ A. You can, but shouldn't if you have myisam tables
 Q. I have groups activated and activated for backfill, but tmux still says no groups enabled for backfill.  I copied the setting from my desktop install which is working correctly.  
 A. You still have to run update_bins on them first or they fail the query  
 
+**Errors**  
+Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
+A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/  
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
