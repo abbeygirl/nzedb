@@ -13,5 +13,6 @@ You may add anything you like to this list and hopefully, someone will have the 
 * change fixReleaseNames not to recheck more than x times.
 * change removeCrapReleases so that filesize per delete category is user adjustable in admin.
 * change predb name compare to not check releases more than x times.
+* create script to delete releases with/without keywords.
 
 There is much more to do, this is just a list I was asked if I had.
