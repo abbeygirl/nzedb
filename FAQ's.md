@@ -1,5 +1,10 @@
 Some common mistakes/errors people encounter.
 
+Q. I changed NNTP providers and now everything is screwed up.
+A. You need to reset groups and truncate some tables. A script exists to handle this for you.
+
+  ```php misc/testing/DB_scripts/reset_truncate.php```
+
 Q: Sabnzbd is not working.  
 A: Make sure you have the sabnzbd/ in the url.
 
