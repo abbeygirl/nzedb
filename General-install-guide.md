@@ -38,6 +38,18 @@ ffmpeg
 mediainfo  
 lame
 
+###Python 2.* or 3.*   
+If Python 3 is installed, the module also must be installed:     
+`apt-get install python-setuptools`  
+`python -m easy_install`  
+`easy_install cymysql`  
+-or-  
+`apt-get install python3-setuptools`   
+`python3 -m easy_install pip`   
+`pip-3.2 install cymysql`   
+-or-   
+`pip-3.3 install cymysql` 
+
 ## INSTALLATION  
 There is an installer in \install\ try it first by creating your website,  
 copying the application files there, and browsing to http://yournewznabserver/install.  
