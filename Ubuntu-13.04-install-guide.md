@@ -13,7 +13,7 @@ Apparmor interferes with some of our files, here is how to disable it:
 `sudo update-rc.d -f apparmor remove`  
 
 For the threaded scripts you will require the Python MySQLdb module:  
-Python 2.* or 3.* - If Python 3 is installed, the module also must be installed
+Python 2.* or 3.* - If Python 3 is installed, the module also must be installed:     
 `apt-get install python-setuptools`  
 `python -m easy_install`  
 `easy_install cymysql`  
