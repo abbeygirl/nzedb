@@ -14,7 +14,7 @@ You may add anything you like to this list and hopefully, someone will have the 
 * change fixReleaseNames not to recheck more than x times.
 * change removeCrapReleases so that filesize per delete category is user adjustable in admin.
 * change predb name compare to not check releases more than x times.
-* create script to delete releases with/without keywords.
+* <s>create script to delete releases with/without keywords.</s>
 * <s>in tmux scripts, separate the postprocessing to individual settings. </s>
 * Allow php/python scripts to connect to mysql using socket.
 
