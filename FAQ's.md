@@ -56,6 +56,12 @@ Percona Server as of versions 5.1.56 and 5.5.11 allows utilizing fast index crea
 expand_fast_index_creation = 1   
 innodb_merge_sort_block_size = 1G
 ```
+Q: How do I move from pane to pane in tmux?
+A: ctrl+a and an arrow key
+
+Q: How do I move from page to page in tmux? (i.e. 0 - monitor, 1 - utils, 2 - post, 3 - optimize, 4 - bash)
+A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-a p ('n' for next, 'p' previous)
+
 **To Update nZEDb (Ubuntu)**  
 1. cd /var/www/nZEDb  
 2. sudo git pull  
