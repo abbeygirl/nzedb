@@ -17,5 +17,7 @@ You may add anything you like to this list and hopefully, someone will have the 
 * <s>create script to delete releases with/without keywords.</s>
 * <s>in tmux scripts, separate the postprocessing to individual settings. </s>
 * Allow php/python scripts to connect to mysql using socket.
+* Fix RAGE id and sitewide RSS feeds. --> Junkman690
+* Fix animeDB lockups so they are local.
 
 There is much more to do, this is just a list I was asked if I had.
