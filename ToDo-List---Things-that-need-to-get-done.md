@@ -16,7 +16,7 @@ You may add anything you like to this list and hopefully, someone will have the 
 * change predb name compare to not check releases more than x times.
 * <s>create script to delete releases with/without keywords.</s>
 * <s>in tmux scripts, separate the postprocessing to individual settings. </s>
-* Allow php/python scripts to connect to mysql using socket.
+* <s>Allow python scripts to connect to mysql using socket. --> josh4trunks</s>
 * Fix RAGE id and sitewide RSS feeds. --> Junkman690
 * Fix animeDB lockups so they are local.
 
