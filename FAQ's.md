@@ -93,10 +93,10 @@ A. You still have to run update_bins on them first or they fail the query
 Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
 A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/  
 
-**Tmux**
-Q. How do I monitor the server from another computer?
-A. Step 1 - ssh into the server
-   Step 2 - Once your are connected, type "tmux attach-session -t nZEDb" (without quotes)
+**Tmux**   
+Q. How do I monitor the server from another computer?   
+A. Step 1 - ssh into the server   
+   Step 2 - Once your are connected, type "tmux attach-session -t nZEDb" (without quotes)   
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
