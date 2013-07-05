@@ -56,11 +56,12 @@ Percona Server as of versions 5.1.56 and 5.5.11 allows utilizing fast index crea
 expand_fast_index_creation = 1   
 innodb_merge_sort_block_size = 1G
 ```
-Q: How do I move from pane to pane in tmux?
-A: ctrl+a and an arrow key
 
-Q: How do I move from page to page in tmux? (i.e. 0 - monitor, 1 - utils, 2 - post, 3 - optimize, 4 - bash)
-A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-a p ('n' for next, 'p' previous)
+Q: I'm having issues with the PREDB backfill script.    
+A: https://github.com/nZEDb/pre-info    
+ 
+Q: Can I have some information on collections/binaries/parts?    
+A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg    
 
 **To Update nZEDb (Ubuntu)**  
 1. cd /var/www/nZEDb  
@@ -74,7 +75,7 @@ Q. How to change registration status
 A. You will need to change in MySQL.  
 update site set value = 0 where setting = 'registerstatus';   
 
-Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??  
+Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??   
 A. Create new user, change role in db, reset password from webui  
 
 **Backfilling**  
@@ -111,6 +112,13 @@ add define('DB_SOCKET', '/var/run/mysqld/mysqld.sock'); to you www/config.php
 Q. How do I monitor the server from another computer?   
 A. Step 1 - ssh into the server   
    Step 2 - Once your are connected, type "tmux attach-session -t nZEDb" (without quotes)   
+
+Q: How do I move from pane to pane in tmux?   
+A: ctrl+a and an arrow key    
+
+Q: How do I move from page to page in tmux? (i.e. 0 - monitor, 1 - utils, 2 - post, 3 - optimize, 4 - bash)    
+A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-a p ('n' for next, 'p' previous)
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
