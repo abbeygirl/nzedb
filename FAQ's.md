@@ -91,7 +91,17 @@ A. You still have to run update_bins on them first or they fail the query
 
 **Errors**  
 Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
-A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/  
+A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/ 
+
+Q. CyMSQL error in update binaries.    
+A. cymysql has been updated to use sockets, python scripts also, you will need to:    
+run sudo pip install --upgrade cymysql    
+-or-   
+run sudo easy_install --upgrade cymysql   
+run sudo pip-3.2 install --upgrade cymysql   
+run sudo pip-3.3 install --upgrade cymysql   
+-and-   
+add define('DB_SOCKET', '/var/run/mysqld/mysqld.sock'); to you www/config.php
 
 **Tmux**   
 Q. How do I monitor the server from another computer?   
