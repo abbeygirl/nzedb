@@ -44,9 +44,9 @@ Python 2.*
 `apt-get install python-setuptools`  
 `python -m easy_install`  
 `easy_install cymysql`  
--or- 
-Python 3.*
-`apt-get install python3-setuptools`   
+-or-    
+Python 3.*    
+`apt-get install python3-setuptools`    
 `python3 -m easy_install pip`   
 `pip-3.2 install cymysql` (Ubuntu 12.10)  
 -or-   
