@@ -93,7 +93,11 @@ A. You still have to run update_bins on them first or they fail the query
 Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
 A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/ 
 
-Q. CyMSQL error in update binaries.    
+Q. KeyError: 'DB_SOCKET'   
+Traceback (most recent call last):    
+File "/var/www/nZEDb/www/../misc/update_scripts/threaded_scripts/grabnzbs_threaded.py", line 26, in     <module>    
+con = mdb.connect(host=conf['DB_HOST'], user=conf['DB_USER'], passwd=conf['DB_PASSWORD'],     db=conf['DB_NAME'], port=int(conf['DB_PORT']    
+), unix_socket=conf['DB_SOCKET'])      
 A. cymysql has been updated to use sockets, python scripts also, you will need to:    
 run sudo pip install --upgrade cymysql    
 -or-   
@@ -114,3 +118,5 @@ Please do not open issues on github if the question is already asked. Take a few
 Do not expect us to implement requested features in a short amount of time.  
 
 Some requested features we will not implement, you are free to clone the git. 
+
+## Make sure you read the changelog to see if there are any new features added!
