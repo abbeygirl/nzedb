@@ -21,8 +21,7 @@ Python 2.*
 -or-    
 Python 3.*     
 `apt-get install python3-setuptools`     
-`python3 -m easy_install pip`   
--or-    
+`python3 -m easy_install pip`     
 `pip-3.3 install cymysql`   
 
 ##Install and configure PHP
