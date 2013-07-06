@@ -106,7 +106,7 @@ run sudo pip-3.2 install --upgrade cymysql
 run sudo pip-3.3 install --upgrade cymysql   
 -and-   
 add define('DB_SOCKET', '/var/run/mysqld/mysqld.sock');  
-to you www/config.php
+to your www/config.php
 
 **Tmux**   
 Q. How do I monitor the server from another computer?   
