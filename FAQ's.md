@@ -77,6 +77,19 @@ update site set value = 0 where setting = 'registerstatus';
 Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??   
 A. Create new user, change role in db, reset password from webui  
 
+**Adding alternate NNTP for post processing**  
+1. Under Admin click Edit Site  
+2. Scroll down to Advanced - Threaded Settings  
+3. Click the box for Alternate NNTP Ptovider    
+4. Save Settings  
+5. Once that is done, edit the file www/config.php  
+define('NNTP_USERNAME_A', 'username');  <-- replace username with your info  
+define('NNTP_PASSWORD_A', 'password');  <-- replace password with your info  
+define('NNTP_SERVER_A', 'server');  <-- replace server with your info  
+define('NNTP_PORT_A', 'port');  <-- replace port with your info  
+define('NNTP_SSLENABLED_A', true);  <--or false if your not using SSL    
+
+
 **Backfilling**  
 _Hanging on Backfilling_  
 	If there is a bad nzb   
