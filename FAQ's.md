@@ -62,6 +62,12 @@ A: https://github.com/nZEDb/pre-info
 Q: Can I have some information on collections/binaries/parts?    
 A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg    
 
+Q: How do I switch branches of development?  
+A: git checkout dev    
+A: git checkout master  
+A: git checkout johnnyboy  
+(make sure your in your root directory for nZEDb)  
+
 **To Update nZEDb (Ubuntu)**  
 1. cd /var/www/nZEDb  
 2. sudo git pull  
