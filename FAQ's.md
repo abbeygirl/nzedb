@@ -138,6 +138,10 @@ A: ctrl+a and an arrow key
 Q: How do I move from page to page in tmux? (i.e. 0 - monitor, 1 - utils, 2 - post, 3 - optimize, 4 - bash)    
 A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-a p ('n' for next, 'p' previous)
 
+Q: How do I show the USP settings in powerline?  
+A: add the following line to tmux.sh   
+"uspsetting 229 0/"  
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
