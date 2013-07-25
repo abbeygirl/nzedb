@@ -56,6 +56,12 @@ expand_fast_index_creation = 1
 innodb_merge_sort_block_size = 1G
 ```
 
+Q: I am trying to convert my mysql tables to InnoDB and mysql crashes or returns with this error.
+```
+ERROR 1114 (HY000): The table '#sql-4f6_2a' is full
+```
+A: The most likely answer is that the partition holding your mysql tmp dir is full. If you have pointed this to /dev/shm, then either drop the indexes on releases, convert to InnoDB and recreate the indexes. Alternatively, chnage the path to mysql temp, restart mysql, convert to InnoDB, change path back for mysql tmp, restart mysql.
+
 Q: I'm having issues with the PREDB backfill script.    
 A: https://github.com/nZEDb/pre-info    
  
@@ -65,7 +71,7 @@ A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg
 Q: How do I switch branches of development?  
 A: git checkout dev    
 A: git checkout master  
-A: git checkout johnnyboy  
+A: git checkout jonnyboy  
 (make sure your in your root directory for nZEDb)  
 
 **To Update nZEDb (Ubuntu)**  
