@@ -7,5 +7,5 @@ nZEDb is a fork of the open source usenet indexer newznab plus : https://github.
 * [Install guides](https://github.com/nZEDb/nZEDb/wiki/Install-Guides)
 * [List of FAQ's](https://github.com/nZEDb/nZEDb/wiki/FAQ%27s)
 * [Database tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning)
-* [Helpful SQL queries](https://github.com/nZEDb/nZEDb/wiki/SQL-queries)
+* [Helpful SQL queries](https://github.com/nZEDb/nZEDb/wiki/SQL-Queries)
 * [ToDo List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
