@@ -5,7 +5,7 @@
 *   update releases set nfostatus = 1 WHERE nfostatus between -6 and -1 and nzbstatus = 1;
 
 ### Audio: 
-  * select ID,name from releases where musicinfoID IS NULL and categoryID BETWEEN 3000 AND 3999 and nzbstatus = 1;
+* select ID,name from releases where musicinfoID IS NULL and categoryID BETWEEN 3000 AND 3999 and nzbstatus = 1;
 *   update releases set musicinfoID = '-2' where musicinfoID IS NULL and categoryID BETWEEN 3000 AND 3999 and nzbstatus = 1;
 
 ### TV
