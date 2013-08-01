@@ -19,5 +19,6 @@ You may add anything you like to this list and hopefully, someone will have the 
 * <s>Allow python scripts to connect to mysql using socket. --> josh4trunks</s>
 * Fix RAGE id and sitewide RSS feeds. --> Junkman690
 * Fix animeDB lockups so they are local.
+* Change login page so password is hashed before it's sent (or use one time key) to site. --> ThePeePs
 
 There is much more to do, this is just a list I was asked if I had.
