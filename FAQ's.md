@@ -147,6 +147,19 @@ A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-
 Q: How do I show the USP settings in powerline?  
 A: add the following line to tmux.sh   
 "uspsetting 229 0/"  
+  
+**Backing up nZEDb (ubuntu)** (by trev_)  
+1. Stop tmux from processing.  Make sure all panes are dead.  
+sudo killall tmux   
+2. Optimize the database   
+/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux/bin/optimize.php true  
+3. Backup the database  
+mysqldump --opt -u <user> -p <password> > ~/nzedb-backup.sql  
+(this will put the newly created backup in your home directory)  
+4. Backup nZEDb  
+rsync -a --stats --progress  /var/www/nZEDb/ ~/nzedb-backup/    
+(these are the steps I use, there are probably better ways.)  
+ 
 
 ************************************************
 
