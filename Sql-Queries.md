@@ -1,7 +1,7 @@
 ## Query / Clear Post Processing Queues
 
 ### NFO
-* select ID,name from releases WHERE nfostatus between -6 and -1 and nzbstatus = 1;   
+* select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1 and nzbstatus = 1;   
 * update releases set nfostatus = 1 WHERE nfostatus between -6 and -1 and nzbstatus = 1;
 
 ### Audio
