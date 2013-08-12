@@ -66,7 +66,11 @@ Q: I'm having issues with the PREDB backfill script.
 A: https://github.com/nZEDb/pre-info    
  
 Q: Can I have some information on collections/binaries/parts?    
-A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg    
+A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg     
+  
+Q: My parts table is very large, what should I do?  
+A: Disable update binaries, backfill, and import.  Let update releases run to clear the backlog out.  
+ 
 
 Q: How do I switch branches of development?  
 A: git checkout dev    
