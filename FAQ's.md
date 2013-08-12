@@ -1,49 +1,140 @@
-Some common mistakes/errors people encounter.
+**Installation**  
+Q: I'm having x issue after converting from newznab +.  
+A: We will not support newznab + conversions, the script is there if you want to use it, use at your own will.
 
-Q. I changed NNTP providers and now everything is screwed up.    
-A. You need to reset groups and truncate some tables. A script exists to handle this for you.   
-  ```php (path to nZEDb)/misc/testing/DB_scripts/reset_truncate.php```
 
-Q: Sabnzbd is not working.  
+**3rd Party**  
+Q: SABnzbd is not working.  
 A: Make sure you have the sabnzbd/ in the url.
 
 Q: Sickbeard/Couchpotato are not working.  
 A: Make sure they are not https.
 
-Q: I do not see any releases unless I click on ALL.  
-A: Go to http://localhost/profileedit untick the 4 checkmarks, click save profile.
-
-Q: I'm not getting any covers or x type of release are not being post processed.  
-A: Make sure your keys are good, all the keys that come with nZEDb are tested and work. It is still preferable to use your own keys. We do not supply a trakt key.
+Q: Sabnzbd says I have problems with extra lines in the NZB.    
+A: There is a script in misc/testing/Dev_testing to fix those NZB files.
 
 Q: How do I test the amazon keys?  
 A: There is a script in the misc/testing/Dev_testing folder. Read the whole output if you get an error (most people are only reading the bottom part).
 
-Q: I'm having x issue after converting from newznab +.  
-A: We will not support newznab + conversions, the script is there if you want to use it, use at your own will.
+
+**Admin of Site**  
+Q. How to change registration status  
+A. You will need to change in MySQL.  
+update site set value = 0 where setting = 'registerstatus';   
+
+Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??   
+A. Create new user, change role in db, reset password from webui  
+
+**To Update nZEDb (Ubuntu)**  
+ 1. cd /var/www/nZEDb  
+ 2. sudo git pull  
+ 3. cd /var/www/nZEDb/misc/testing/DB_scripts  
+ 4. php patchmysql.php  
+ 5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/* 
+
+**Backing up nZEDb (ubuntu)** (by trev_)  
+ 1. Stop tmux from processing.  Make sure all panes are dead.  
+sudo killall tmux   
+ 2. Optimize the database   
+/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux/bin/optimize.php true  
+ 3. Backup the database  
+mysqldump --opt -u <user> -p <password> > ~/nzedb-backup.sql  
+(this will put the newly created backup in your home directory)  
+ 4. Backup nZEDb  
+rsync -a --stats --progress  /var/www/nZEDb/ ~/nzedb-backup/    
+(these are the steps I use, there are probably better ways.)  
+
+Q: How do I switch branches of development?  
+A: git checkout dev    
+A: git checkout master  
+A: git checkout jonnyboy  
+(make sure your in your root directory for nZEDb)
+
+
+**Tmux**   
+Q. How do I monitor the server from another computer?   
+A. Step 1 - ssh into the server   
+   Step 2 - Once your are connected, type "tmux attach-session -t nZEDb" (without quotes)   
+
+Q: How do I move from pane to pane in tmux?   
+A: ctrl+a and an arrow key    
+
+Q: How do I move from page to page in tmux? (i.e. 0 - monitor, 1 - utils, 2 - post, 3 - optimize, 4 - bash)    
+A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-a p ('n' for next, 'p' previous)
+
+Q: How do I show the USP settings in powerline?  
+A: add the following line to tmux.sh   
+"uspsetting 229 0/"
+
+
+**Adding alternate NNTP for post processing**  
+ 1. Under Admin click Edit Site  
+ 2. Scroll down to Advanced - Threaded Settings  
+ 3. Click the box for Alternate NNTP Ptovider    
+ 4. Save Settings  
+ 5. Once that is done, edit the file www/config.php  
+define('NNTP_USERNAME_A', 'username');  <-- replace username with your info  
+define('NNTP_PASSWORD_A', 'password');  <-- replace password with your info  
+define('NNTP_SERVER_A', 'server');  <-- replace server with your info  
+define('NNTP_PORT_A', 'port');  <-- replace port with your info  
+define('NNTP_SSLENABLED_A', true);  <--or false if your not using SSL  
+
+Q. I changed NNTP providers and now everything is screwed up.    
+A. You need to reset groups and truncate some tables. A script exists to handle this for you.   
+  ```php (path to nZEDb)/misc/testing/DB_scripts/reset_truncate.php```
+
+
+**Processing**  
+Q: I'm not getting any covers or x type of release are not being post processed.  
+A: Make sure your keys are good, all the keys that come with nZEDb are tested and work. It is still preferable to use your own keys. We do not supply a trakt key.
 
 Q: I'm getting lots of spam, or small files.   
 A: Use blacklists. removeCrapReleases script, size settings for groups etc..
 
-Q: The scripts and my site is slow.   
-A: You will need to tune MYSQL, have a look at the [database tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning) page.
-
-Q: Sabnzbd says I have problems with extra lines in the NZB.    
-A: There is a script in misc/testing/Dev_testing to fix those NZB files.
-
 Q: I'm getting many releases with unusable names.   
 A: There is a script in misc/testing/Release_scripts called fixReleaseNames.php
    Do not expect miracles...
- 
+
+Q: I'm having issues with the PREDB backfill script.    
+A: https://github.com/nZEDb/pre-info
+
+Q: I do not see any releases unless I click on ALL.  
+A: Go to http://localhost/profileedit untick the 4 checkmarks, click save profile.
+
+Q: The scripts and my site is slow.   
+A: You will need to tune MYSQL, have a look at the [database tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning) page.
+
 Q: How do I run x script?   
 A: type php name-of-the-script.php , most of the scripts tell you how to use them if you run them like that.
 
-Q: My parts/binaries/collections tabls are very large.    
+Q: My parts/binaries/collections tables are very large.    
 A: Article collections with poorly named subjects or incomplete collections are created 2 hours after the last time we have downloaded an article for that collection,
    if you keep backfilling, your parts/binaries/collections tables will get large obviously...
 
 Q: I'm having x issue not in the readme or FAQ.    
 A: Please do some research first. If you can't solve the issue, we have a channel on IRC, server : synirc, channel #nZEDB
+
+Q: Can I have some information on collections/binaries/parts?    
+A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg   
+
+Q: My parts table is very large, what should I do?  
+A: Disable update binaries, backfill, and import.  Let update releases run to clear the backlog out.  
+
+
+**Backfilling**  
+_Hanging on Backfilling_  
+	If there is a bad nzb   
+Run this SQL command elect r.ID, r.guid, r.name, c.disablepreview, r.size, r.adddate from releases r left join category c on c.ID = r.categoryID where nzbstatus = 1 and (r.passwordstatus between -6 and -1) AND (r.haspreview = -1 and c.disablepreview = 0) order by adddate desc limit 1;   
+then delete the one it lists  
+
+Q. Should I run backfill and update binaries at the same time?   
+A. You can, but shouldn't if you have myisam tables  
+
+Q. I have groups activated and activated for backfill, but tmux still says no groups enabled for backfill.  I copied the setting from my desktop install which is working correctly.  
+A. You still have to run update_bins on them first or they fail the query  
+
+
+**MySQL/InnoDB**
 
 Q: I have converted my mysql tables to InnoDB and the ibdata file keeps getting bigger, even after I optimize the tables?    
 A: You should follow the recommendations found on these 2 webpages.
@@ -62,62 +153,7 @@ ERROR 1114 (HY000): The table '#sql-4f6_2a' is full
 ```
 A: The most likely answer is that the partition holding your mysql tmp dir is full. If you have pointed this to /dev/shm, then either drop the indexes on releases, convert to InnoDB and recreate the indexes. Alternatively, chnage the path to mysql temp, restart mysql, convert to InnoDB, change path back for mysql tmp, restart mysql.
 
-Q: I'm having issues with the PREDB backfill script.    
-A: https://github.com/nZEDb/pre-info    
  
-Q: Can I have some information on collections/binaries/parts?    
-A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg     
-  
-Q: My parts table is very large, what should I do?  
-A: Disable update binaries, backfill, and import.  Let update releases run to clear the backlog out.  
- 
-
-Q: How do I switch branches of development?  
-A: git checkout dev    
-A: git checkout master  
-A: git checkout jonnyboy  
-(make sure your in your root directory for nZEDb)  
-
-**To Update nZEDb (Ubuntu)**  
-1. cd /var/www/nZEDb  
-2. sudo git pull  
-3. cd /var/www/nZEDb/misc/testing/DB_scripts  
-4. php patchmysql.php  
-5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/*  
-
-**Admin of Site**  
-Q. How to change registration status  
-A. You will need to change in MySQL.  
-update site set value = 0 where setting = 'registerstatus';   
-
-Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??   
-A. Create new user, change role in db, reset password from webui  
-
-**Adding alternate NNTP for post processing**  
-1. Under Admin click Edit Site  
-2. Scroll down to Advanced - Threaded Settings  
-3. Click the box for Alternate NNTP Ptovider    
-4. Save Settings  
-5. Once that is done, edit the file www/config.php  
-define('NNTP_USERNAME_A', 'username');  <-- replace username with your info  
-define('NNTP_PASSWORD_A', 'password');  <-- replace password with your info  
-define('NNTP_SERVER_A', 'server');  <-- replace server with your info  
-define('NNTP_PORT_A', 'port');  <-- replace port with your info  
-define('NNTP_SSLENABLED_A', true);  <--or false if your not using SSL    
-
-
-**Backfilling**  
-_Hanging on Backfilling_  
-	If there is a bad nzb   
-Run this SQL command elect r.ID, r.guid, r.name, c.disablepreview, r.size, r.adddate from releases r left join category c on c.ID = r.categoryID where nzbstatus = 1 and (r.passwordstatus between -6 and -1) AND (r.haspreview = -1 and c.disablepreview = 0) order by adddate desc limit 1;   
-then delete the one it lists  
-
-Q. Should I run backfill and update binaries at the same time?   
-A. You can, but shouldn't if you have myisam tables  
-
-Q. I have groups activated and activated for backfill, but tmux still says no groups enabled for backfill.  I copied the setting from my desktop install which is working correctly.  
-A. You still have to run update_bins on them first or they fail the query  
-
 **Errors**  
 Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
 A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/ 
@@ -136,34 +172,6 @@ run sudo pip-3.3 install --upgrade cymysql
 -and-   
 add define('DB_SOCKET', '/var/run/mysqld/mysqld.sock');  
 to your /var/www/nZEDb/www/config.php
-
-**Tmux**   
-Q. How do I monitor the server from another computer?   
-A. Step 1 - ssh into the server   
-   Step 2 - Once your are connected, type "tmux attach-session -t nZEDb" (without quotes)   
-
-Q: How do I move from pane to pane in tmux?   
-A: ctrl+a and an arrow key    
-
-Q: How do I move from page to page in tmux? (i.e. 0 - monitor, 1 - utils, 2 - post, 3 - optimize, 4 - bash)    
-A: ctrl-a followed by the number ctrl-a 1, ctrl-a 2 etc... or ctrl-a n and ctrl-a p ('n' for next, 'p' previous)
-
-Q: How do I show the USP settings in powerline?  
-A: add the following line to tmux.sh   
-"uspsetting 229 0/"  
-  
-**Backing up nZEDb (ubuntu)** (by trev_)  
-1. Stop tmux from processing.  Make sure all panes are dead.  
-sudo killall tmux   
-2. Optimize the database   
-/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux/bin/optimize.php true  
-3. Backup the database  
-mysqldump --opt -u <user> -p <password> > ~/nzedb-backup.sql  
-(this will put the newly created backup in your home directory)  
-4. Backup nZEDb  
-rsync -a --stats --progress  /var/www/nZEDb/ ~/nzedb-backup/    
-(these are the steps I use, there are probably better ways.)  
- 
 
 ************************************************
 
