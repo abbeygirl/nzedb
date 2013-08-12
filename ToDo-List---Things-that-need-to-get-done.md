@@ -20,6 +20,7 @@ You may add anything you like to this list and hopefully, someone will have the 
 * Fix RAGE id and sitewide RSS feeds. --> Junkman690
 * Fix animeDB lockups so they are local.
 * Add option to use one time passwords (sw key fob on smartphone) for login page. --> ThePeePs
+* Speed up queries for site-stats page. --> ThePeePs
 
 
 There is much more to do, this is just a list I was asked if I had.
