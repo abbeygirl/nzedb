@@ -198,7 +198,7 @@ Make nginx server nZEDb instead of the default site:
 `sudo ln -s /etc/nginx/sites-available/nZEDb /etc/nginx/sites-enabled/nZEDb`
 
 Restart Nginx
-'sudo service nginx restart'
+`sudo service nginx restart`
 
 ##Post-Processing
 
