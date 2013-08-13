@@ -120,6 +120,8 @@ A: http://s12.postimg.org/ity5z1xnf/Untitled.jpg
 Q: My parts table is very large, what should I do?  
 A: Disable update binaries, backfill, and import.  Let update releases run to clear the backlog out.  
 
+Q: Is there was a script that would remove releases based on the fact that the nzb for them is missing?  
+A: Yes, clean_nzbs.php which can be located at /var/www/nZEDb/misc/testing/Dev_testing (linux)  
 
 **Backfilling**  
 _Hanging on Backfilling_  
