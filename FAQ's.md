@@ -44,6 +44,18 @@ mysqldump --opt -u <user> -p <password> > ~/nzedb-backup.sql
 rsync -a --stats --progress  /var/www/nZEDb/ ~/nzedb-backup/    
 (these are the steps I use, there are probably better ways.)  
 
+Very simple backup script, has saved my DB more than once. Backs up nzbs and covers too : (by Nukien, with some editing by trev_)    
+```
+#!/bin/bash    
+DATE= `date +%Y-%m-%d_%H-%M-%S` 
+echo "Kicking off tar backup of nZEDb"      
+sudo tar cf ${HOME}/MySQL-backups/${DATE}-nzedb.tar /etc/mysql /var/www/nZEDb/nzbfiles/[0-9]   /var/www/nZEDb/nzbfiles/[a-f] /var/www/nZEDb/www/covers/ &  
+echo "===== Starting main backup"  
+innobackupex --parallel=2 --no-timestamp --rsync ${HOME}/MySQL-backups/${DATE}  
+echo "===== Applying logs to backup" 
+sudo innobackupex --apply-log ${HOME}/MySQL-backups/${DATE}
+```
+
 Q: How do I switch branches of development?  
 A: git checkout dev    
 A: git checkout master  
