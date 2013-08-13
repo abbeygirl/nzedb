@@ -187,6 +187,8 @@ location ~ \.php$ {
 }
 ```
 
+You will need to make sure that either phpfpm is listening using a TCP connection (default config path /etc/php5/fpm/pool.d/www.conf) or change your Nginx config file to use a socket.
+
 Make sure logs will write:   
 `sudo mkdir -p /var/log/nginx`   
 `sudo chmod 755 /var/log/nginx`  
@@ -194,6 +196,9 @@ Make sure logs will write:
 Make nginx server nZEDb instead of the default site:   
 `sudo unlink /etc/nginx/sites-enabled/default`  
 `sudo ln -s /etc/nginx/sites-available/nZEDb /etc/nginx/sites-enabled/nZEDb`
+
+Restart Nginx
+'sudo service nginx restart'
 
 ##Post-Processing
 
