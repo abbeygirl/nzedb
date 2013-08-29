@@ -1,6 +1,8 @@
-## Query / Clear Post Processing Queues
+## Database administration for nZEDb
 
-A list of database SQL statements to count, find and/or clear the post-processing queues.
+A simple list of database SQL statements cut&paste ready
+
+## Counting, finding and/or clearing nZEDb post-processing queues.
 
 ### NFO
 **Find**
