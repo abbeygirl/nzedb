@@ -8,7 +8,7 @@ If you do know what you're doing, check your last backup!
 
 
 
-## nZEDb Post-Processing Queues: Count, Find & Clear
+## Post-Processing Queues: Count, Find & Clear
 
 ### NFO
 _Find_
