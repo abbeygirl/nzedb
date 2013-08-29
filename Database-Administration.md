@@ -1,4 +1,4 @@
-## Database administration for nZEDb
+## Database Administration for nZEDb
 
 A simple list of database SQL statements cut & paste ready.
 
