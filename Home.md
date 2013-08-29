@@ -8,5 +8,5 @@ nZEDb is a fork of the open source usenet indexer newznab plus : https://github.
 * [List of FAQ's](https://github.com/nZEDb/nZEDb/wiki/FAQ%27s)
 * [Database Tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning)
 * [Database Administration](https://github.com/nZEDb/nZEDb/wiki/SQL-Queries)
-* [To-Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
+* [To Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
