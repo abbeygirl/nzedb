@@ -34,7 +34,7 @@ _Find_
 _Set imdbID_
 * mysql> update example: update releases set imdbID = 1686784 WHERE id = 3789422; 
 
-### Misc
+### Misc (Additional)
 _Count_
 * mysql> SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 
