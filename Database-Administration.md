@@ -4,8 +4,7 @@ A simple list of database SQL statements cut & paste ready.
 
 If you don't know what you're doing, make backups first.
 
-If you do know what you're doing, check your last backup!
-
+If you do know what you're doing see above!
 
 
 ## Post-Processing Queues: Count, Find & Clear
