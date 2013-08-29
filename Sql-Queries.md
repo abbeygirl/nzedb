@@ -3,14 +3,14 @@
 A list of database SQL statements to count, find and/or clear the post-processing queues.
 
 ### NFO
-Find
+**Find**
 * mysql> select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1 and nzbstatus = 1;
    
-Clear
+**Clear**
 * mysql> update releases set nfostatus = 1 WHERE nfostatus between -6 and -1 and nzbstatus = 1;
 
 ### Audio
-Find
+_Find_
 * mysql> select ID,name from releases where musicinfoID IS NULL and categoryID BETWEEN 3000 AND 3999 and nzbstatus = 1;
 
 Clear
