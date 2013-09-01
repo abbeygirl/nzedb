@@ -80,7 +80,7 @@ getTMdb.php
 getTVInfo.php     
 musicTest.php   
 
-/var/www/nZEDb/misc/testing/Release_scripts
+/var/www/nZEDb/misc/testing/Release_scripts  
 delete_disabled_category_releases.php  
 fixReleaseNames.php  
 foreignmoviesorter.php  
