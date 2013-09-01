@@ -89,7 +89,7 @@ resetRelnameStatus.php
 resetSearchname.php  
 showsleep.php
 
-/var/www/nZEDb/misc/update_scripts
+/var/www/nZEDb/misc/update_scripts  
 backfill.php  
 config.php 
 decrypt_hashes.php  
@@ -100,7 +100,7 @@ update_releases.php
 update_theaters.php  
 update_tvschedule.php
 
-/var/www/nZEDb/misc/update_scripts/nix_scripts/screen/sequential  
+/var/www/nZEDb/misc/update_scripts/nix_scripts/screen/sequential    
 simple.sh    
 threaded.sh  
 
@@ -108,7 +108,7 @@ threaded.sh
 helper.sh  
 start.sh  
 
-/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux  
+/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux    
 commit.sh  
 monitor.php  
 start.php  
