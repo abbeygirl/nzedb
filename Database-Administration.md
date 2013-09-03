@@ -46,4 +46,8 @@ _Find_
 
 
 ## Check progress while populating guid in releases table
-* SELECT count(*) from releases where nzb_guid is null and nzbstatus = 1;
+* mysql> SELECT count(*) from releases where nzb_guid is null and nzbstatus = 1;
+
+
+## Check how many request-ID lookups to be performed
+* mysql> SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
