@@ -54,4 +54,7 @@ _Count_
 * mysql> SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 
 _View_
-* SELECT r.ID,r.passwordstatus,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
+* mysql> SELECT r.ID,r.passwordstatus,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
+
+## Query to show duplicate release names
+* mysql> select r.id, r.name from releases r inner join (select r.name from releases r group by r.name having count(r.name) > 1) dup on r.name = dup.name;
