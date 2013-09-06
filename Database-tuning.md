@@ -1,6 +1,6 @@
 In order to get the most out of nZEDb, you are going to have to tune your database for your machine. The default configuration will work, but if you want real speed it will take some time and tuning.
 
-Best place to start is [https://tools.percona.com/wizard](https://tools.percona.com/wizard) with a fresh database install.
+If you're using percona the best place to start is [https://tools.percona.com/wizard](https://tools.percona.com/wizard) with a fresh database install.
 
 Once you have a base config, use tools such as the phpmyadmin adviser and **[MySQLtuner](http://mysqltuner.com)** to fine tune things further.
 
