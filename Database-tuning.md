@@ -2,7 +2,7 @@ In order to get the most out of nZEDb, you are going to have to tune your databa
 
 Best place to start is [https://tools.percona.com/wizard](https://tools.percona.com/wizard) with a fresh database install.
 
-Once you have a base config, use tools such as the phpmyadmin adviser and MySQLtuner to fine tune things further.
+Once you have a base config, use tools such as the phpmyadmin adviser and **[MySQLtuner](http://mysqltuner.com)** to fine tune things further.
 
 If you are using the tmux scripts it is advised to convert you tables to InnoDB to avoid table locks. There is a script under misc/testing/DB_scripts to help you with this.
 
