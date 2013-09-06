@@ -10,5 +10,6 @@ irc.synirc.net #nZEDb
 * [List of FAQ's](https://github.com/nZEDb/nZEDb/wiki/FAQ%27s)
 * [Database Tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning)
 * [Database Administration](https://github.com/nZEDb/nZEDb/wiki/Database Administration)
+* [Release Management](https://github.com/nZEDb/nZEDb/wiki/Release Management)
 * [To-Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
