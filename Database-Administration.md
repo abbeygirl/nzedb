@@ -27,6 +27,9 @@ _Clear_
 _Count_
 * mysql> SELECT COUNT(*) from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999 and nzbstatus = 1;
 
+_Find_
+* mysql> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999 and nzbstatus = 1;
+
 ### Movies
 _Find_
 * mysql> select id,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999;
