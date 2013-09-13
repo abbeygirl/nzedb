@@ -48,10 +48,11 @@ nzb-reorg.php
 patchmysql.php            
 populate_imdb_type.php    
 populate_nzb_guid.php      
-resetdb.php   
+resetdb.php - This script removes all releases, nzb files, truncates all article tables, resets groups.  
+              _example: php resetdb.php true_  
 reset_Collections.php        
 reset_postprocessing.php   
-reset_truncate.php   
+reset_truncate.php - This script removes releases with no NZBs, resets all groups, truncates article tables. All other releases are left alone.  
 
 /var/www/nZEDb/misc/testing/Dev_testing  
 check_nzbfolder.php    
@@ -94,9 +95,9 @@ backfill.php
 config.php 
 decrypt_hashes.php  
 optimise_db.php      
-postprocess.php
-update_binaries.php
-update_releases.php  
+postprocess.php  
+update_binaries.php  
+update_releases.php    
 update_theaters.php  
 update_tvschedule.php
 
