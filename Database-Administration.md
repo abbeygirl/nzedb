@@ -11,24 +11,24 @@ If you do know what you're doing, see above
 
 ### NFO
 _Find_
-* mysql> select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1 and nzbstatus = 1;
+* mysql> select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1;
  
 _Clear_
-* mysql> update releases set nfostatus = 1 WHERE nfostatus between -6 and -1 and nzbstatus = 1;
+* mysql> update releases set nfostatus = 1 WHERE nfostatus between -6 and -1;
 
 ### Audio
 _Find_
-* mysql> select ID,name from releases where musicinfoID IS NULL and categoryID BETWEEN 3000 AND 3999 and nzbstatus = 1;
+* mysql> select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 
 _Clear_
-* mysql> update releases set musicinfoID = '-2' where musicinfoID IS NULL and categoryID BETWEEN 3000 AND 3999 and nzbstatus = 1;
+* mysql> update releases set musicinfoID = '-2' where musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);;
 
 ### TV
 _Count_
-* mysql> SELECT COUNT(*) from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999 and nzbstatus = 1;
+* mysql> SELECT COUNT(*) from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
 
 _Find_
-* mysql> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999 and nzbstatus = 1;
+* mysql> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
 
 ### Movies
 _Find_
