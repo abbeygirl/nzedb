@@ -45,7 +45,7 @@ _Find_
 * mysql> SELECT r.ID,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 
 ### Console
-_Find_
+_Count the number in database_
 * mysql> SELECT COUNT( id ) FROM releases WHERE categoryid BETWEEN 1000 AND 1999 AND nzbstatus = 1;
 
 
