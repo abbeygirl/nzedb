@@ -14,6 +14,7 @@ irc.synirc.net #nZEDb
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
 
 ***
+* [Post-Processing Queue Management](https://github.com/nZEDb/nZEDb/wiki/Post-Processing-Queue-Management)
 * [Database Administration](https://github.com/nZEDb/nZEDb/wiki/Database Administration)
 * [Release Management](https://github.com/nZEDb/nZEDb/wiki/Release Management)
 
