@@ -1,6 +1,6 @@
 ## Database Administration for nZEDb
 
-Miscellaneous SQL statements that you may find useful, cut & paste ready.
+Miscellaneous SQL statements that you may find useful. Cut & paste ready.
 
 ## Check progress while populating guid in releases table
 * mysql> SELECT count(*) from releases where nzb_guid is null and nzbstatus = 1;
