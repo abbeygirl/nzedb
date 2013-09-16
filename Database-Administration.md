@@ -1,12 +1,9 @@
 ## Database Administration for nZEDb
 
-A simple list of database SQL statements cut & paste ready.
-
-If you don't know what you're doing, make backups first.
+Miscellaneous SQL statements that you may find useful, cut & paste ready.
 
 ## Check progress while populating guid in releases table
 * mysql> SELECT count(*) from releases where nzb_guid is null and nzbstatus = 1;
-
 
 ## Request-ID lookups 
 _Count_
