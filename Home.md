@@ -15,8 +15,8 @@ irc.synirc.net #nZEDb
 
 ***
 * [Post-Processing Queue Management](https://github.com/nZEDb/nZEDb/wiki/Post-Processing-Queue-Management)
-* [Database Administration](https://github.com/nZEDb/nZEDb/wiki/Database Administration)
 * [Release Management](https://github.com/nZEDb/nZEDb/wiki/Release Management)
+* [Database Administration](https://github.com/nZEDb/nZEDb/wiki/Database Administration)
 
 ***
 * [To-Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
