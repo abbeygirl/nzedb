@@ -49,7 +49,7 @@ config goes here
 
 ### ffmpeg
 
-Download latest tarball from http://ffmpeg.org
+Download latest tarball from http://ffmpeg.org or the static build here: http://johnvansickle.com/ffmpeg/
 
 * wget http://ffmpeg.org/releases/ffmpeg-2.0.1.tar.bz2
 * bunzip2 ffmpeg-2.0.1.tar.bz2
@@ -71,5 +71,4 @@ Get latest version from https://mediaarea.net
 
 It is strongly recommended that you run nZEDb as a non-root user.
 * useradd 
-
 
