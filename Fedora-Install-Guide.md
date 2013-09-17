@@ -16,8 +16,11 @@ Cython MySQL
 
 * vi /etc/php.ini
 memory_limit = 1024M   (1G minimum, 2G if system has RAM)
+
 post_max_size = 64M    (used when doing large import/exports)
+
 date.timezone = Europe/SomeCountry
+
 
 
 
