@@ -1,5 +1,7 @@
 A quick install guide for those familiar with Fedora & RPM based distros.
 
+NOT finished!
+
 Install development packages
 * yum groupinstall "Development Tools" "Development Libraries"
 
