@@ -1,4 +1,4 @@
-A quick install guide for those familiar with Fedora & RPM based distros. This document prepared Fedora 19 using Apache & MariaDB. It describes installing under a separately mounted filesystem in this case called /data. As nZEDb can generate a heavy I/O load it's generally a good idea to have this on a dedicated disk. The filesystem should have at least 8M inodes.
+A quick install guide for those familiar with Fedora & RPM based distros. This document prepared Fedora 19 using Apache & MariaDB. It describes installing under a separately mounted filesystem in this case called /var/www. As nZEDb can generate a heavy I/O load it's generally a good idea to have it on a dedicated disk. The filesystem should have at least 8M inodes.
 
 ### Package Installation
 Install development packages (useful for compiling stuff later on)
@@ -65,9 +65,17 @@ Get latest version from https://mediaarea.net
 * wget http://mediaarea.net/download/binary/mediainfo/0.7.64/mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 * rpm -ivh libmediainfo0-0.7.64-1.x86_64.Fedora_19.rpm libzen0-0.4.29-1.x86_64.Fedora_19.rpm mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 
-## Create nzedb user-id
+## Create nzedb user-id & git pull the source
 
 It is strongly recommended that you run nZEDb as a non-root user.
-* useradd -c nzedb -d /data/nZEDb nzedb
+* useradd -c nzedb -d /var/www/nZEDb nzedb
+* su - nzedb
+* mv .b* .v* /tmp/     (move the .bash etc files to tmp for now for git clone)
+* cd /var/www
+* git clone https://github.com/nZEDb/nZEDb.git
+* cd ~
+* mv /tmp/.b* . && mv /tmp/.v* .   (moves dot files back)
+
+
 
 ** Not Finished! **
