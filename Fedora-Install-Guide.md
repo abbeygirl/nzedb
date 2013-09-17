@@ -67,6 +67,9 @@ Get latest version from https://mediaarea.net
 * wget http://mediaarea.net/download/binary/mediainfo/0.7.64/mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 * rpm -ivh libmediainfo0-0.7.64-1.x86_64.Fedora_19.rpm libzen0-0.4.29-1.x86_64.Fedora_19.rpm mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 
+## Create nzedb user-id
 
+It is strongly recommended that you run nZEDb as a non-root user.
+* useradd 
 
 
