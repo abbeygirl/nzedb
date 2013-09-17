@@ -22,6 +22,9 @@ post_max_size = 64M    (used when doing large import/exports)
 
 date.timezone = Europe/YourCountry
 
+max_execution_time = 300    (>120 is recommended)
+
+
 **Note**: the timezone settings of system, php, and mysql must match.
 
 ### MariaDB
@@ -57,7 +60,7 @@ Open up the firewall for http & https ports. Be sure to edit the Permanent Confi
 * firewall-config
 
 
-## Post-Processing extras
+## Post-Processing extras (optional)
 
 ### ffmpeg
 
@@ -96,7 +99,17 @@ As root user:
 * chmod g+rx /var/www/nZEDb
 * usermod -a -G nzedb apache
 
+## Create nZEDb Database and grant user access
+* mysql -u root -p    (Default is no password)
+* create database nzedb;
+* use nzedb;
+* grant all privileges on nzedb.* to nzedb@'localhost' identified by 'YourPasswordHere';
+* flush privileges;
+* exit
 
+## Initial test
+
+Point your browser to the defined IP/hostname. You should be automatically redirected to the install script.
 
 
 
