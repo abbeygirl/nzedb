@@ -7,7 +7,7 @@ Install development packages
 * yum groupinstall "Development Tools" "Development Libraries"
 
 Install general packages needed by nZEDb. (Some will be replaced with updated packages later)
-* yum install lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools
+* yum install yasm lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools
 
 Cython MySQL
 * python -m easy_install --upgrade cymysql
@@ -51,7 +51,21 @@ config goes here
 
 Download latest tarball from http://ffmpeg.org
 
-* wget "http://ffmpeg.org/releases/ffmpeg-2.0.1.tar.bz2"
+* wget http://ffmpeg.org/releases/ffmpeg-2.0.1.tar.bz2
+* bunzip2 ffmpeg-2.0.1.tar.bz2
+* tar -xf ffmpeg-2.0.1.tar
+* cd ffmpeg-2.0.1
+* ./configure
+* make -j4     (j optional)
+
+### mediainfo
+
+Get latest version from https://mediaarea.net
+* wget http://mediaarea.net/download/binary/libzen0/0.4.29/libzen0-0.4.29-1.x86_64.Fedora_19.rpm
+* wget http://mediaarea.net/download/binary/libmediainfo0/0.7.64/libmediainfo0-0.7.64-1.x86_64.Fedora_19.rpm
+* wget http://mediaarea.net/download/binary/mediainfo/0.7.64/mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
+* rpm -ivh libmediainfo0-0.7.64-1.x86_64.Fedora_19.rpm libzen0-0.4.29-1.x86_64.Fedora_19.rpm mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
+
 
 
 
