@@ -1,6 +1,4 @@
-A quick install guide for those familiar with Fedora & RPM based distros. This document prepared Fedora 19 using Apache & MariaDB.
-
-**NOT finished!**
+A quick install guide for those familiar with Fedora & RPM based distros. This document prepared Fedora 19 using Apache & MariaDB. It describes installing under a separately mounted filesystem in this case called /data. As nZEDb can generate a heavy I/O load it's generally a good idea to have this on a dedicated disk. The filesystem should have at least 8M inodes.
 
 ### Package Installation
 Install development packages (useful for compiling stuff later on)
@@ -72,3 +70,4 @@ Get latest version from https://mediaarea.net
 It is strongly recommended that you run nZEDb as a non-root user.
 * useradd 
 
+** Not Finiished! **
