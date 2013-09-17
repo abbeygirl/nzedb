@@ -20,7 +20,9 @@ memory_limit = 1024M   (1G minimum, 2G if system has RAM)
 
 post_max_size = 64M    (used when doing large import/exports)
 
-date.timezone = Europe/London
+date.timezone = Europe/YourCountry
+
+**Note**: the timezone settings of system, php, and mysql must match.
 
 ### MariaDB
 Initial configuration below to get you started. Use MySQLtuner.pl to tune the database once running.
@@ -40,7 +42,7 @@ innodb_file_per_table=1
 
 * vi /etc/httpd/conf.d/nzedb.conf
 
-config goes here
+config goes here ** Not finished **
 
 * systemctl restart httpd.service
 * systemctl enable httpd.service
@@ -78,9 +80,14 @@ It is strongly recommended that you run nZEDb as a non-root user.
 * cd ~
 * mv /tmp/.b* . && mv /tmp/.v* .   (moves dot files back)
 
-Certain directories need to be read/writable to both the nzedb user and apache. The "easy" way is to make these directories world writeable. For this see the other install guides. Alternatively you can add the apache user to the nzedb group and change the needed directories to group writeable.
+Certain directories need to be read/writable to both the nzedb user and apache. One way is to make these directories world writeable. For this see the other install guides. Alternatively you can open the home directory of the nzedb user to group members and add the apache user to the nzedb group.
 
-* 
+As root user:
+* chmod g+rx /var/www/nZEDb
+* usermod -a -G nzedb apache
+
+
+
 
 
 ** Not Finished! **
