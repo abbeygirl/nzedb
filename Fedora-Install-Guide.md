@@ -40,6 +40,12 @@ innodb_file_per_table=1
 
 ### Apache
 
+Ensure apache is listening on the IP and port you expect
+* vi /etc/httpd/conf/httpd.conf  
+* Listen 192.168.x.x:80
+
+Create nZEDb VirtualHost config
+
 * vi /etc/httpd/conf.d/nzedb.conf
 
 config goes here **Not finished**
