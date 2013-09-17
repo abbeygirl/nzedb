@@ -2,6 +2,8 @@
 
 Here a list of statements useful for managing the post-processing queues.
 
+***
+
 An example *nix ps command to display any post-proccessing task taking longer than 60 seconds:
 * ps aux | grep postprocess_new.php | grep -v grep | sed -e 's/://g' | awk '{if ($10 > 60) print $13,$15 }'
 
