@@ -57,6 +57,7 @@ Download latest tarball from http://ffmpeg.org
 * cd ffmpeg-2.0.1
 * ./configure
 * make -j4     (j optional)
+* make install
 
 ### mediainfo
 
