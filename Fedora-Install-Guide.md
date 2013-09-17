@@ -42,7 +42,7 @@ innodb_file_per_table=1
 
 * vi /etc/httpd/conf.d/nzedb.conf
 
-config goes here ** Not finished **
+config goes here **Not finished**
 
 * systemctl restart httpd.service
 * systemctl enable httpd.service
@@ -90,4 +90,4 @@ As root user:
 
 
 
-** Not Finished! **
+**Not Finished!**
