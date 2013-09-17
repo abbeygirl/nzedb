@@ -1,5 +1,7 @@
 A quick install guide for those familiar with Fedora & RPM based distros. This document prepared Fedora 19 using Apache & MariaDB. It describes installing under a separately mounted filesystem in this case called /var/www. As nZEDb can generate a heavy I/O load it's generally a good idea to have it on a dedicated disk. The filesystem should have at least 8M inodes.
 
+The installation example is started using the root user, later changes to a specific nzedb user.
+
 ### Package Installation
 Install development packages (useful for compiling stuff later on)
 * yum groupinstall "Development Tools" "Development Libraries"
@@ -70,12 +72,15 @@ Get latest version from https://mediaarea.net
 It is strongly recommended that you run nZEDb as a non-root user.
 * useradd -c nzedb -d /var/www/nZEDb nzedb
 * su - nzedb
-* mv .b* .v* /tmp/     (move the .bash etc files to tmp for now for git clone)
+* mv .b* .v* /tmp/     (HACK: move the .bash etc files to tmp for now for git clone)
 * cd /var/www
 * git clone https://github.com/nZEDb/nZEDb.git
 * cd ~
 * mv /tmp/.b* . && mv /tmp/.v* .   (moves dot files back)
 
+Certain directories need to be read/writable to both the nzedb user and apache. The "easy" way is to make these directories world writeable. For this see the other install guides. Alternatively you can add the apache user to the nzedb group and change the needed directories to group writeable.
+
+* 
 
 
 ** Not Finished! **
