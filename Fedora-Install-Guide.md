@@ -1,6 +1,6 @@
 A quick install guide for those familiar with Fedora & RPM based distros. This document prepared with Fedora 19 using a standard MySQL/InnoDB backend.
 
-NOT finished!
+**NOT finished!**
 
 ### Package Installation
 Install development packages
