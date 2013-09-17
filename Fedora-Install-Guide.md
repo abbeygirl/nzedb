@@ -37,6 +37,8 @@ group_concat_max_len=8192
 
 innodb_file_per_table=1
 
+max_allowed_packet=128M   (For dumping large tables)
+
 * systemctl restart mariadb.service
 * systemctl enable mysqld.service
 
