@@ -100,6 +100,8 @@ As root user:
 * usermod -a -G nzedb apache
 
 ## Create nZEDb Database and grant user access
+This step is optional as the installer can create the database for you. This method below is useful if you have other applications using the same database.
+
 * mysql -u root -p    (Default is no password)
 * create database nzedb;
 * use nzedb;
@@ -110,7 +112,7 @@ As root user:
 ## Initial test
 
 Point your browser to the defined IP/hostname. You should be automatically redirected to the install script.
-
+Walk through the Pre-Flight checks and correct any possible issues. 
 
 
 **Not Finished!**
