@@ -68,6 +68,6 @@ Get latest version from https://mediaarea.net
 ## Create nzedb user-id
 
 It is strongly recommended that you run nZEDb as a non-root user.
-* useradd 
+* useradd -c nzedb -d /data/nZEDb nzedb
 
-** Not Finiished! **
+** Not Finished! **
