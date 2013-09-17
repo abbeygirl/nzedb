@@ -53,27 +53,25 @@ Create nZEDb VirtualHost config
 
 * vi /etc/httpd/conf.d/nzedb.conf
 
-* <VirtualHost *:80>
-*     Alias /nZEDb /var/www/nZEDb/www
-*     ServerAdmin admin@home.lu
-*     DocumentRoot /var/www/nZEDb/www
-*     ServerName nzedb.example.com
-*     ErrorLog logs/nzedb.log
-*     CustomLog logs/nzedb.log common
+>  <VirtualHost *:80>
+>      Alias /nZEDb /var/www/nZEDb/www
+>      ServerAdmin admin@home.lu
+>      DocumentRoot /var/www/nZEDb/www
+>      ServerName nzedb.example.com
+>      ErrorLog logs/nzedb.log
+>      CustomLog logs/nzedb.log common
+>      <Directory "/var/www/nZEDb/www">
+>                  AllowOverride All
+>                  Options FollowSymLinks
+>                  Order Deny,Allow
+>                  Allow from all
+>                  Require all granted
+>      </Directory>
+>      <Files ".ht*">
+>        Require all denied
+>      </Files>
 
-*     <Directory "/var/www/nZEDb/www">
-*                 AllowOverride All
-*                 Options FollowSymLinks
-*                 Order Deny,Allow
-*                 Allow from all
-*                 Require all granted
-
-*     </Directory>
-*     <Files ".ht*">
-*       Require all denied
-*     </Files>
-
-* </VirtualHost>
+>  </VirtualHost>
 
 
 * systemctl restart httpd.service
