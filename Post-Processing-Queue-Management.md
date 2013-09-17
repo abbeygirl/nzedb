@@ -10,6 +10,11 @@ This outputs the ID and guid of the release. This SQL query will display the nam
 
 nnnnnnn = ID, the first number displayed by the ps command
 
+
+***
+
+# Various SQL Queries
+
 ### NFO
 _Find_
 * mysql> select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1;
