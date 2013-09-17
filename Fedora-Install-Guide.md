@@ -1,12 +1,12 @@
-A quick install guide for those familiar with Fedora & RPM based distros. This document prepared with Fedora 19 using MariaDB.
+A quick install guide for those familiar with Fedora & RPM based distros. This document prepared Fedora 19 using Apache & MariaDB.
 
 **NOT finished!**
 
 ### Package Installation
-Install development packages
+Install development packages (useful for compiling stuff later on)
 * yum groupinstall "Development Tools" "Development Libraries"
 
-Install general packages needed by nZEDb. (Some will be replaced with updated packages later)
+Install general packages needed by nZEDb.
 * yum install yasm lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools
 
 Cython MySQL
