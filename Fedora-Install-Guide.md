@@ -114,7 +114,6 @@ This step is optional as the installer can create the database for you. This met
 ## Initial test
 
 Point your browser to the defined IP/hostname. You should be automatically redirected to the install script.
-Walk through the Pre-Flight checks and correct any possible issues. 
+Walk through the Pre-Flight checks and correct any possible issues. Follow the onscreen instructions.
 
 
-**Not Finished!**
