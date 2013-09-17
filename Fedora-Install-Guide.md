@@ -53,6 +53,10 @@ config goes here **Not finished**
 * systemctl restart httpd.service
 * systemctl enable httpd.service
 
+Open up the firewall for http & https ports. Be sure to edit the Permanent Configuration.
+* firewall-config
+
+
 ## Post-Processing extras
 
 ### ffmpeg
