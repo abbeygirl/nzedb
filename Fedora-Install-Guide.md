@@ -54,7 +54,7 @@ Create nZEDb VirtualHost config
 * vi /etc/httpd/conf.d/nzedb.conf
 
 ```  
-      <VirtualHost *:80>
+  <VirtualHost *:80>
       Alias /nZEDb /var/www/nZEDb/www
       ServerAdmin admin@home.lu
       DocumentRoot /var/www/nZEDb/www
