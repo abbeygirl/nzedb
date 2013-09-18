@@ -16,14 +16,12 @@ Cython MySQL
 
 * vi /etc/php.ini
 
+```
 memory_limit = 1024M   (1G minimum, 2G if system has RAM)
-
 post_max_size = 64M    (used when doing large import/exports)
-
 date.timezone = Europe/YourCountry
-
 max_execution_time = 300    (>120 is recommended)
-
+```
 
 **Note**: the timezone settings of system, php, and mysql must match.
 
@@ -32,12 +30,11 @@ Initial configuration below to get you started. Use MySQLtuner.pl to tune the da
 * vi /etc/my.cnf.d/server.cnf
 
 Under [server]
-
+```
 group_concat_max_len=8192
-
 innodb_file_per_table=1
-
 max_allowed_packet=128M   (For dumping large tables)
+```
 
 * systemctl restart mariadb.service
 * systemctl enable mysqld.service
