@@ -4,13 +4,13 @@ The installation example is started using the root user, later changes to a spec
 
 ### Package Installation
 Install development packages (useful for compiling stuff later on)
-* yum groupinstall "Development Tools" "Development Libraries"
+`yum groupinstall "Development Tools" "Development Libraries"
 
 Install general packages needed by nZEDb.
-* yum install yasm lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools p7zip
+`yum install yasm lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools p7zip
 
 Cython MySQL
-* python -m easy_install --upgrade cymysql
+`python -m easy_install --upgrade cymysql
 
 ### Configure PHP
 
