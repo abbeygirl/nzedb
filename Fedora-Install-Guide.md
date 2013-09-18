@@ -106,7 +106,7 @@ Get latest version from https://mediaarea.net
 It is strongly recommended that you run nZEDb as a non-root user.
 * useradd -c nzedb -d /var/www/nZEDb nzedb
 * su - nzedb
-* mv .b* .v* /tmp/     (HACK: move the .bash etc files to tmp for now for git clone)
+* mv .b* .v* /tmp/     (Hack: move the .bash* files away for git clone)
 * cd /var/www
 * git clone https://github.com/nZEDb/nZEDb.git
 * cd ~
