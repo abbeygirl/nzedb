@@ -126,6 +126,7 @@ This step is optional as the installer can create the database for you. This met
 * use nzedb;
 * grant all privileges on nzedb.* to nzedb@'localhost' identified by 'YourPasswordHere';
 * grant all privileges on nzedb.* to nzedb@'127.0.0.1' identified by 'YourPasswordHere';
+* GRANT FILE on *.* to nzedb@'localhost';      (used when loading tables from system files)
 * flush privileges;
 * exit
 
@@ -133,4 +134,3 @@ This step is optional as the installer can create the database for you. This met
 
 Point your browser to the defined IP/hostname. You should be automatically redirected to the install script.
 Walk through the Pre-Flight checks and correct any possible issues. Follow the onscreen instructions.
-
