@@ -53,7 +53,7 @@ Create nZEDb VirtualHost config
 ```  
   <VirtualHost *:80>
       Alias /nZEDb /var/www/nZEDb/www
-      ServerAdmin admin@home.lu
+      ServerAdmin nzedb@example.com
       DocumentRoot /var/www/nZEDb/www
       ServerName nzedb.example.com
       ErrorLog logs/nzedb.log
