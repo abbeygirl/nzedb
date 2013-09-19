@@ -111,7 +111,7 @@ Paste the following:
          AllowOverride All
          Order allow,deny
          allow from all
-       </Directory>
+  </Directory>
 
 </VirtualHost>
 ```
