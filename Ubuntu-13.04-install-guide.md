@@ -99,7 +99,6 @@ Create the site config:
 Paste the following:  
 ```
 <VirtualHost *:80>
-     DocumentRoot "/var/www/nZEDb/www"
      ServerName xxxx
      ServerAdmin xxxxx
      ServerAlias xxxx
