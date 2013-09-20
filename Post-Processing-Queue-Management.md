@@ -22,7 +22,8 @@ nnnnnnn = ID, the first number displayed by the ps command
 _Find_
 ```
 mysql> select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1;
-``` 
+```
+ 
 _Clear_
 ```
 mysql> update releases set nfostatus = 1 WHERE nfostatus between -6 and -1;
