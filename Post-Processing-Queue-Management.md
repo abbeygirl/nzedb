@@ -9,7 +9,7 @@ ps aux | grep postprocess_new.php | grep -v grep | sed -e 's/://g' | awk '{if ($
 
 This outputs the ID and guid of the release. This SQL query will display the name
 ```
-SELECT ID,passwordstatus,name,searchname FROM releases WHERE ID = nnnnnnn;
+mysql> SELECT ID,passwordstatus,name,searchname FROM releases WHERE ID = nnnnnnn;
 ```
 nnnnnnn = ID, the first number displayed by the ps command
 
@@ -78,7 +78,7 @@ mysql> untested! > update releases set r.passwordstatus = 0 where r left join ca
 ```
 
 ### Console
-_Count the number in database_
+_Count_
 ```
 mysql> SELECT COUNT(id) FROM releases WHERE categoryid BETWEEN 1000 AND 1999 AND nzbstatus = 1;
 ```
