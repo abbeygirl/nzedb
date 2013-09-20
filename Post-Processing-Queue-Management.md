@@ -32,12 +32,12 @@ mysql> update releases set nfostatus = 1 WHERE nfostatus between -6 and -1;
 ### Audio
 _Find_
 ```
-mysql> select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
+> select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 ```
 
 _Clear_
 ```
-mysql> update releases set musicinfoID = '-2' where musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
+> update releases set musicinfoID = '-2' where musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 ```
 
 ### TV
@@ -65,16 +65,16 @@ mysql> update example: update releases set imdbID = 1686784 WHERE id = 3789422;
 ### Misc (Additional)
 _Count_
 ```
-mysql> SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
+> SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
 _Find_
 ```
-mysql> SELECT r.ID,r.passwordstatus,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
+> SELECT r.ID,r.passwordstatus,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
 
 _Clear (Untested, do a backup first!)_
 ```
-mysql> untested! > update releases set passwordstatus = 0 where r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
+> untested! > update releases set passwordstatus = 0 where r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
 
 ### Console
