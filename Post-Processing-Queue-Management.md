@@ -62,6 +62,11 @@ _Set imdbID_
 mysql> update example: update releases set imdbID = 1686784 WHERE id = 3789422; 
 ```
 
+_Clear_
+```
+mysql> update releases set imdbID = 000000 WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999; 
+```
+
 ### Misc (Additional)
 _Count_
 ```
