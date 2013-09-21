@@ -127,6 +127,7 @@ This step is optional as the installer can create the database for you. This met
 * grant all privileges on nzedb.* to nzedb@'localhost' identified by 'YourPasswordHere';
 * grant all privileges on nzedb.* to nzedb@'127.0.0.1' identified by 'YourPasswordHere';
 * GRANT FILE on *.* to nzedb@'localhost';      (used when loading tables from system files)
+* GRANT RELOAD on *.* to nzedb@'localhost';    (used when optimising DB)
 * flush privileges;
 * exit
 
