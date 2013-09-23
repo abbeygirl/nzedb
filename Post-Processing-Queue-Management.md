@@ -52,9 +52,14 @@ mysql> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID B
 ```
 
 ### Movies
-_Find_
+_Find master_
 ```
 mysql> select id,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999;
+```
+
+_Find dev_
+```
+> select id,nzbstatus,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999 AND nzbstatus = 1;;
 ```
 
 _Set imdbID_
