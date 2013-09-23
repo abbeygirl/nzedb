@@ -26,7 +26,7 @@ php delete_release.php guid equals 1f374b691cdba39757e5a7a59978ceb89373fb20
 * select ID,name from releases where adddate > DATE_SUB(NOW(), INTERVAL 1 day);
 
 
-## Cross-posted or Duplicate Releases
+### Cross-posted or Duplicate Releases
 
 _View_
 ```
