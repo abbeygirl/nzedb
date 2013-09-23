@@ -21,6 +21,11 @@ cd misc/testing/DB_scripts
 php delete_release.php guid equals 1f374b691cdba39757e5a7a59978ceb89373fb20
 ```
 
+### List releases added during the last day
+
+* select ID,name from releases where adddate > DATE_SUB(NOW(), INTERVAL 1 day);
+
+
 ## Cross-posted or Duplicate Releases
 
 _View_
