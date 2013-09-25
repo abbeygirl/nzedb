@@ -41,14 +41,24 @@ _Clear_
 ```
 
 ### TV
-_Count_
+_Count (master)_
 ```
-mysql> SELECT COUNT(*) from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
+> SELECT COUNT(*) from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
 ```
 
-_Find_
+_Count (dev)_
 ```
-mysql> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
+> SELECT COUNT(*) FROM releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
+```
+
+_Find (master)_
+```
+> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
+```
+
+_Find (dev)_
+```
+> SELECT r.ID,nzbstatus,name from releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
 ```
 
 ### Movies
