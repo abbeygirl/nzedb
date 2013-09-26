@@ -30,7 +30,8 @@ mysql> select ID,name from releases where adddate > DATE_SUB(NOW(), INTERVAL 1 d
 ### Cross-posted or Duplicate Releases
 
 _View_
-Note: This query finds both duplicates and crossposts. A true duplicate matches on group, a crosspost does not.
+
 ```
 mysql> select name,fromname,size,count(*) as dupes from releases group by name,fromname,size HAVING dupes > 1;
 ```
+Note: The above query finds both duplicates and crossposts. A true duplicate matches on group, a crosspost does not.
