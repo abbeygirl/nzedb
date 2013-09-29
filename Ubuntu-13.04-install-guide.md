@@ -155,7 +155,8 @@ Nginx site configuration file:
 `sudo nano /etc/nginx/sites-available/nZEDb`
 
 Add:   
-```server {
+```
+server {
 # Change these settings to match your machine
 listen 80 default_server;
 server_name localhost;
