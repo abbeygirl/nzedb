@@ -19,57 +19,42 @@ nnnnnnn = ID, the first number displayed by the ps command
 ## Various SQL Queries for the Post-Processing Queues
 
 ### NFO
-_Find_
+_Find_ OLD
 ```
 mysql> select ID,nfostatus,name from releases WHERE nfostatus between -6 and -1;
 ```
  
-_Clear_
+_Clear_ OLD
 ```
 mysql> update releases set nfostatus = 1 WHERE nfostatus between -6 and -1;
 ```
 
 ### Audio
-_Find_
+_Find_ OLD
 ```
 > select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 ```
 
-_Clear_
+_Clear_ OLD
 ```
 > update releases set musicinfoID = '-2' where musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 ```
 
 ### TV
-_Count (master)_
-```
-> SELECT COUNT(*) from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
-```
-
-_Count (dev)_
+_Count_
 ```
 > SELECT COUNT(*) FROM releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
 ```
 
-_Find (master)_
+_Find_
 ```
-> SELECT ID,nzbstatus,name from releases where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
-```
-
-_Find (dev)_
-```
-> SELECT r.ID,nzbstatus,name from releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
+> SELECT r.ID,passwordstatus,name from releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
 ```
 
 ### Movies
-_Find (master)_
+_Find_
 ```
-mysql> select id,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999;
-```
-
-_Find (dev)_
-```
-> select id,nzbstatus,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999 AND nzbstatus = 1;;
+> select id,passwordstatus,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999 AND nzbstatus = 1;;
 ```
 
 _Set imdbID_
@@ -99,7 +84,7 @@ _Clear_
 
 
 ### Console
-_Count_
+_Count_ OLD
 ```
 mysql> SELECT COUNT(id) FROM releases WHERE categoryid BETWEEN 1000 AND 1999 AND nzbstatus = 1;
 ```
