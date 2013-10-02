@@ -13,6 +13,8 @@ This outputs the ID and guid of the release. This SQL query will display the nam
 ```
 nnnnnnn = ID, the first number displayed by the ps command
 
+To delete a particular release, use the misc/testing/DB_scripts/delete_releases.php script to remove the collection from the DB and its' related meta objects.
+
 
 ***
 
