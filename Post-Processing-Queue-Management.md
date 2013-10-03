@@ -21,11 +21,16 @@ To delete a particular release, use the misc/testing/DB_scripts/delete_releases.
 ## Various SQL Queries for the Post-Processing Queues
 
 ### NFO
-_Find_
+_Count_
 ```
 > SELECT COUNT(*) FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
 ```
  
+_Find_
+```
+> SELECT ID,nfostatus,name FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
+```
+
 _Clear_
 ```
 > update releases set nfostatus = 1 WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
