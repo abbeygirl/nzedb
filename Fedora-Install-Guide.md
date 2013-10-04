@@ -121,15 +121,17 @@ As root user:
 ## Create nZEDb Database and grant user access
 This step is optional as the installer can create the database for you. This method below is useful if you have other applications using the same database.
 
-* mysql -u root -p    (Default is no password)
-* create database nzedb;
-* use nzedb;
-* grant all privileges on nzedb.* to nzedb@'localhost' identified by 'YourPasswordHere';
-* grant all privileges on nzedb.* to nzedb@'127.0.0.1' identified by 'YourPasswordHere';
-* GRANT FILE on *.* to nzedb@'localhost';      (used when loading tables from system files)
-* GRANT RELOAD on *.* to nzedb@'localhost';    (used when optimising DB)
-* flush privileges;
-* exit
+```
+mysql -u root -p    (Default is no password)
+create database nzedb;
+use nzedb;
+grant all privileges on nzedb.* to nzedb@'localhost' identified by 'YourPasswordHere';
+grant all privileges on nzedb.* to nzedb@'127.0.0.1' identified by 'YourPasswordHere';
+GRANT FILE on *.* to nzedb@'localhost';      (used when loading tables from system files)
+GRANT RELOAD on *.* to nzedb@'localhost';    (used when optimising DB)
+flush privileges;
+exit
+```
 
 ## Initial test
 
