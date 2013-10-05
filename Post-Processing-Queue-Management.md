@@ -58,6 +58,11 @@ _Find_
 > SELECT r.ID,passwordstatus,name from releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
 ```
 
+_Clear_
+```
+> update releases set rageID = 1 where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
+```
+
 ### Movies
 _Find_
 ```
