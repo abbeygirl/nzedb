@@ -292,10 +292,10 @@ Q: I am trying to convert my mysql tables to InnoDB and mysql crashes or returns
 ```
 ERROR 1114 (HY000): The table '#sql-4f6_2a' is full
 ```
-A: The most likely answer is that the partition holding your mysql tmp dir is full. If you have pointed this to /dev/shm, then either drop the indexes on releases, convert to InnoDB and recreate the indexes. Alternatively, chnage the path to mysql temp, restart mysql, convert to InnoDB, change path back for mysql tmp, restart mysql.
+A: The most likely answer is that the partition holding your mysql tmp dir is full. If you have pointed this to /dev/shm, then either drop the indexes on releases, convert to InnoDB and recreate the indexes. Alternatively, change the path to mysql temp, restart mysql, convert to InnoDB, change path back for mysql tmp, restart mysql.
 
 Q: I am getting this error message "Lock wait timeout exceeded"
-A: The application is waiting too long to gain update locks with InnoDB. Need to increase in my.cnf this value: innodb_lock_wait_timeout. Default is 50, generally increased to 150. 
+A: The application is waiting too long to gain update locks with InnoDB. Within my.cnf increase this value: innodb_lock_wait_timeout. Default is 50, generally increased to 150. 
 
 
 **Errors**  
