@@ -294,7 +294,10 @@ ERROR 1114 (HY000): The table '#sql-4f6_2a' is full
 ```
 A: The most likely answer is that the partition holding your mysql tmp dir is full. If you have pointed this to /dev/shm, then either drop the indexes on releases, convert to InnoDB and recreate the indexes. Alternatively, chnage the path to mysql temp, restart mysql, convert to InnoDB, change path back for mysql tmp, restart mysql.
 
- 
+Q: I am getting this error message "Lock wait timeout exceeded"
+A: The application is waiting too long to gain update locks with InnoDB. Need to increase in my.cnf this value: innodb_lock_wait_timeout. Default is 50, generally increased to 150. 
+
+
 **Errors**  
 Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
 A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/ 
