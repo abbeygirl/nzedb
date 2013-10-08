@@ -318,6 +318,14 @@ run sudo pip-3.3 install --upgrade cymysql
 add define('DB_SOCKET', '/var/run/mysqld/mysqld.sock');  
 to your /var/www/nZEDb/www/config.php
 
+Q: I noticed my update_releases did this:
+|PHP Warning:  simplexml_load_file(): compress.zlib:///var/www/nZEDb/nzbfiles/a/blaaaablaaa.nzb.gz:34: parser error : Extra content at the end of the docu
+19:58 <&jonnyboy> PHP Warning:  simplexml_load_file(): compress.zlib:///var/www/nZEDb/nzbfiles/a/blaaablaaaa.nzb.gz:32: parser error : Opening and ending tag mismatch: nzb
+
+A:
+Most likely a nzb is invalid.
+
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
