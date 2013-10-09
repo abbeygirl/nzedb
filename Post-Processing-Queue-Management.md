@@ -80,7 +80,8 @@ _Clear_
 ```
 
 ### Misc (Additional)
-This is the sum of PC(4000), Pr0n(6000) and Misc(7000).
+This is the sum of PC(4000), Pron(6000) and Misc(7000).
+
 _Count_
 ```
 > SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
