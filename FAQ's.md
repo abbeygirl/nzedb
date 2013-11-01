@@ -218,9 +218,9 @@ define('NNTP_SERVER_A', 'server');  <-- replace server with your info
 define('NNTP_PORT_A', 'port');  <-- replace port with your info  
 define('NNTP_SSLENABLED_A', true);  <--or false if your not using SSL  
 
-Q. I changed NNTP providers and now everything is screwed up.    
+Q. I need to change NNTP Usenet provider (USP)     
 A. You need to reset groups and truncate some tables. A script exists to handle this for you.   
-  ```php (path to nZEDb)/misc/testing/DB_scripts/reset_truncate.php```
+  ```php (path to nZEDb)/misc/testing/DB_scripts/change_USP_provider.php```
 
 
 **Processing**  
