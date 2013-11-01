@@ -35,12 +35,6 @@ ServerSignature Off
 ```
 
 * In your php.ini file for apache turn off **expose_php**, this will supress the "X-Powered by" http header, and not let people know what version of php you are running.
-* If you are running from the master branch, grab the following files from the dev branch, it will set the 'secure' flag for session and "remember me" cookies when using SSL.
-
-```
-www/lib/users.php
-www/lib/framework/basepage.php
-```
 
 * In /etc/sysctl.conf add the following, after you have added it run "sysctl -p".  This prevents a time-based TCP attack(I will add the ref later).
 `net.ipv4.tcp_timestamps = 0`
