@@ -3,8 +3,7 @@
 
 nZEDb is a fork of the open source usenet indexer newznab plus : https://github.com/anth0/nnplus
 
-irc.synirc.net #nZEDb
-
+Chat:  irc.synirc.net #nZEDb
 Forum: [nZEDb.com](http://nzedb.com)
 
 * [Getting Started Guide](https://github.com/nZEDb/nZEDb/wiki/Getting-started-guide)
