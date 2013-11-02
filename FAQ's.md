@@ -45,7 +45,7 @@ delete_releases.php
 mysql_to_ramdisk.sh             
 mysqldump_tables.php     
 nzb-reorg.php  
-patchmysql.php            
+patchDB.php.php            
 populate_imdb_type.php    
 populate_nzb_guid.php      
 resetdb.php - This script removes all releases, nzb files, truncates all article tables, resets groups.  
