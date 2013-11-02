@@ -156,7 +156,7 @@ updatereleases.bat
  1. cd /var/www/nZEDb  
  2. sudo git pull  
  3. cd /var/www/nZEDb/misc/testing/DB_scripts  
- 4. php patchmysql.php  
+ 4. php patchDB.php  
  5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/* 
 
 **Backing up nZEDb (ubuntu)** (by trev_)  
