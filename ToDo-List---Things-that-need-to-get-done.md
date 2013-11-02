@@ -5,8 +5,8 @@ You may add anything you like to this list and hopefully, someone will have the 
 
 * <s>finish Grab NZBs to get all available nzbs and clean up after itself. --> jonnyboy</s>
 * <s>finish Backfill Safe Threaded to use all user settings. --> jonnyboy</s>
-* <s>Find cause of orphaned collections, binaries and parts. --> jonnyboy
-  * It seems to be caused during inserts. I'm thinking its related to the prepare sql statement. When it fails, there is no recovery</s>
+* <s>Find cause of orphaned collections, binaries and parts. --> jonnyboy</s>
+  * <s>It seems to be caused during inserts. I'm thinking its related to the prepare sql statement. When it fails, there is no recovery</s>
 * improve category sorting.
 * improve naming for releases. WIP
 * improve imdb identification.
