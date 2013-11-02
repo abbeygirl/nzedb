@@ -5,13 +5,13 @@ You may add anything you like to this list and hopefully, someone will have the 
 
 * <s>finish Grab NZBs to get all available nzbs and clean up after itself. --> jonnyboy</s>
 * <s>finish Backfill Safe Threaded to use all user settings. --> jonnyboy</s>
-* Find cause of orphaned collections, binaries and parts. --> jonnyboy
-  * It seems to be caused during inserts. I'm thinking its related to the prepare sql statement. When it fails, there is no recovery
+* <s>Find cause of orphaned collections, binaries and parts. --> jonnyboy
+  * It seems to be caused during inserts. I'm thinking its related to the prepare sql statement. When it fails, there is no recovery</s>
 * improve category sorting.
-* improve naming for releases.
+* improve naming for releases. WIP
 * improve imdb identification.
 * change misc sorter to not recheck releases more than x times.
-* change fixReleaseNames not to recheck more than x times.
+* change fixReleaseNames not to recheck more than x times. Should change all status' to use 1 bitwise column.
 * change removeCrapReleases so that filesize per delete category is user adjustable in admin.
 * change predb name compare to not check releases more than x times.
 * <s>create script to delete releases with/without keywords.</s>
