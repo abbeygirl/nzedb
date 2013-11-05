@@ -1,1 +1,1 @@
-nZEDb has a rich variety of scripts that automate many administrative tasks.
+nZEDb has a rich variety of scripts that automate many administrative tasks. We strongly suggest that you take the time to browse the scripts found in the misc/testing/ directory and familiarise yourself with the various possibilities.
