@@ -43,3 +43,5 @@ Only use this script after you have updated your config.php file with your new U
 Make sure you **DO NOT** have any update or postprocess scripts running when running this script!
 
 Usage: php change_USP_provider true
+
+### Continue HERE !!
