@@ -26,3 +26,20 @@ An optional first argument of ASC/DESC is used to sort the display by first_reco
 An optional second argument will limit the return to that number of groups.
 To sort the backfill groups by first_record_postdate and display only 20 groups run:
   php backfill_groups.php true 20
+
+### backfill_predb.php
+
+This script inserts pre info into the preDB mysql table from a dump made 5/29/2013.
+Supply an argument ex\:(php backfill_predb.php 3), 3 will backfill 30000, you can backfill up to 1.42 million (142 as an argument).
+If you have already ran this script in the past, your status is saved, so you can go further.
+It is a good idea to do a little at a time if you are uncertain, instead of doing all 142 in 1 go.
+
+Make sure there are no data###.zip or data###.txt in the www folder before starting.
+
+### change_USP_provider.php
+
+This script is used when you have switched UseNet Providers(USP) so you can pickup where you left off, rather than resetting all the groups.
+Only use this script after you have updated your config.php file with your new USP info!!
+Make sure you **DO NOT** have any update or postprocess scripts running when running this script!
+
+Usage: php change_USP_provider true
