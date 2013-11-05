@@ -19,3 +19,10 @@ This script will automatically do a git pull, patch the DB and delete the smarty
 If you are sure you want to run it, type php autopatcher.php true
 If you want to run a backup of your database and then update, type php autopatcher.php safe
 
+### backfill_groups.php
+
+This script will show all Backfill Groups.
+An optional first argument of ASC/DESC is used to sort the display by first_record_postdate in ascending/descending order.
+An optional second argument will limit the return to that number of groups.
+To sort the backfill groups by first_record_postdate and display only 20 groups run:
+  php backfill_groups.php true 20
