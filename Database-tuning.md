@@ -1,6 +1,6 @@
 In order to get the most out of nZEDb, you are going to have to tune your database for your machine. The default configuration will work, but if you want real speed it will take some time and tuning.
 
-If you're using percona the best place to start is [https://tools.percona.com/wizard](https://tools.percona.com/wizard) with a fresh database install.
+If you're using percona the best place to start is [https://tools.percona.com/wizard](https://tools.percona.com/wizard) with a fresh database install. Be _cautious_ not to check "Enable a strict SQL mode" as it will enforce ONLY_FULL_GROUP_BY which will yield in errors. It may be possible to use "Enable a strict SQL mode" with the ONLY_FULL_GROUP_BY option removed manually (added as last option to the variable sql-mode).
 
 Once you have a base config, use tools such as the phpmyadmin adviser and **[MySQLtuner](http://mysqltuner.com)** to fine tune things further.
 
