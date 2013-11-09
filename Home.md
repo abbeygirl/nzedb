@@ -14,7 +14,7 @@ Forum: [nZEDb.com](http://nzedb.com)
 ***
 * [Database Tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning)
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
-* [NNTP Proxy](nntpproxy)
+* [NNTP Proxy](https://github.com/nZEDb/nZEDb/wiki/nntpproxy)
 ***
 * [Post-Processing Queue Management](https://github.com/nZEDb/nZEDb/wiki/Post-Processing-Queue-Management)
 * [Release Management](https://github.com/nZEDb/nZEDb/wiki/Release Management)
