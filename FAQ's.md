@@ -327,6 +327,10 @@ Q: I noticed my update_releases did this:
 A:
 Most likely a nzb is invalid.
 
+Q: Send to SABnzbd button is not working.
+
+A:
+One possible reason is due to that the nginx server name does not match the domain you are accessing the web interface through. Please make sure that the server_name variable matches the url you are accessing. The variable is located at /etc/nginx/sites-available/nZEDb (or whatever you called your site). Notice that the catch-all "server_name _;" does not work for this and thus your web browser will think that you are trying to make an cross-domain request which is not allowed.
 
 ************************************************
 
