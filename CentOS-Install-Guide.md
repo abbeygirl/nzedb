@@ -117,7 +117,7 @@ yum -y install autoconf automake gcc gcc-c++ git libtool make nasm pkgconfig zli
 mkdir -p ~/ffmpeg_sources
 ```
 
-Yasm is an assembler used by x264 and FFmpeg
+### Yasm is an assembler used by x264 and FFmpeg
 
 ```
 cd ~/ffmpeg_sources
@@ -129,7 +129,7 @@ make && make install && make distclean
 . ~/.bash_profile
 ```
 
-x264 = H.264 video encoder
+### x264 = H.264 video encoder
 
 ```
 cd ~/ffmpeg_sources
@@ -139,7 +139,7 @@ cd x264
 make && make install && make distclean
 ```
 
-libfdk_aac = AAC audio encoder.
+### libfdk_aac = AAC audio encoder.
  
 ```
 cd ~/ffmpeg_sources
@@ -150,7 +150,7 @@ autoreconf -fiv
 make && make install && make distclean
 ```
 
-libmp3lame = MP3 audio encoder.
+### libmp3lame = MP3 audio encoder.
 
 ```
 cd ~/ffmpeg_sources
@@ -161,7 +161,7 @@ cd lame-3.99.5
 make && make install && make distclean
 ```
 
-libopus = Opus audio decoder and encoder
+### libopus = Opus audio decoder and encoder
 
 ```
 cd ~/ffmpeg_sources
@@ -172,7 +172,7 @@ cd opus-1.0.3
 make && make install && make distclean
 ```
 
-libogg = Ogg bitstream library. Required by libtheora and libvorbis.
+### libogg = Ogg bitstream library. Required by libtheora and libvorbis.
 
 ```
 cd ~/ffmpeg_sources
@@ -183,7 +183,7 @@ cd libogg-1.3.1
 make && make install && make distclean
 ```
 
-libvorbis = Vorbis audio encoder. Requires libogg.
+### libvorbis = Vorbis audio encoder. Requires libogg.
 
 ```
 cd ~/ffmpeg_sources
@@ -194,7 +194,7 @@ cd libvorbis-1.3.3
 make && make install && make distclean
 ```
 
-libvpx = VP8/VP9 video encoder.
+### libvpx = VP8/VP9 video encoder.
 
 ```
 cd ~/ffmpeg_sources
@@ -233,7 +233,7 @@ yum -y groupinstall "Development tools"
 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel nasm
 ```
 
-### Install python3 to /opt/python3/ with ???
+### Install python3 to /opt/python3/ 
 
 ```
 curl -O http://www.python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
@@ -253,13 +253,13 @@ tar xvf distribute-0.6.49.tar.gz && cd distribute-0.6.49 && python3 setup.py ins
 ### And a little pip wouldn't hurt!
 
 ```
-cd /opt/pytnon3/bin && ./easy_install pip
+cd /opt/python3/bin && ./easy_install pip
 ```
 
 ### And finally, enter cymysql
 
 ```
-cd /opt/pytnon3/bin && ./easy_install cymysql
+cd /opt/python3/bin && ./easy_install cymysql
 ```
 
 ### Configure PHP
@@ -341,7 +341,7 @@ GRANT ALL PRIVILEGES ON nzedb.* TO 'nzedb'@'localhost' IDENTIFIED BY 'nzedb';
 quit
 ```
 
-goto http://nZEDb/install
+Browse to http://nZEDb/install
 
 ```
 yum -y install time tmux
