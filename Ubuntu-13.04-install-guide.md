@@ -103,6 +103,7 @@ Paste the following:
      ServerAdmin xxxxx
      ServerAlias xxxx
      DocumentRoot "/var/www/nZEDb/www"
+     ErrorLog /var/log/apache2/error.log
      LogLevel warn
      ServerSignature Off
 
