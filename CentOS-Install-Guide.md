@@ -4,29 +4,23 @@ This install guide contributed by sniffer http://nzedb.com/index.php?topic=967.0
 
 ```
 Server version: Apache/2.2.15 (Unix)
-
 Server built:   Aug 13 2013 17:29:28
-
 Server's Module Magic Number: 20051115:25
-
 Server loaded:  APR 1.3.9, APR-Util 1.3.9
-
 Compiled using: APR 1.3.9, APR-Util 1.3.9
-
 Architecture:   64-bit
-
 Server MPM:     Prefork
-
   threaded:     no
-
     forked:     yes (variable process count
 ```
 
+```
+PHP 5.5.3 (cli) (built: Aug 24 2013 10:14:23)
+Copyright (c) 1997-2013 The PHP Group
+Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
+    with Zend OPcache v7.0.3-dev, Copyright (c) 1999-2013, by Zend Technologies
+```
 
-* PHP 5.5.3 (cli) (built: Aug 24 2013 10:14:23)
-* Copyright (c) 1997-2013 The PHP Group
-* Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
-*     with Zend OPcache v7.0.3-dev, Copyright (c) 1999-2013, by Zend Technologies
    
 * mysql  Ver 14.14 Distrib 5.1.69, for redhat-linux-gnu (x86_64) using readline 5.1
 
@@ -49,25 +43,31 @@ url_setup
 http://mirror.centos.org/centos/6/os/x86_64/
 ```
 
-`
+```
 yum -y update
 yum -y nano
-`
+````
 
+```
 nano /etc/sysconfig/iptables
 (INSERT AFTER ssh port 22 line)
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+```
 
+```
 adduser user 
 passwd password
+```
 
 reboot login as root
 
+```
 yum -y install wget screen vim acpid
 yum -y install httpd php mysql-server mysql memcached php-mysql php-gd php-pear mod_ssl php-curl php-process
 chmod 777 /var/lib/php/session
 
 rpm -Uvh http://pkgs.repoforge.org/unrar/unrar-4.2.3-1.el6.rf.x86_64.rpm
+```
 
 nstalling/Enabling RPMForge on CentOS 6.4 (latest binaries)
 rnd=$RANDOM
