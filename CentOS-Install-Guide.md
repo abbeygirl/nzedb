@@ -2,40 +2,41 @@ This install guide contributed by sniffer http://nzedb.com/index.php?topic=967.0
 
 ### System Info
 
- Server version: Apache/2.2.15 (Unix)
- Server built:   Aug 13 2013 17:29:28
- Server's Module Magic Number: 20051115:25
- Server loaded:  APR 1.3.9, APR-Util 1.3.9
- Compiled using: APR 1.3.9, APR-Util 1.3.9
- Architecture:   64-bit
- Server MPM:     Prefork
-   threaded:     no
-      forked:     yes (variable process count
+* Server version: Apache/2.2.15 (Unix)
+* Server built:   Aug 13 2013 17:29:28
+* Server's Module Magic Number: 20051115:25
+* Server loaded:  APR 1.3.9, APR-Util 1.3.9
+* Compiled using: APR 1.3.9, APR-Util 1.3.9
+* Architecture:   64-bit
+* Server MPM:     Prefork
+*   threaded:     no
+*     forked:     yes (variable process count
 
-PHP 5.5.3 (cli) (built: Aug 24 2013 10:14:23)
-Copyright (c) 1997-2013 The PHP Group
-Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
-    with Zend OPcache v7.0.3-dev, Copyright (c) 1999-2013, by Zend Technologies
+* PHP 5.5.3 (cli) (built: Aug 24 2013 10:14:23)
+* Copyright (c) 1997-2013 The PHP Group
+* Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
+*     with Zend OPcache v7.0.3-dev, Copyright (c) 1999-2013, by Zend Technologies
    
-mysql  Ver 14.14 Distrib 5.1.69, for redhat-linux-gnu (x86_64) using readline 5.1
+* mysql  Ver 14.14 Distrib 5.1.69, for redhat-linux-gnu (x86_64) using readline 5.1
 
-ffmpeg version git-2013-11-22-51268aa Copyright (c) 2000-2013 the FFmpeg developers
-  built on Nov 22 2013 17:37:41 with gcc 4.4.7 (GCC) 20120313 (Red Hat 4.4.7-3)
+* ffmpeg version git-2013-11-22-51268aa Copyright (c) 2000-2013 the FFmpeg developers
+*   built on Nov 22 2013 17:37:41 with gcc 4.4.7 (GCC) 20120313 (Red Hat 4.4.7-3)
 
-MediaInfoLib - v0.7.64
+* MediaInfoLib - v0.7.64
   
-Python 3.3.3 (default, Nov 22 2013, 16:20:57)
-[GCC 4.4.7 20120313 (Red Hat 4.4.7-3)] on linux
-distribute-0.6.49
+* Python 3.3.3 (default, Nov 22 2013, 16:20:57)
+* [GCC 4.4.7 20120313 (Red Hat 4.4.7-3)] on linux
+* distribute-0.6.49
 
-p7zip Version 9.20 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,1 CPU)
-unrar-4.2.3-1
-=============================================================================================
+* p7zip Version 9.20 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,1 CPU)
+* unrar-4.2.3-1
 
-# netinstall
-download http://isoredirect.centos.org/centos/6/isos/x86_64/
+***
+### netinstall
+```download http://isoredirect.centos.org/centos/6/isos/x86_64/
 url_setup
 http://mirror.centos.org/centos/6/os/x86_64/
+```
 
 yum -y update
 yum -y nano
