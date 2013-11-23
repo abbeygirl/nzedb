@@ -2,7 +2,7 @@ This install guide contributed by sniffer http://nzedb.com/index.php?topic=967.0
 
 ### System Info
 
-` Server version: Apache/2.2.15 (Unix)
+Server version: Apache/2.2.15 (Unix)
 Server built:   Aug 13 2013 17:29:28
 Server's Module Magic Number: 20051115:25
 Server loaded:  APR 1.3.9, APR-Util 1.3.9
@@ -11,7 +11,6 @@ Architecture:   64-bit
 Server MPM:     Prefork
   threaded:     no
      forked:     yes (variable process count
-`
 
 PHP 5.5.3 (cli) (built: Aug 24 2013 10:14:23)
 Copyright (c) 1997-2013 The PHP Group
