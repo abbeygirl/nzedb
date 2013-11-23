@@ -139,7 +139,7 @@ cd x264
 make && make install && make distclean
 ```
 
-### libfdk_aac = AAC audio encoder.
+### libfdk_aac = AAC audio encoder
  
 ```
 cd ~/ffmpeg_sources
@@ -150,7 +150,7 @@ autoreconf -fiv
 make && make install && make distclean
 ```
 
-### libmp3lame = MP3 audio encoder.
+### libmp3lame = MP3 audio encoder
 
 ```
 cd ~/ffmpeg_sources
@@ -172,7 +172,7 @@ cd opus-1.0.3
 make && make install && make distclean
 ```
 
-### libogg = Ogg bitstream library. Required by libtheora and libvorbis.
+### libogg = Ogg bitstream library. Required by libtheora and libvorbis
 
 ```
 cd ~/ffmpeg_sources
@@ -183,7 +183,7 @@ cd libogg-1.3.1
 make && make install && make distclean
 ```
 
-### libvorbis = Vorbis audio encoder. Requires libogg.
+### libvorbis = Vorbis audio encoder. Requires libogg
 
 ```
 cd ~/ffmpeg_sources
@@ -194,7 +194,7 @@ cd libvorbis-1.3.3
 make && make install && make distclean
 ```
 
-### libvpx = VP8/VP9 video encoder.
+### libvpx = VP8/VP9 video encoder
 
 ```
 cd ~/ffmpeg_sources
@@ -341,7 +341,7 @@ GRANT ALL PRIVILEGES ON nzedb.* TO 'nzedb'@'localhost' IDENTIFIED BY 'nzedb';
 quit
 ```
 
-Browse to http://nZEDb/install
+### Browse to http://nZEDb/install
 
 ```
 yum -y install time tmux
