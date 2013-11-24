@@ -339,6 +339,7 @@ mysql_secure_installation
 ```
 and follow the command prompts.
 
+### Create nZEDb MySQL User
 
 ```
 mysql -u root -p
