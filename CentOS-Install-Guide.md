@@ -332,6 +332,14 @@ chmod -R 775 ./nZEDb/www/lib/smarty/templates_c/
 
 ### MySQL Secure Installation
 
+Set password for MySQL root user
+
+```
+mysql_secure_installation
+```
+and follow the command prompts.
+
+
 ```
 mysql -u root -p
 -> mySQL password
