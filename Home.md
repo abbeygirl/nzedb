@@ -21,6 +21,7 @@ Forum: [nZEDb.com](http://nzedb.com)
 * [Release Management](https://github.com/nZEDb/nZEDb/wiki/Release Management)
 * [Database Administration](https://github.com/nZEDb/nZEDb/wiki/Database Administration)
 * [nZEDb Administration Scripts](https://github.com/nZEDb/nZEDb/wiki/nZEDb-Administration-Scripts)
+* [Tmux Backfill Groups Selected Explained](https://github.com/nZEDb/nZEDb/wiki/Tmux-Backfill-Explanation-of-Groups)
 
 ***
 * [To-Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
