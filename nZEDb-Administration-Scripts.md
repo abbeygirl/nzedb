@@ -29,12 +29,8 @@ To sort the backfill groups by first_record_postdate and display only 20 groups 
 
 ### backfill_predb.php
 
-This script inserts pre info into the preDB mysql table from a dump made 5/29/2013.
-Supply an argument ex\:(php backfill_predb.php 3), 3 will backfill 30000, you can backfill up to 1.42 million (142 as an argument).
-If you have already ran this script in the past, your status is saved, so you can go further.
-It is a good idea to do a little at a time if you are uncertain, instead of doing all 142 in 1 go.
-
-Make sure there are no data###.zip or data###.txt in the www folder before starting.
+This script is outdated, but kept as a how to should we need it again.
+Please use the predb dump located at nZEDb.com
 
 ### change_USP_provider.php
 
@@ -44,4 +40,39 @@ Make sure you **DO NOT** have any update or postprocess scripts running when run
 
 Usage: php change_USP_provider true
 
-### Continue HERE !!
+### convert_from_newznab.php
+
+Usage: newznab_schema nZEDB_schema true/false
+example: php convert_from_newznab.php newznab nzedb true
+
+newznab_schema: Schema where your newznab install is located. The database name. The current user in your config.php file must have access to this schema
+nZEDB_schema: Schema where you want the newznab data converted too. The database name. The schema must be populated and will be wiped clean except the sites and categories tables
+true/false: false = Show the queries but do not run.  true means you understand the risks and want to convert the data (Your old data will not be touched
+
+NOTE: This is experimental and there is a possibility that this will not work correctly.  Please let us know if it doesn't work correctly, but we are not responsible for any lost data.
+      You will have to start any backfilling and processing over again since we use a different mechanism for processing releases
+
+### convert_mysql_tables.php
+
+php convert_mysql_tables.php myisam                     ...: Converts all the tables to Myisam Dynamic.
+php convert_mysql_tables.php dinnodb                    ...: Converts all the tables to InnoDB Dynamic.
+php convert_mysql_tables.php cinnodb                    ...: Converts all the tables to InnoDB Compressed.
+php convert_mysql_tables.php collections                ...: Converts collections, binaries, parts to MyIsam.
+php convert_mysql_tables.php mariadb-tokudb             ...: Converts all the tables to MariaDB Tokutek DB.
+php convert_mysql_tables.php tokudb                     ...: Converts all the tables to Tokutek DB.
+php convert_mysql_tables.php table [ myisam, dinnodb, cinnodb ] ...: Converts 1 table to Engine, row_format specified.
+
+### convert_to_tpg.php
+
+his script will allow you to move from single collections/binaries/parts tables to TPG without having to run reset_truncate.
+Please STOP all update scripts before running this script.
+
+Use the following options to run:
+php convert_to_tpg.php true               Convert c/b/p to tpg leaving current collections/binaries/parts tables in-tact.
+php convert_to_tgp.php true delete        Convert c/b/p to tpg and TRUNCATE current collections/binaries/parts tables.
+
+### copy_from_newznab.php 
+
+Usage php copy_from_newznab.php path_to_newznab_nzbs
+
+### 
