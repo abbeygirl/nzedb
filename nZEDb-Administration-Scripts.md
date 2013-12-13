@@ -54,6 +54,7 @@ NOTE: This is experimental and there is a possibility that this will not work co
 
 ### convert_mysql_tables.php
 
+```
 php convert_mysql_tables.php myisam                     ...: Converts all the tables to Myisam Dynamic.
 php convert_mysql_tables.php dinnodb                    ...: Converts all the tables to InnoDB Dynamic.
 php convert_mysql_tables.php cinnodb                    ...: Converts all the tables to InnoDB Compressed.
@@ -61,15 +62,19 @@ php convert_mysql_tables.php collections                ...: Converts collection
 php convert_mysql_tables.php mariadb-tokudb             ...: Converts all the tables to MariaDB Tokutek DB.
 php convert_mysql_tables.php tokudb                     ...: Converts all the tables to Tokutek DB.
 php convert_mysql_tables.php table [ myisam, dinnodb, cinnodb ] ...: Converts 1 table to Engine, row_format specified.
+```
 
 ### convert_to_tpg.php
 
-his script will allow you to move from single collections/binaries/parts tables to TPG without having to run reset_truncate.
+This script will allow you to move from single collections/binaries/parts tables to TPG without having to run reset_truncate.
 Please STOP all update scripts before running this script.
 
 Use the following options to run:
+
+```
 php convert_to_tpg.php true               Convert c/b/p to tpg leaving current collections/binaries/parts tables in-tact.
 php convert_to_tgp.php true delete        Convert c/b/p to tpg and TRUNCATE current collections/binaries/parts tables.
+```
 
 ### copy_from_newznab.php 
 
