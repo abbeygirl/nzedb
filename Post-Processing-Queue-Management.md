@@ -1,6 +1,13 @@
-Here a list of statements useful for managing the post-processing queues.
+Post-Processing attempts up to 6 times for each release, prioritising new releases over the ones it has tried previously. Should there be many thousands queued for post-processing it may appear that the releases are not being processed, however this is seldom the case.
 
-***
+This SQL query provides a simple overview:
+
+```
+SELECT passwordstatus, count(*) FROM releases WHERE haspreview = -1 GROUP BY passwordstatus;
+```
+
+
+### Finding looping/hung tasks
 
 An example *nix ps command to display any post-proccessing task taking longer than 60 seconds:
 ```
