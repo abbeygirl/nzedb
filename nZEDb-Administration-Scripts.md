@@ -80,4 +80,28 @@ php convert_to_tgp.php true delete        Convert c/b/p to tpg and TRUNCATE curr
 
 Usage php copy_from_newznab.php path_to_newznab_nzbs
 
+### delete_releases.php
+
+This script removes all releases and nzb files from a poster or by searchname or by name or by groupname or by guid or by categoryid or newer than x hours adddate/postdate.
+If you are sure you want to run it, type php delete_releases.php [ fromname, searchname, name, groupname, guid, categoryid, adddate/postdate ] equals [ name, guid, 7010, hours(number) ]
+You can also use like instead of equals by doing type php delete_releases.php [ fromname, searchname, name, groupname, guid ] like [ name/guid ]
+
+### mysqldump_tables.php
+
+**Single File
+To dump the database run: php mysqldump_tables.php db dump /path/to/save/to
+To restore the database run: php mysqldump_tables.php db restore /path/where/saved
+
+**Individual Table Files
+To dump all tables run: php mysqldump_tables.php all dump /path/to/save/to
+To restore all tables run: php mysqldump_tables.php all restore /path/where/saved
+
+**Three Tables (collections, binaries, parts)
+To dump collections, binaries, parts tables run: php mysqldump_tables.php test dump /path/to/save/to
+To restore collections, binaries, parts tables run: php mysqldump_tables.php test restore /path/where/saved
+
+**Individal Files - OUTFILE/INFILE - No schema
+To dump all tables, using OUTFILE run: php mysqldump_tables.php all outfile /path/to/save/to
+To restore all tables, using INFILE run: php mysqldump_tables.php all infile /path/where/saved
+
 ### 
