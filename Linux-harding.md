@@ -1,7 +1,7 @@
 These are some tips to "harden" your linux install, and make your nZEDb site a bit more on the secure side.  I'm sure there are some things I have forgotten, and I will update the list when I think of it.  Please let me know if you have any questions.  :)
 * Use SSL, if have registered a domain, you should use SSL, as logins are currently sent in the clear.  You can get them free from [StartSSL.com](https://www.startssl.com).  Below are the global and site settings that should be used for apache
 ```
-SSLCipherSuite ECDHE-RSA-AES128-SHA256:AES128-GCM-SHA256:RC4:HIGH:!MD5:!aNULL:!EDH
+SSLCipherSuite EECDH+AES:EDH+AES:-SHA1:EECDH+RC4:EDH+RC4:EECDH+AES256:EDH+AES256:AES256-SHA:!aNULL:!eNULL:!EXP:!LOW:!MD5
 SSLHonorCipherOrder on
 SSLProtocol all -SSLv2
 ```
