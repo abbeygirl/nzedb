@@ -42,6 +42,8 @@ ServerSignature Off
 * Setup iptables to only allow TCP port 80/443 from the internet to your server, and only allow other traffic (ssh/mysql/etc) from your local LAN. 
 In the example below, the first line will allow all connections on the loopback interface (recommended), the second line will allow return traffic to come in (response from update server/dns/etc). The next two lines will allow only new incoming TCP connections from the anywere on ports 80 and 443, and the next two lines will allow ssh (tcp/22) and mysql (tcp/3306) only from the local LAN. The last line drops all other incoming traffic.
 
+In this example, your Local LAN would be 192.168.1.0/24 (netmask: 255.255.255.0)
+
 ```
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
