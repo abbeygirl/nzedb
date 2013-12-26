@@ -83,7 +83,7 @@ _Set imdbID_
 
 _Clear_
 ```
-> update releases set imdbID = 000000 WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999; 
+> update releases set imdbID = NULL WHERE imdbID = 0 and categoryID BETWEEN 2000 AND 2999; 
 ```
 
 ### Misc (Additional)
