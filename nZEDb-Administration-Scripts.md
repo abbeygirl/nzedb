@@ -104,4 +104,12 @@ To restore collections, binaries, parts tables run: php mysqldump_tables.php tes
 To dump all tables, using OUTFILE run: php mysqldump_tables.php all outfile /path/to/save/to
 To restore all tables, using INFILE run: php mysqldump_tables.php all infile /path/where/saved
 
+### setUserPasswordHash.php
+
+usage: php setUserPasswordHash.php password (id | username)
+
+ID and username are the entries in the users table. Either can be used.
+
+Allows you to set the password hash on a particular user's account. Used, for example, when upgrading from earlier version of nZEDb (pre-crypt() use) or when a user forgets their password. Admin should set a random password and give that to the user to log in and reset it how they like.
+
 ### 
