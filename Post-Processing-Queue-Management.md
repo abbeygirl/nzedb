@@ -28,50 +28,50 @@ To delete a particular release, use the misc/testing/DB_scripts/delete_releases.
 ## Various SQL Queries for the Post-Processing Queues
 
 ### NFO
-_Count_
+_Count Queued_
 ```
 > SELECT COUNT(*) FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
 ```
  
-_Find_
+_Find Queued_
 ```
 > SELECT ID,nfostatus,name FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
 ```
 
-_Clear_
+_Clear Queued_
 ```
 > update releases set nfostatus = 1 WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
 ```
 
 ### Audio
-_Find_
+_Find Queued_
 ```
 > select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 ```
 
-_Clear_
+_Clear Queued_
 ```
 > update releases set musicinfoID = '-2' where musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
 ```
 
 ### TV
-_Count_
+_Count Queued_
 ```
 > SELECT COUNT(*) FROM releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
 ```
 
-_Find_
+_Find Queued_
 ```
 > SELECT r.ID,passwordstatus,name from releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
 ```
 
-_Clear_
+_Clear Queued_
 ```
 > update releases set rageID = 1 where rageID = -1 and categoryID BETWEEN 5000 AND 5999;
 ```
 
 ### Movies
-_Find_
+_Find Queued_
 ```
 > select id,passwordstatus,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999 AND nzbstatus = 1;
 ```
@@ -81,7 +81,7 @@ _Set imdbID_
 > update example: update releases set imdbID = 1686784 WHERE id = 3789422; 
 ```
 
-_Clear_
+_Reset for re-postprocessing_
 ```
 > update releases set imdbID = NULL WHERE imdbID = 0 and categoryID BETWEEN 2000 AND 2999; 
 ```
@@ -89,23 +89,23 @@ _Clear_
 ### Misc (Additional)
 This is the sum of PC(4000), Pron(6000) and Misc(7000).
 
-_Count_
+_Count Queued_
 ```
 > SELECT count(*) FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
-_Find_
+_Find Queued_
 ```
 > SELECT r.ID,r.passwordstatus,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
 
-_Clear_
+_Clear Queued_
 ```
 > update releases r left join category c on c.ID = r.categoryID set passwordstatus = 0 where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
 
 
 ### Console
-_Count_
+_Count Queued_
 ```
 > SELECT COUNT(*) FROM releases r, category c WHERE r.categoryid = c.id AND c.parentid = 1000 AND consoleinfoid IS NULL;
 ```
