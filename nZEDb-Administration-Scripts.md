@@ -118,4 +118,8 @@ See the warning in the file for usage!
 
 This script is an alternative for people with large numbers of the old SHA1 hashed passwords, that do not want to change them manually with the above script. It does what its name suggests, scans the users table for old-style passwords (ignoring new ones completely) and changes the hash to that of the user's email address. This allows the user to log in with their email address as a password and then change it manually to whatever they like.
 
+### updateMovieInfo.php
+
+Scans your covers/movies directory and sets/resets the fields indicating if covers/backdrops exist appropriately. This allows post processing to check for them again.
+
 ### 
