@@ -112,4 +112,10 @@ ID and username are the entries in the users table. Either can be used.
 
 Allows you to set the password hash on a particular user's account. Used, for example, when upgrading from earlier version of nZEDb (pre-crypt() use) or when a user forgets their password. Admin should set a random password and give that to the user to log in and reset it how they like.
 
+### setUserPasswordHashesToEmail.php
+
+See the warning in the file for usage!
+
+This script is an alternative for people with large numbers of the old SHA1 hashed passwords, that do not want to change them manually with the above script. It does what its name suggests, scans the users table for old-style passwords (ignoring new ones completely) and changes the hash to that of the user's email address. This allows the user to log in with their email address as a password and then change it manually to whatever they like.
+
 ### 
