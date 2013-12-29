@@ -40,7 +40,7 @@ _Find Queued_
 
 _Clear Queued_
 ```
-> update releases set nfostatus = 1 WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
+> update releases set nfostatus = 0 WHERE nfostatus < 0;
 ```
 
 ### Audio
