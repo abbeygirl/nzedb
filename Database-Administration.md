@@ -5,6 +5,7 @@
 ### Miscellaneous SQL statements that you may find useful. Cut & paste ready.
 
 ### Calculate size of tables and indexes
+found here: http://blog.elijaa.org/index.php?post/2013/08/22/Calculate-Optimize-MySQL-Database-Size
 ```
 SELECT TABLE_NAME AS "Table", 
        TABLE_ROWS AS "Rows", 
