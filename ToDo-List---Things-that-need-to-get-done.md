@@ -10,17 +10,17 @@ You may add anything you like to this list and hopefully, someone will have the 
 * improve category sorting.
 * improve naming for releases. WIP
 * improve imdb identification.
-* change misc sorter to not recheck releases more than x times.
-* change fixReleaseNames not to recheck more than x times. Should change all status' to use 1 bitwise column.
+* <s>change misc sorter to not recheck releases more than x times.</s>
+* <s>change fixReleaseNames not to recheck more than x times. Should change all status' to use 1 bitwise column.</s>
 * change removeCrapReleases so that filesize per delete category is user adjustable in admin.
-* change predb name compare to not check releases more than x times.
+* <s>change predb name compare to not check releases more than x times.</s> Not needed, it should be checked.
 * <s>create script to delete releases with/without keywords.</s>
 * <s>in tmux scripts, separate the postprocessing to individual settings. </s>
 * <s>Allow python scripts to connect to mysql using socket. --> josh4trunks</s>
 * <s>Fix RAGE id and sitewide RSS feeds. --> Junkman690</s>
 * Fix animeDB lookups so they are local.
 * Add option to use one time passwords (sw key fob on smartphone) for login page. --> ThePeePs
-  * Not sure if this is still wanted by those not using SSL and have their site public.
+   * Not sure if this is still wanted by those not using SSL and have their site public.
 * Speed up queries for site-stats page. --> ThePeePs
 
 
