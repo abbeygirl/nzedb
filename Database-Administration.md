@@ -6,7 +6,8 @@
 
 
 
-### Mysql 5.6+ Options, add to my.cnf and restart
+### Mysql 5.6+ Options
+add to my.cnf and restart
 ```
 #dump/restore buffer pool, faster buffer pool warmup
 innodb_buffer_pool_dump_at_shutdown = ON
