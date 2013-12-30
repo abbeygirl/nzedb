@@ -44,7 +44,8 @@ If you're planning to use the "Table Per Group" feature the number of open file 
 
 Under [server]
 ```
-open_files_limit=24576
+open_files_limit=34768
+innodb_open_files=24576    <= If using InnoDB
 ```
 
 Increase the total system limit and call "sysctl -p" after this edit:
