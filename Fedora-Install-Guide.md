@@ -47,13 +47,13 @@ Under [server]
 open_files_limit=24576
 ```
 
-Also increase the total system limit and call "sysctl -p" after this edit:
+Increase the total system limit and call "sysctl -p" after this edit:
 ```
 vi /etc/sysctl.conf
 fs.file-max = 512000
 ```
 
-Also increase the open files limit for mysql user:
+Also ncrease the open files limit for mysql user:
 ```
 vi /etc/security/limits.conf
 mysql soft nofile 24576
