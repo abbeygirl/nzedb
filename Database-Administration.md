@@ -8,6 +8,7 @@
 
 ### Mysql 5.6+ Options
 add to my.cnf and restart
+http://dev.mysql.com/doc/refman/5.6/en/innodb-performance.html
 ```
 #dump/restore buffer pool, faster buffer pool warmup
 innodb_buffer_pool_dump_at_shutdown = ON
