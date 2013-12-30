@@ -53,7 +53,7 @@ vi /etc/sysctl.conf
 fs.file-max = 512000
 ```
 
-Also ncrease the open files limit for mysql user:
+Also increase the open files limit for mysql user:
 ```
 vi /etc/security/limits.conf
 mysql soft nofile 24576
