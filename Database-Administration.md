@@ -4,6 +4,17 @@
 
 ### Miscellaneous SQL statements that you may find useful. Cut & paste ready.
 
+
+
+### Mysql 5.6+ Options, add to my.cnf and restart
+```
+#dump/restore buffer pool, faster buffer pool warmup
+innodb_buffer_pool_dump_at_shutdown = ON
+innodb_buffer_pool_load_at_startup  = ON
+
+innodb_checksum_algorithm           = crc32
+```
+
 ### Calculate size of tables and indexes
 found here: http://blog.elijaa.org/index.php?post/2013/08/22/Calculate-Optimize-MySQL-Database-Size
 ```
