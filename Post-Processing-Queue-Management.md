@@ -30,7 +30,7 @@ To delete a particular release, use the misc/testing/DB_scripts/delete_releases.
 ### NFO
 _Count Queued_
 ```
-> SELECT COUNT(*) FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
+> SELECT nfostatus,COUNT(*) FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 ) group by nfostatus;
 ```
  
 _Find Queued_
