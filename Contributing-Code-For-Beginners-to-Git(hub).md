@@ -21,6 +21,8 @@ Contributing code fixes or new features should be done something like the follow
 
 `git branch dev-<your-gitID>-<feature/fix-name>`
 
+`git checkout dev-<your-gitID>-<feature/fix-name>`
+
 * When your fixes/feature are ready you first need to make sure dev didn't change while you were working.
 
 `git pull upstream dev`
