@@ -2,32 +2,36 @@ If you are familiar with git/github you can probably skip this, you may want to 
 
 Contributing code fixes or new features should be done something like the following:
 
-* Fork the project.
+* Fork the project. See https://help.github.com/articles/fork-a-repo
 
-* Clone your fork to your computer.
+* Clone your fork to your computer. It will need a different name if it will be in the same directory as your clone of the main project. e.g. /var/www/nZEDb and /var/www/nZEDb-&lt;git-user-name&gt;
 
-`git clone git@github.com:/nZEDb.git`
-* Add the nZEDb repository to your local copy as a remote. This will allow you to pull updates into your fork later.
+`cd /var/www`
 
-`cd nZEDb`
+`git clone git@github.com:<git-user-name>/nZEDb-main.git nZEDB-<git-user-name>`
+
+* Add the main project as a remote. This will allow you to pull updates into your fork later:
+
+`cd nZEDb-<git-user-name>`
 
 `git remote add upstream git@github.com:nZEDb/nZEDb.git`
 
-* Create a new branch to work in. Keeping your changes separate from master/dev will make it much easier to compare them, create pull requests, and merge back. Use a name that tells you and us what its intention is and possibly who it came from. Only work on one bug or feature in each branch. Anything else is just too confusing to read/merge!
+* Create a new branch to work in. Keeping your changes separate from master/dev will make it much easier to compare them, create pull requests, and merge back. Use a name that tells you and us what its intention is and possibly who it came from. Only work on one bug or feature in each branch. Anything else is just too confusing to read/merge! If you are proposing a fix for a known issue (i.e. in the issue tracker), use the issue-ID.
 
 `git branch -t dev`
 
 `git checkout dev`
 
-`git branch dev-<your-gitID>-<feature/fix-name>`
+`git branch dev-<git-user-name>-<feature/fix-name>`
 
-`git checkout dev-<your-gitID>-<feature/fix-name>`
+`git checkout dev-<git-user-name>-<feature/fix-name>`
 
 * When your fixes/feature are ready you first need to make sure dev didn't change while you were working.
 
 `git pull upstream dev`
 
-* Fix any merge onflicts.
+* Fix any merge conflicts.
 
-`git push`
+`git push origin dev-<git-user-name>-<feature/fix-name>`
+
 * On your github repository change the view so that you are comparing nZEDb:dev to your new branch before sending a pull request.
