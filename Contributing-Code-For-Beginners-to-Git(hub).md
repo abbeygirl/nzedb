@@ -8,13 +8,13 @@ Contributing code fixes or new features should be done something like the follow
 
 `cd /var/www`
 
-`git clone git@github.com:<git-user-name>/nZEDb-main.git nZEDB-<git-user-name>`
+`git clone https://github.com/<git-user-name>/nZEDb-main.git nZEDB-<git-user-name>`
 
 * Add the main project as a remote. This will allow you to pull updates into your fork later:
 
 `cd nZEDb-<git-user-name>`
 
-`git remote add upstream git@github.com:nZEDb/nZEDb.git`
+`git remote add upstream https://github.com/nZEDb/nZEDb.git`
 
 * Create a new branch to work in. Keeping your changes separate from master/dev will make it much easier to compare them, create pull requests, and merge back. Use a name that tells you and us what its intention is and possibly who it came from. Only work on one bug or feature in each branch. Anything else is just too confusing to read/merge! If you are proposing a fix for a known issue (i.e. in the issue tracker), use the issue-ID.
 
