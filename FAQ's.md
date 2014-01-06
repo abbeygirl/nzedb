@@ -332,6 +332,13 @@ Q: Send to SABnzbd button is not working.
 A:
 One possible reason is due to that the nginx server name does not match the domain you are accessing the web interface through. Please make sure that the server_name variable matches the url you are accessing. The variable is located at /etc/nginx/sites-available/nZEDb (or whatever you called your site). Notice that the catch-all "server_name _;" does not work for this and thus your web browser will think that you are trying to make an cross-domain request which is not allowed.
 
+Q: -I am postprocessing and see many lines like this, what is the cause and how do I fix it?
+```
+E: File Read Error
+```
+
+A: The cause is mediainfo can not recognize or can not read the file. The file may be valid, just not a compatible format or it may be an empty file. There is no fix, except ensure you have the latest version.
+
 ************************************************
 
 Please do not open issues on github if the question is already asked. Take a few minutes to look at the titles of other issues. 
