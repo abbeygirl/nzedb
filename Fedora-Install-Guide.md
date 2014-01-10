@@ -61,6 +61,16 @@ mysql soft nofile 24576
 mysql hard nofile 32384
 ```
 
+The systemd start scripts should also be adjusted
+```
+vi /etc/systemd/system/mysqld.service
+.include /lib/systemd/system/mysqld.service
+[Service]
+LimitNOFILE=24576
+
+systemctl daemon-reload
+```
+
 ### Apache
 
 Ensure apache is listening on the IP and port you expect
