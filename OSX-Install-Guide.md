@@ -107,6 +107,6 @@ _mediainfo_
 	3) Edit /Library/Server/Web/Data/Sites/nzedb/nZEDb/www/config.php file as follows
 		`change MEMCACHE_ENABLED to true`
 
-**Section J - Tmux **
+**Section J - Tmux**
 1) In Terminal issue the following commands
 ' brew install tmux ' 
