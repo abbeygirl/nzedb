@@ -106,3 +106,7 @@ _mediainfo_
 	2)Restart Apache from OSX Server Admin app
 	3) Edit /Library/Server/Web/Data/Sites/nzedb/nZEDb/www/config.php file as follows
 		`change MEMCACHE_ENABLED to true`
+
+**Section J - Tmux **
+1) In Terminal issue the following commands
+' brew install tmux ' 
