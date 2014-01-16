@@ -10,6 +10,7 @@ Prerequisite - Install XCODE , sequelpro, OSX Server APP, iterm2 app, git
 **Section B - Install Python**
 1) In terminal Issue the following commands
 	`brew install python`
+        `brew install python3`
 	`export PATH=/usr/local/share/python:$PATH`
 
 -----------------------------------------------------------------------------------------	
@@ -19,6 +20,7 @@ Prerequisite - Install XCODE , sequelpro, OSX Server APP, iterm2 app, git
 	`brew install mysql`
     `pip install MySQL-python`
 	`pip install cymysql`
+        `pip3 install cymysql`
 3) In terminal issue the following command
         `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
         `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
