@@ -123,21 +123,7 @@ sudo chmod -R 777 /Library/Server/Web/Data/Sites/nzedb/nZEDb/nzbfiles
 
 ***
 
-**_Section I - memcached_** <br>
-* In Terminal issue the following commands <br>
-```
-pip install python-memcached
-```
-* Restart Apache from OSX Server Admin app <br>
-* Edit /Library/Server/Web/Data/Sites/nzedb/nZEDb/www/config.php file as follows <br>
-```
-change MEMCACHE_ENABLED to true
-```
-
-
-***
-
-**_Section J - Tmux_** <br>
+**_Section I - Tmux_** <br>
 * In Terminal issue the following commands <br>
 ```
 brew install tmux
