@@ -17,7 +17,7 @@ mysql> SELECT ID,passwordstatus,name,searchname,guid FROM releases WHERE ID = 47
 ### Delete a specific release
 
 ```
-cd misc/testing/DB_scripts
+cd misc/testing/DB
 php delete_release.php guid equals 1f374b691cdba39757e5a7a59978ceb89373fb20
 ```
 
