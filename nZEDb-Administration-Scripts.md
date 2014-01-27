@@ -2,7 +2,7 @@ nZEDb has a rich variety of scripts that automate many administrative tasks. We 
 
 The scripts are loosely grouped by function into several sub-directories.
 
-## DB_scripts 
+## DB scripts (misc/testing/DB)
 
 ### active_groups.php 
 
