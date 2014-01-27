@@ -21,10 +21,10 @@ Then add the required modules
 `sudo easy_install socketpool`
 
 Copy the sample config  
-`cp /var/www/nZEDb/misc/update_scripts/python_scripts/lib/nntpproxy.conf.sample /var/www/nZEDb/misc/update_scripts/python_scripts/lib/nntpproxy.conf`
+`cp /var/www/nZEDb/misc/update/python/lib/nntpproxy.conf.sample /var/www/nZEDb/misc/update/python/lib/nntpproxy.conf`
 
-and make the nessasary changes  
-`sudo nano /var/www/nZEDb/misc/update_scripts/python_scripts/lib/nntpproxy.conf`
+and make the necessary changes  
+`sudo nano /var/www/nZEDb/misc/update/python/lib/nntpproxy.conf`
 
 If you intend to use more than one NNTP you will need to repeat the config steps creating a second config file nntpproxy_a.conf and ensure you use a different port (I suggest 9992)
 
