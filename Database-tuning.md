@@ -4,11 +4,17 @@ If you're using percona the best place to start is [https://tools.percona.com/wi
 
 Once you have a base config, use tools such as the phpmyadmin adviser and **[MySQLtuner](http://mysqltuner.com)** to fine tune things further.
 
-If you are using the tmux scripts it is advised to convert you tables to InnoDB to avoid table locks. There is a script under misc/testing/DB_scripts to help you with this.
+If you are using the tmux scripts it is advised to convert you tables to InnoDB to avoid table locks. There is a script under misc/testing/DB to help you with this.
 
 **Before migrating from MyISAM to InnoDB** be sure to set **innodb_file_per_table** in my.cnf. If that was not done first follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
 
 ## MySQL Buffer Size Tuning
+At the latest, once the database is holding more than 1 million releases you'll need start tuning. The two queries below can provide a simple recommendation. There is a helpful nZEDb script
+```
+php /var/nZEDb/misc/testing/DB/show_table_sizes.php
+```
+
+And once again **[MySQL Tuner](http://mysqltuner.pl)**  <== Use it!
 
 ### Determine Recommended MyISAM Key Buffer Size
 ```
