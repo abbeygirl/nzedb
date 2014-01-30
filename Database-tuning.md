@@ -8,7 +8,7 @@ If you are using the tmux scripts it is advised to convert you tables to InnoDB 
 
 **Before migrating from MyISAM to InnoDB** be sure to set **innodb_file_per_table** in my.cnf. If that was not done first follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
 
-## MySQL Buffer Size
+## MySQL Buffer Sizes
 At the latest, once the database is holding more than 1 million releases you'll need start tuning. The two queries below can provide a simple recommendation. There is a helpful nZEDb script
 ```
 php /var/nZEDb/misc/testing/DB/show_table_sizes.php
