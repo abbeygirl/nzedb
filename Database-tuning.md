@@ -8,6 +8,8 @@ If you are using the tmux scripts it is advised to convert you tables to InnoDB 
 
 **Before migrating from MyISAM to InnoDB** be sure to set **innodb_file_per_table** in my.cnf. If that was not done first follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
 
+## MySQL Buffer Size Tuning
+
 ### Determine Recommended MyISAM Key Buffer Size
 ```
 SELECT CONCAT(ROUND(KBS/POWER(1024,IF(pw<0,0,IF(pw>3,0,pw)))+0.49999),
