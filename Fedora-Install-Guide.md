@@ -109,6 +109,12 @@ Create nZEDb VirtualHost config
 Open up the firewall for http & https ports. Be sure to edit the Permanent Configuration.
 * firewall-config
 
+## Configure memcached (optional)
+* yum install memcached    (done above)
+* vi /etc/sysconfig/memcached   (configure as desired)
+* systemctl start memcached.service
+* systemctl enable memcached.service
+* echo stats | nc localhost 11211   (test)
 
 ## Post-Processing extras (optional)
 
