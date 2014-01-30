@@ -6,7 +6,7 @@ Once you have a base config, use tools such as the phpmyadmin adviser and **[MyS
 
 If you are using the tmux scripts it is advised to convert you tables to InnoDB to avoid table locks. There is a script under misc/testing/DB_scripts to help you with this.
 
-**_Before migrating from MyISAM to InnoDB_** be sure to set **innodb_file_per_table** in my.cnf. If that was not done first follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
+**Before migrating from MyISAM to InnoDB** be sure to set **innodb_file_per_table** in my.cnf. If that was not done first follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
 
 ### Determine Recommended MyISAM Key Buffer Size
 ```
