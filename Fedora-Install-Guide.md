@@ -116,6 +116,8 @@ Open up the firewall for http & https ports. Be sure to edit the Permanent Confi
 * systemctl enable memcached.service
 * echo stats | nc localhost 11211   (test)
 
+Enable memcache in /var/www/nZEDb/config.php
+
 ## Post-Processing extras (optional)
 
 ### ffmpeg
