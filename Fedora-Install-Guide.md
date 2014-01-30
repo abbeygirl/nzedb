@@ -148,6 +148,7 @@ Certain directories need to be read/writable to both the nzedb user and apache. 
 As root user:
 * chmod g+rx /var/www/nZEDb
 * usermod -a -G nzedb apache
+* chgrp apache /var/www/nZEDb/nzbfiles nzbfiles
 
 ## Create nZEDb Database and grant user access
 This step is optional as the installer can create the database for you. This method below is useful if you have other applications using the same database.
