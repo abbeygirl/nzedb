@@ -32,7 +32,7 @@ Fix any merge conflicts.
 
 ### Push changes to your Repository
 
-`git commit -a`
+`./commit`
 
 `git push origin dev-<git-user-name>-<feature/fix-name>`
 
