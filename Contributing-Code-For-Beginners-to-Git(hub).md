@@ -38,6 +38,7 @@ Contributing code fixes or new features should be done something like the follow
 
 On your github repository page you should now see a "Compare & Send Pull Request" button. After using this button you need to use the Edit button to ensure the comparison direction is correct. Place your fork and branch on one side and nZEDb's branch on the other. 
 
-e.g. Fork:<git-user-name>/nZEDb  Branch:<feature/fix-name>   Fork:nZEDb/nZEDb  Branch:nZEDb/dev
+e.g. 
+`Fork:<git-user-name>/nZEDb  Branch:<feature/fix-name>   Fork:nZEDb/nZEDb  Branch:nZEDb/dev`
 
 This may take several attempts as you need to do a "Cross-fork Comparison".
