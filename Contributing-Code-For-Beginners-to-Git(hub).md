@@ -24,11 +24,11 @@ Contributing code fixes or new features should be done something like the follow
 
 ### Do your Coding & Testing
 
-* When your fixes/feature are ready you first need to make sure dev didn't change while you were working.
+When your fixes/feature are ready you first need to make sure dev didn't change while you were working.
 
 `git pull upstream dev`
 
-* Fix any merge conflicts.
+Fix any merge conflicts.
 
 ### Push changes to your Repository
 
@@ -36,7 +36,7 @@ Contributing code fixes or new features should be done something like the follow
 
 `git push origin dev-<git-user-name>-<feature/fix-name>`
 
-On your github repository page you should now see a "Compare & Send Pull Request" button. After using this button you need to use the Edit button to ensure the correct branches are compared. Place your fork and branch on one side and nZEDb's fork and dev branch on the other. e.g. 
+On your github repository page you should now see a green "Compare & Send Pull Request" button. After using this button you need to use the Edit button to ensure the correct branches are compared. Place your fork and branch on one side and nZEDb's fork and dev branch on the other. e.g. 
 
 `Fork:<git-user-name>/nZEDb  Branch:<feature/fix-name>  ==>  Fork:nZEDb/nZEDb  Branch:nZEDb/dev`
 
