@@ -8,7 +8,7 @@ Contributing code fixes or new features should be done something like the follow
 
 `cd /var/www`
 
-`git clone https://github.com/<git-user-name>/nZEDb-main.git nZEDB-<git-user-name>`
+`git clone https://github.com/<git-user-name>/nZEDb.git nZEDB-<git-user-name>`
 
 * Add the main project as a remote. This will allow you to pull updates into your fork later:
 
