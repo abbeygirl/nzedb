@@ -18,10 +18,6 @@ Contributing code fixes or new features should be done something like the follow
 
 * Create a new branch to work in. Keeping your changes separate from master/dev will make it much easier to compare them, create pull requests, and merge back. Use a name that tells you and us what its intention is and possibly who it came from. Only work on one bug or feature in each branch. Anything else is just too confusing to read/merge! If you are proposing a fix for a known issue (i.e. in the issue tracker), use the issue-ID.
 
-`git branch -t dev`
-
-`git checkout dev`
-
 `git branch dev-<git-user-name>-<feature/fix-name>`
 
 `git checkout dev-<git-user-name>-<feature/fix-name>`
@@ -32,6 +28,12 @@ Contributing code fixes or new features should be done something like the follow
 
 * Fix any merge conflicts.
 
+`git commit -a`
+
 `git push origin dev-<git-user-name>-<feature/fix-name>`
 
-* On your github repository change the view so that you are comparing nZEDb:dev to your new branch before sending a pull request.
+* On your github repository page you should now see a "Compare & Send Pull Request" button. After using this button you need to use the Edit button to ensure the comparison direction is correct. Place your fork and branch on the left side and nZEDb's branch on the right. 
+
+i.e. Fork:<git-user-name>/nZEDb  Branch:<feature/fix-name>   Fork:nZEDb/nZEDb  Branch:nZEDb/dev
+
+This may take several attempts as you need to do a "Cross-fork Comparison".
