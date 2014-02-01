@@ -25,4 +25,4 @@ Forum: [nZEDb.com](http://nzedb.com)
 
 ***
 * [To-Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
-* [Contributing Code](https://github.com/nZEDb/nZEDb/wiki/Contributing-Code-For-Beginners-to-Git(hub\))
+* [Contributing Code](https://github.com/nZEDb/nZEDb/wiki/Contributing-Code-For-Beginners-to-Git(hub))
