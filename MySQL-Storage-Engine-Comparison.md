@@ -1,6 +1,6 @@
 This a comparison between MyISAM fixed, MyISAM Dynamic, InnoDB Dynamic and InnoDB Compressed mysql engines and row formats. I am testing with Percona Server version: 5.6.15-63.0-log Percona XtraDB Cluster (GPL), Release 25.3, wsrep_25.3.r4034. I am using the same database for each engine and row_format and using mysql_convert_tables.php for the conversion.
 
-The absolute largest data set is MyISAM Fixed row format with 83GB.
+The absolute largest data set is MyISAM Fixed row format with 83GB. During this set of tests, I started with a freshly imported copy of my backup db. I did not realize that the index size was not correct until after the very last conversion. As this test took more than 12 hours to conduct, I do not care to do it again. The index sizes are incorrect because I did not analyze the tables after conversion to rebuild that statistics. 
 
 | Table | Count                 |
 | ------------- |:-------------:|
