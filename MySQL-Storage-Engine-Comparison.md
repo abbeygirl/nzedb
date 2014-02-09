@@ -207,4 +207,61 @@ With InnoDB Compressed Row Format:
 ```
 php misc/testing/DB/convert_mysql_tables.php cinnodb
 php misc/testing/DB/show_table_sizes.php 0
+Table Name                 Engine Row_Format       Data Size      Index Size      Free Space      Total Size
+========================= ======= ========== =============== =============== =============== ===============
+releasenfo                 InnoDB    DYNAMIC     4,380.00 MB        42.58 MB         5.00 MB     4,422.58 MB
+releases                   InnoDB COMPRESSED     1,118.00 MB        49.34 MB         0.00 MB     1,167.34 MB
+releaseextrafull           InnoDB COMPRESSED       900.50 MB         0.00 MB         5.00 MB       900.50 MB
+predb                      InnoDB COMPRESSED       501.50 MB       263.50 MB         0.00 MB       765.00 MB
+tvrage                     InnoDB COMPRESSED       539.78 MB         0.76 MB         1.50 MB       540.54 MB
+movieinfo                  InnoDB COMPRESSED       218.99 MB         0.00 MB         0.00 MB       218.99 MB
+releasefiles               InnoDB COMPRESSED       115.39 MB         0.00 MB         0.00 MB       115.39 MB
+releasevideo               InnoDB COMPRESSED        31.80 MB         0.00 MB         5.00 MB        31.80 MB
+releaseaudio               InnoDB COMPRESSED        22.29 MB         9.27 MB         2.50 MB        31.56 MB
+bookinfo                   InnoDB COMPRESSED        18.28 MB         0.00 MB         2.00 MB        18.28 MB
+anidb                      InnoDB COMPRESSED         5.26 MB         0.00 MB         2.00 MB         5.26 MB
+musicinfo                  InnoDB COMPRESSED         5.26 MB         0.00 MB         2.00 MB         5.26 MB
+releasesubs                InnoDB COMPRESSED         2.26 MB         1.76 MB         2.00 MB         4.02 MB
+tvrageepisodes             InnoDB COMPRESSED         2.76 MB         0.76 MB         2.50 MB         3.52 MB
+consoleinfo                InnoDB COMPRESSED         1.26 MB         0.00 MB         2.00 MB         1.26 MB
+allgroups                  InnoDB COMPRESSED         0.76 MB         0.20 MB         2.50 MB         0.96 MB
+upcoming                   InnoDB COMPRESSED         0.08 MB         0.01 MB         0.00 MB         0.09 MB
+collections                InnoDB COMPRESSED         0.01 MB         0.05 MB         0.00 MB         0.06 MB
+groups                     InnoDB COMPRESSED         0.03 MB         0.02 MB         0.00 MB         0.05 MB
+userrequests               InnoDB COMPRESSED         0.03 MB         0.02 MB         0.00 MB         0.05 MB
+forumpost                  InnoDB COMPRESSED         0.01 MB         0.03 MB         0.00 MB         0.04 MB
+partrepair                 InnoDB COMPRESSED         0.01 MB         0.03 MB         0.00 MB         0.04 MB
+category                   InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.03 MB
+binaries                   InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.03 MB
+nzbs                       InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.03 MB
+parts                      InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.02 MB
+releasecomment             InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.02 MB
+userdownloads              InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.02 MB
+binaryblacklist            InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.02 MB
+tmux                       InnoDB COMPRESSED         0.01 MB         0.02 MB         0.00 MB         0.02 MB
+usercart                   InnoDB COMPRESSED         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+userseries                 InnoDB COMPRESSED         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+country                    InnoDB COMPRESSED         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+site                       InnoDB COMPRESSED         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+userexcat                  InnoDB COMPRESSED         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+usermovies                 InnoDB COMPRESSED         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+logging                    InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+userroles                  InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+menu                       InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+users                      InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+animetitles                InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+content                    InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+shortgroups                InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+userinvite                 InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+genres                     InnoDB COMPRESSED         0.01 MB         0.00 MB         0.00 MB         0.01 MB
+========================= ======= ========== =============== =============== =============== ===============
+Table Name                 Engine Row_Format       Data Size      Index Size      Free Space      Total Size
+                                                 7,864.43 MB       368.52 MB        34.00 MB     8,232.95 MB
 
+
+The recommended minimums are:
+MyISAM: key-buffer-size           =
+InnoDB: innodb_buffer_pool_size   = 1G
+
+**Total DB size 8.04GB**
+```
