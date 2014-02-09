@@ -72,3 +72,65 @@ InnoDB: innodb_buffer_pool_size   = 0G
 ```
 
 With MyISAM Dynamic Row Format:
+
+```
+php misc/testing/DB/convert_mysql_tables.php fmyisam
+php misc/testing/DB/show_table_sizes.php 0
+Table Name                 Engine Row_Format       Data Size      Index Size      Free Space      Total Size
+========================= ======= ========== =============== =============== =============== ===============
+releases                   MyISAM    DYNAMIC     2,182.63 MB     4,200.64 MB         0.00 MB     6,383.27 MB
+releasenfo                 MyISAM      FIXED     3,299.91 MB        50.41 MB         0.00 MB     3,350.32 MB
+releaseextrafull           MyISAM      FIXED     1,576.63 MB         7.08 MB         0.00 MB     1,583.71 MB
+predb                      MyISAM    DYNAMIC       788.93 MB       727.88 MB         0.00 MB     1,516.81 MB
+tvrage                     MyISAM      FIXED     1,392.27 MB         3.79 MB         0.00 MB     1,396.07 MB
+movieinfo                  MyISAM    DYNAMIC       403.97 MB        57.57 MB         0.00 MB       461.54 MB
+releasefiles               MyISAM    DYNAMIC       163.88 MB       134.70 MB         0.00 MB       298.58 MB
+releasevideo               MyISAM    DYNAMIC        56.20 MB         6.78 MB         0.00 MB        62.97 MB
+releaseaudio               MyISAM    DYNAMIC        36.72 MB        19.59 MB         0.00 MB        56.31 MB
+bookinfo                   MyISAM    DYNAMIC        33.59 MB         0.29 MB         0.00 MB        33.89 MB
+musicinfo                  MyISAM    DYNAMIC         9.09 MB         0.14 MB         0.00 MB         9.23 MB
+anidb                      MyISAM      FIXED         7.90 MB         0.07 MB         0.00 MB         7.97 MB
+tvrageepisodes             MyISAM    DYNAMIC         4.89 MB         0.95 MB         0.00 MB         5.84 MB
+releasesubs                MyISAM    DYNAMIC         2.43 MB         3.10 MB         0.00 MB         5.54 MB
+consoleinfo                MyISAM    DYNAMIC         1.52 MB         0.02 MB         0.00 MB         1.54 MB
+allgroups                  MyISAM    DYNAMIC         0.44 MB         0.21 MB         0.00 MB         0.65 MB
+upcoming                   MyISAM      FIXED         0.18 MB         0.00 MB         0.00 MB         0.18 MB
+groups                     MyISAM    DYNAMIC         0.03 MB         0.04 MB         0.00 MB         0.07 MB
+userrequests               MyISAM    DYNAMIC         0.02 MB         0.01 MB         0.00 MB         0.03 MB
+country                    MyISAM    DYNAMIC         0.01 MB         0.01 MB         0.00 MB         0.02 MB
+shortgroups                MyISAM    DYNAMIC         0.00 MB         0.01 MB         0.00 MB         0.01 MB
+site                       MyISAM    DYNAMIC         0.00 MB         0.01 MB         0.00 MB         0.01 MB
+tmux                       MyISAM    DYNAMIC         0.00 MB         0.01 MB         0.00 MB         0.01 MB
+category                   MyISAM    DYNAMIC         0.00 MB         0.01 MB         0.00 MB         0.01 MB
+binaryblacklist            MyISAM    DYNAMIC         0.00 MB         0.01 MB         0.00 MB         0.01 MB
+genres                     MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.01 MB
+forumpost                  MyISAM      FIXED         0.00 MB         0.01 MB         0.00 MB         0.01 MB
+userdownloads              MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.01 MB
+users                      MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+content                    MyISAM      FIXED         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+binaries                   MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+nzbs                       MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+collections                MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+animetitles                MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+menu                       MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+userseries                 MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+logging                    MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+userroles                  MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+userexcat                  MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+userinvite                 MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+partrepair                 MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+usermovies                 MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+parts                      MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+usercart                   MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+releasecomment             MyISAM    DYNAMIC         0.00 MB         0.00 MB         0.00 MB         0.00 MB
+========================= ======= ========== =============== =============== =============== ===============
+Table Name                 Engine Row_Format       Data Size      Index Size      Free Space      Total Size
+                                                 9,961.25 MB     5,213.39 MB         0.00 MB    15,174.64 MB
+
+
+The recommended minimums are:
+MyISAM: key-buffer-size           = 6G
+InnoDB: innodb_buffer_pool_size   = 0G
+
+**Total DB size 14.82GB**
+```
