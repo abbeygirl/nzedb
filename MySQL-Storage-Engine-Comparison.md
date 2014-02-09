@@ -9,6 +9,7 @@ This a comparison between MyISAM fixed, MyISAM Dynamic, InnoDB Dynamic and InnoD
 | TvRage(incl images)        | 41,157        |
 
 With MyISAM Fixed Row Format:
+
 ```
 php misc/testing/DB/convert_mysql_tables.php fmyisam
 php misc/testing/DB/show_table_sizes.php 0
@@ -134,3 +135,9 @@ InnoDB: innodb_buffer_pool_size   = 0G
 
 **Total DB size 14.82GB**
 ```
+
+With InnoDB Dynamic Row Format:
+
+```
+php misc/testing/DB/convert_mysql_tables.php dinnodb
+php misc/testing/DB/show_table_sizes.php 0
