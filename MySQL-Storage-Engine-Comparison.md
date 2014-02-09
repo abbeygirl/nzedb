@@ -143,3 +143,68 @@ With InnoDB Dynamic Row Format:
 ```
 php misc/testing/DB/convert_mysql_tables.php dinnodb
 php misc/testing/DB/show_table_sizes.php 0
+Table Name                 Engine Row_Format       Data Size      Index Size      Free Space      Total Size
+========================= ======= ========== =============== =============== =============== ===============
+releasenfo                 InnoDB    DYNAMIC     4,380.00 MB        42.58 MB         5.00 MB     4,422.58 MB
+releases                   InnoDB    DYNAMIC     2,543.00 MB       105.67 MB         0.00 MB     2,648.67 MB
+releaseextrafull           InnoDB    DYNAMIC     2,045.00 MB         0.00 MB         4.00 MB     2,045.00 MB
+predb                      InnoDB    DYNAMIC       936.00 MB       438.00 MB         0.00 MB     1,374.00 MB
+movieinfo                  InnoDB    DYNAMIC       465.95 MB         0.00 MB         0.00 MB       465.95 MB
+tvrage                     InnoDB    DYNAMIC       342.52 MB         0.33 MB         4.00 MB       342.84 MB
+releasefiles               InnoDB    DYNAMIC       210.72 MB         0.00 MB         0.00 MB       210.72 MB
+releasevideo               InnoDB    DYNAMIC        70.59 MB         0.00 MB         6.00 MB        70.59 MB
+releaseaudio               InnoDB    DYNAMIC        47.58 MB        19.55 MB         5.00 MB        67.13 MB
+bookinfo                   InnoDB    DYNAMIC        38.56 MB         0.00 MB         6.00 MB        38.56 MB
+anidb                      InnoDB    DYNAMIC        11.52 MB         0.00 MB         4.00 MB        11.52 MB
+musicinfo                  InnoDB    DYNAMIC        10.52 MB         0.00 MB         4.00 MB        10.52 MB
+tvrageepisodes             InnoDB    DYNAMIC         6.52 MB         1.52 MB         4.00 MB         8.03 MB
+releasesubs                InnoDB    DYNAMIC         4.52 MB         3.52 MB         4.00 MB         8.03 MB
+consoleinfo                InnoDB    DYNAMIC         2.52 MB         0.00 MB         4.00 MB         2.52 MB
+allgroups                  InnoDB    DYNAMIC         1.52 MB         0.41 MB         4.00 MB         1.92 MB
+upcoming                   InnoDB    DYNAMIC         0.23 MB         0.02 MB         0.00 MB         0.25 MB
+collections                InnoDB    DYNAMIC         0.02 MB         0.11 MB         0.00 MB         0.13 MB
+groups                     InnoDB    DYNAMIC         0.06 MB         0.05 MB         0.00 MB         0.11 MB
+userrequests               InnoDB    DYNAMIC         0.06 MB         0.03 MB         0.00 MB         0.09 MB
+forumpost                  InnoDB    DYNAMIC         0.02 MB         0.06 MB         0.00 MB         0.08 MB
+partrepair                 InnoDB    DYNAMIC         0.02 MB         0.06 MB         0.00 MB         0.08 MB
+shortgroups                InnoDB    DYNAMIC         0.02 MB         0.06 MB         0.00 MB         0.08 MB
+binaries                   InnoDB    DYNAMIC         0.02 MB         0.05 MB         0.00 MB         0.06 MB
+nzbs                       InnoDB    DYNAMIC         0.02 MB         0.05 MB         0.00 MB         0.06 MB
+category                   InnoDB    DYNAMIC         0.02 MB         0.05 MB         0.00 MB         0.06 MB
+binaryblacklist            InnoDB    DYNAMIC         0.02 MB         0.03 MB         0.00 MB         0.05 MB
+tmux                       InnoDB    DYNAMIC         0.02 MB         0.03 MB         0.00 MB         0.05 MB
+parts                      InnoDB    DYNAMIC         0.02 MB         0.03 MB         0.00 MB         0.05 MB
+releasecomment             InnoDB    DYNAMIC         0.02 MB         0.03 MB         0.00 MB         0.05 MB
+userdownloads              InnoDB    DYNAMIC         0.02 MB         0.03 MB         0.00 MB         0.05 MB
+country                    InnoDB    DYNAMIC         0.02 MB         0.02 MB         0.00 MB         0.03 MB
+site                       InnoDB    DYNAMIC         0.02 MB         0.02 MB         0.00 MB         0.03 MB
+userexcat                  InnoDB    DYNAMIC         0.02 MB         0.02 MB         0.00 MB         0.03 MB
+usermovies                 InnoDB    DYNAMIC         0.02 MB         0.02 MB         0.00 MB         0.03 MB
+usercart                   InnoDB    DYNAMIC         0.02 MB         0.02 MB         0.00 MB         0.03 MB
+userseries                 InnoDB    DYNAMIC         0.02 MB         0.02 MB         0.00 MB         0.03 MB
+userinvite                 InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+genres                     InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+logging                    InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+userroles                  InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+menu                       InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+users                      InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+animetitles                InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+content                    InnoDB    DYNAMIC         0.02 MB         0.00 MB         0.00 MB         0.02 MB
+========================= ======= ========== =============== =============== =============== ===============
+Table Name                 Engine Row_Format       Data Size      Index Size      Free Space      Total Size
+                                                11,117.78 MB       612.34 MB        54.00 MB    11,730.13 MB
+
+
+The recommended minimums are:
+MyISAM: key-buffer-size           =
+InnoDB: innodb_buffer_pool_size   = 1G
+
+**Total DB size 11.452GB**
+```
+
+With InnoDB Compressed Row Format:
+
+```
+php misc/testing/DB/convert_mysql_tables.php cinnodb
+php misc/testing/DB/show_table_sizes.php 0
+
