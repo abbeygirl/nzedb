@@ -1,11 +1,12 @@
-This a comparison between MyISAM fixed, MyISAM Dynamic, InnoDB Dynamic and InnoDB Compressed. I am using the same database for each engine and row_format and using mysql_convert_tables.php for the conversion.
+This a comparison between MyISAM fixed, MyISAM Dynamic, InnoDB Dynamic and InnoDB Compressed mysql engines and row_formats. I am testing with Percona Server version: 5.6.15-63.0-log Percona XtraDB Cluster (GPL), Release 25.3, wsrep_25.3.r4034. I am using the same database for each engine and row_format and using mysql_convert_tables.php for the conversion.
 
-Releases    6,287,347
-NFO's       1,993,044
-PreDB       6,596,484
-MovieInfo   1,552,054
-TvRage         41,157 *including images
-
+| Table | Count                 |
+| ------------- |:-------------:|
+| Releases      | 6,287,347     |
+| NFO's         | 1,993,044     |
+| PreDB         | 6,596,484     |
+| MovieInfo     | 1,552,054     |
+| TvRage(incl images)        | 41,157        |
 
 With MyISAM Fixed Row Format:
 ```
