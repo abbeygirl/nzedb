@@ -12,7 +12,15 @@ You need to have Python 2 installed. If you are on a newer operating system whic
 
 ### Ubuntu instructions:
 
-First install Python 2.7  
+First, check that you have Python 2.7 installed:
+```
+python
+Python 2.7.3 (default, Sep 26 2013, 16:35:25)
+[GCC 4.7.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+Skip this if it's already installed:
 ```
 sudo easy_install-2.7 -U pip
 ```
