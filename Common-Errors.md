@@ -12,4 +12,4 @@ innodb_lock_wait_timeout                              = 240
 transaction-isolation                                 = READ-COMMITTED
 ```
 
-These are both InnoDB settings and will reduce the occurrence of lock wait timeouts. The second has the added benefit of releasing the row lock as soon as possible where without it, its not releases until the query is finished.
+These are both InnoDB settings and will reduce the occurrence of lock wait timeouts. The second has the added benefit of releasing the row lock as soon as possible where without it, its not released until the query is finished.
