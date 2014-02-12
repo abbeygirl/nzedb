@@ -1,4 +1,4 @@
-### Lock Wait Timeout Errors
+### Lock Wait Timeout
 This is caused when 1 script locks a row and another script is waiting for the row. The script that is waiting, times out.
 
 There are at least 2 things you can do to mitigate this behavior.
