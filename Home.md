@@ -25,5 +25,6 @@ Forum: [nZEDb.com](http://nzedb.com)
 * [Tmux Backfill Groups Selected Explained](https://github.com/nZEDb/nZEDb/wiki/Tmux-Backfill-Explanation-of-Groups)
 
 ***
+* Common Errors(https://github.com/nZEDb/nZEDb/wiki/Common-Errors)
 * [To-Do List](https://github.com/nZEDb/nZEDb/wiki/ToDo-List---Things-that-need-to-get-done)
 * [Contributing Code](https://github.com/nZEDb/nZEDb/wiki/Contributing-Code-For-Beginners-to-Git(hub))
