@@ -2,6 +2,7 @@
 This is caused when 1 script locks a row/table and another script is waiting for the row/table. The script that is waiting, times out.
 
 There are at least 2 things you can do to mitigate this behavior.
+
 1. Increase you lock wait timeout, so the script can wait a little longer.
 2. Allow the first script to release the row as soon as it is finished with it.
 
