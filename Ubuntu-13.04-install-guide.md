@@ -117,11 +117,20 @@ Paste the following:
 </VirtualHost>
 ```
 
-Enable the site/etc:   
+Enable the site/etc Ubuntu 13.04:  
+ 
 `sudo a2dissite default`  
 `sudo a2ensite nZEDb`  
 `sudo a2enmod rewrite`  
-`sudo service apache2 restart`  
+`sudo service apache2 restart` 
+
+Enable the site/etc Ubuntu 13.10:
+
+sudo nano /etc/apache2/sites-available/nZEDb.conf
+sudo a2dissite 000-default
+sudo a2ensite nZEDb
+sudo a2enmod rewrite
+sudo service apache2 restart 
 
 **********************************************  
 If you get the following error:
