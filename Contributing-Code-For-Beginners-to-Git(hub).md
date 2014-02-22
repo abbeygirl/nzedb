@@ -32,9 +32,9 @@ When your fixes/feature are ready you first need to make sure dev didn't change 
 
 Fix any merge conflicts.
 
-### Push changes to your Repository
-
 `./commit`
+
+### Push changes to your Repository
 
 `git push origin dev-<git-user-name>-<feature/fix-name>`
 
