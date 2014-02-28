@@ -11,10 +11,10 @@ Q: Sickbeard/Couchpotato are not working.
 A: Make sure they are not https.
 
 Q: Sabnzbd says I have problems with extra lines in the NZB.    
-A: There is a script in misc/testing/Dev_testing to fix those NZB files.
+A: There is a script in misc/testing/Dev to fix those NZB files.
 
 Q: How do I test the amazon keys?  
-A: There is a script in the misc/testing/Dev_testing folder. Read the whole output if you get an error (most people are only reading the bottom part).
+A: There is a script in the misc/testing/Dev folder. Read the whole output if you get an error (most people are only reading the bottom part).
 
 
 **Admin of Site**  
@@ -25,7 +25,7 @@ update site set value = 0 where setting = 'registerstatus';
 Q. Best way to change user password (admin) when no options to send out email ? If directly in db what password options to set, like md5, password ??   
 A. Create new user, change role in db, reset password from webui  
 
-**nZEDb Script Locations and use (for linux)**
+**Default nZEDb Script Locations and use (for Ubuntu linux)**
 
 /var/www/nZEDb/misc/testing/  
 nzb-import.php  
@@ -33,7 +33,7 @@ nzb-import.php
 /var/www/nZEDb/misc/testing/Bulk_import_linux  
 nzb-import-bulk.php  
 
-/var/www/nZEDb/misc/testing/DB_scripts    
+/var/www/nZEDb/misc/testing/DB
 active_groups.php      
 autopatcher.php  
 backfill_groups.php  
@@ -54,7 +54,7 @@ reset_Collections.php
 reset_postprocessing.php   
 reset_truncate.php - This script removes releases with no NZBs, resets all groups, truncates article tables. All other releases are left alone.  
 
-/var/www/nZEDb/misc/testing/Dev_testing  
+/var/www/nZEDb/misc/testing/Dev  
 check_nzbfolder.php    
 clean_nzbs.php  
 create_predb_patches.php    
@@ -66,13 +66,13 @@ test-amazon.php
 test_misc_sorter.php  
 test-rottentomato.php  
 
-/var/www/nZEDb/misc/testing/Dev_testing/Subject_Testing  
+/var/www/nZEDb/misc/testing/Dev/Subject  
 test-backfillcollectionname.php    
 test-binariescollectionname.php    
 test-cleansubject.php     
 test-releasecleaner.php   
 
-/var/www/nZEDb/misc/testing/PostProc_scripts   
+/var/www/nZEDb/misc/testing/PostProc  
 getAlbum.php     
 getConsole.php     
 getImdb.php     
@@ -81,7 +81,7 @@ getTMdb.php
 getTVInfo.php     
 musicTest.php   
 
-/var/www/nZEDb/misc/testing/Release_scripts  
+/var/www/nZEDb/misc/testing/Release  
 delete_disabled_category_releases.php  
 fixReleaseNames.php  
 foreignmoviesorter.php  
@@ -90,7 +90,7 @@ resetRelnameStatus.php
 resetSearchname.php  
 showsleep.php
 
-/var/www/nZEDb/misc/update_scripts  
+/var/www/nZEDb/misc/update     
 backfill.php  
 config.php 
 decrypt_hashes.php  
@@ -101,21 +101,21 @@ update_releases.php
 update_theaters.php  
 update_tvschedule.php
 
-/var/www/nZEDb/misc/update_scripts/nix_scripts/screen/sequential    
+/var/www/nZEDb/misc/update/nix/screen/sequential    
 simple.sh    
 threaded.sh  
 
-/var/www/nZEDb/misc/update_scripts/nix_scripts/screen/threaded  
+/var/www/nZEDb/misc/update/nix/screen/threaded  
 helper.sh  
 start.sh  
 
-/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux    
+/var/www/nZEDb/misc/update/nix/tmux    
 commit.sh  
 monitor.php  
 start.php  
 tmux.conf   
 
-/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux/bin  
+/var/www/nZEDb/misc/update/nix/tmux/bin  
 backfill_all_quick.php     
 backfill_interval.php   
 backfill_safe.php     
@@ -131,7 +131,7 @@ requestID.php
 tmux-mem-cpu-load   
 update_releases.php   
 
-/var/www/nZEDb/misc/update_scripts/threaded_scripts    
+/var/www/nZEDb/misc/update/threaded    
 backfill_safe_threaded.py     
 backfill_threaded.py   
 binaries_threaded.py     
@@ -142,7 +142,7 @@ postprocess_threaded.py
 postprocess_old_threaded.py       
 requestid_threaded.py   
 
-/var/www/nZEDb/misc/update_scripts/win_scripts  
+/var/www/nZEDb/misc/update/win    
 optimisedb.bat       
 runme.bat     
 runme_with_scrape.bat     
@@ -155,15 +155,14 @@ updatereleases.bat
 **To Update nZEDb (Ubuntu)**  
  1. cd /var/www/nZEDb  
  2. sudo git pull  
- 3. cd /var/www/nZEDb/misc/testing/DB_scripts  
+ 3. cd /var/www/nZEDb/misc/testing/DB  
  4. php patchDB.php  
- 5. rm -rf /var/www/nZEDb/www/lib/smarty/templates_c/* 
 
 **Backing up nZEDb (ubuntu)** (by trev_)  
  1. Stop tmux from processing.  Make sure all panes are dead.  
 sudo killall tmux   
  2. Optimize the database   
-/var/www/nZEDb/misc/update_scripts/nix_scripts/tmux/bin/optimize.php true  
+/var/www/nZEDb/misc/update/nix/tmux/bin/optimize.php true  
  3. Backup the database  
 mysqldump --opt -u <user> -p <password> > ~/nzedb-backup.sql  
 (this will put the newly created backup in your home directory)  
@@ -176,7 +175,7 @@ Very simple backup script, has saved my DB more than once. Backs up nzbs and cov
 #!/bin/bash    
 DATE= `date +%Y-%m-%d_%H-%M-%S` 
 echo "Kicking off tar backup of nZEDb"      
-sudo tar cf ${HOME}/MySQL-backups/${DATE}-nzedb.tar /etc/mysql /var/www/nZEDb/nzbfiles/[0-9]   /var/www/nZEDb/nzbfiles/[a-f] /var/www/nZEDb/www/covers/ &  
+sudo tar cf ${HOME}/MySQL-backups/${DATE}-nzedb.tar /etc/mysql /var/www/nZEDb/resources/nzb/[0-9]   /var/www/nZEDb/resources/nzb/[a-f] /var/www/nZEDb/resources/covers/ &  
 echo "===== Starting main backup"  
 innobackupex --parallel=2 --no-timestamp --rsync ${HOME}/MySQL-backups/${DATE}  
 echo "===== Applying logs to backup" 
@@ -220,7 +219,7 @@ define('NNTP_SSLENABLED_A', true);  <--or false if your not using SSL
 
 Q. I need to change NNTP Usenet provider (USP)     
 A. You need to reset groups and truncate some tables. A script exists to handle this for you.   
-  ```php (path to nZEDb)/misc/testing/DB_scripts/change_USP_provider.php```
+  ```php (path to nZEDb)/misc/testing/DB/change_USP_provider.php```
 
 Run the script without option for instructions.
 
@@ -233,7 +232,7 @@ Q: I'm getting lots of spam, or small files.
 A: Use blacklists. removeCrapReleases script, size settings for groups etc..
 
 Q: I'm getting many releases with unusable names.   
-A: There is a script in misc/testing/Release_scripts called fixReleaseNames.php
+A: There is a script in misc/testing/Release called fixReleaseNames.php
    Do not expect miracles...
 
 Q: I'm having issues with the PREDB backfill script.    
@@ -262,7 +261,7 @@ Q: My parts table is very large, what should I do?
 A: Disable update binaries, backfill, and import.  Let update releases run to clear the backlog out.  
 
 Q: Is there was a script that would remove releases based on the fact that the nzb for them is missing?  
-A: Yes, clean_nzbs.php which can be located at /var/www/nZEDb/misc/testing/Dev_testing (linux)  
+A: Yes, clean_nzbs.php which can be located at /var/www/nZEDb/misc/testing/Dev (linux)  
 
 **Backfilling**  
 _Hanging on Backfilling_  
@@ -302,12 +301,12 @@ A: The application is waiting too long to gain update locks with InnoDB. Within 
 
 
 **Errors**  
-Q. file_put_contents(/var/www/nZEDb/nzbfiles/tmpunrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
-A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/nzbfiles/ 
+Q. file_put_contents(/var/www/nZEDb/resources/tmp/unrar/rarfile.rar): failed to open stream: Permission denied in /var/www/nZEDb/www/lib/postprocess.php on line 648  
+A. Make sure your tmpunrar folder is writable by sudo chmod 777 /var/www/nZEDb/resources/tmp/unrar
 
 Q. KeyError: 'DB_SOCKET'   
 Traceback (most recent call last):    
-File "/var/www/nZEDb/www/../misc/update_scripts/threaded_scripts/grabnzbs_threaded.py", line 26, in     <module>    
+File "/var/www/nZEDb/www/../misc/update/threaded/grabnzbs_threaded.py", line 26, in     <module>    
 con = mdb.connect(host=conf['DB_HOST'], user=conf['DB_USER'], passwd=conf['DB_PASSWORD'],     db=conf['DB_NAME'], port=int(conf['DB_PORT']    
 ), unix_socket=conf['DB_SOCKET'])      
 A. cymysql has been updated to use sockets, python scripts also, you will need to:    
@@ -321,8 +320,8 @@ add define('DB_SOCKET', '/var/run/mysqld/mysqld.sock');
 to your /var/www/nZEDb/www/config.php
 
 Q: I noticed my update_releases did this:
-|PHP Warning:  simplexml_load_file(): compress.zlib:///var/www/nZEDb/nzbfiles/a/blaaaablaaa.nzb.gz:34: parser error : Extra content at the end of the docu
-19:58 <&jonnyboy> PHP Warning:  simplexml_load_file(): compress.zlib:///var/www/nZEDb/nzbfiles/a/blaaablaaaa.nzb.gz:32: parser error : Opening and ending tag mismatch: nzb
+|PHP Warning:  simplexml_load_file(): compress.zlib:///var/www/nZEDb/resources/nzb/a/blaaaablaaa.nzb.gz:34: parser error : Extra content at the end of the docu
+19:58 <&jonnyboy> PHP Warning:  simplexml_load_file(): compress.zlib:///var/www/nZEDb/resources/nzb/a/blaaablaaaa.nzb.gz:32: parser error : Opening and ending tag mismatch: nzb
 
 A:
 Most likely a nzb is invalid.
