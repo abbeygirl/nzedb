@@ -1,4 +1,4 @@
-A quick install guide for those familiar with Fedora & RPM based distros. This document was prepared using Fedora 19 using Apache & MariaDB. It describes installing under a separately mounted filesystem in this case called /var/www. As nZEDb can generate a heavy I/O load it's generally a good idea to have it on a dedicated disk. The filesystem should have at least 8M inodes.
+A quick install guide for those familiar with Fedora & RPM based distros. This document was prepared using Fedora 19 with Apache & MariaDB. It describes installing under a separately mounted filesystem in this case called /var/www. As nZEDb can generate a heavy I/O load it's generally a good idea to have it on a dedicated disk. The filesystem should have at least 8M inodes.
 
 The installation example is started using the root user, later changes to a specific nzedb user.
 
