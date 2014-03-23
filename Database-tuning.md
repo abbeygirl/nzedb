@@ -14,8 +14,6 @@ At the latest, once the database is holding more than 1 million releases you'll 
 php /var/nZEDb/misc/testing/DB/show_table_sizes.php
 ```
 
-And once again **[MySQL Tuner](http://mysqltuner.pl)**  <== Use it!
-
 ### Determine Recommended MyISAM Key Buffer Size
 ```
 SELECT CONCAT(ROUND(KBS/POWER(1024,IF(pw<0,0,IF(pw>3,0,pw)))+0.49999),
