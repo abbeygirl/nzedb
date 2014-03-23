@@ -2,7 +2,7 @@ In order to get the most out of nZEDb, you are going to have to tune your databa
 
 If you're using percona the best place to start is [https://tools.percona.com/wizard](https://tools.percona.com/wizard) with a fresh database install. Be _cautious_ not to check "Enable a strict SQL mode" as it will enforce ONLY_FULL_GROUP_BY which will yield in errors. It may be possible to use "Enable a strict SQL mode" with the ONLY_FULL_GROUP_BY option removed manually (added as last option to the variable sql-mode).
 
-Once you have a base config, use tools such as the phpmyadmin adviser and **[MySQLtuner](http://mysqltuner.com)** and **[tuning primer] (https://launchpad.net/mysql-tuning-primer)** to fine tune things further.
+Once you have a base config, use tools such as the phpmyadmin adviser and **[MySQLtuner](http://mysqltuner.com)** and **[Tuning Primer] (https://launchpad.net/mysql-tuning-primer)** to fine tune things further.
 
 If you are using the tmux scripts it is advised to convert you tables to InnoDB to avoid table locks. There is a script under misc/testing/DB to help you with this.
 
