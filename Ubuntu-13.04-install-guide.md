@@ -260,8 +260,11 @@ You will also want to change some file permissions:
 `sudo chmod 777 /var/www/nZEDb/www`  
 `sudo chmod 777 /var/www/nZEDb/www/install`  
 `sudo chmod -R 777 /var/www/nZEDb/nzbfiles`  
+
+Installer requires the following default directories to write to so rights must be changed.
 `sudo chmod -R 777 /var/www/nZEDb/resources/nzb/`
 `sudo chmod -R 777 /var/www/nZEDb/resources/tmp/unrar/`
+
 ##Run the installer.
 
 In your browser go to `http://(nZEDb machine ip)/install`  
