@@ -136,7 +136,10 @@ Enable the site/etc Ubuntu 13.10:
 If you get the following error:
 (Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName)
 
-`sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name' && sudo service apache2 restart`   
+`sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name' && sudo service apache2 restart` 
+
+Ubuntu 13.10 apache2
+`sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/apache2.conf' && sudo service apache2 restart` 
 **********************************************
 
 ###Nginx
