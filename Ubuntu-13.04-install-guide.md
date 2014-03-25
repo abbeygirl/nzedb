@@ -124,13 +124,13 @@ Enable the site/etc Ubuntu 13.04:
 `sudo a2enmod rewrite`  
 `sudo service apache2 restart` 
 
-Enable the site/etc Ubuntu 13.10:
+Enable the site/etc Ubuntu 13.10:  
 
-`sudo nano /etc/apache2/sites-available/nZEDb.conf`
-`sudo a2dissite 000-default`
-`sudo a2ensite nZEDb`
-`sudo a2enmod rewrite`
-`sudo service apache2 restart `
+`sudo nano /etc/apache2/sites-available/nZEDb.conf`  
+`sudo a2dissite 000-default`  
+`sudo a2ensite nZEDb`  
+`sudo a2enmod rewrite`  
+`sudo service apache2 restart `  
 
 **********************************************  
 If you get the following error:
@@ -251,7 +251,7 @@ Now we can clone nZEDb:
 `cd /var/www`  
 `git clone https://github.com/nZEDb/nZEDb.git`
 
-You will also want to change some file permissions:
+You will also want to change some file permissions:  
 `sudo chmod 777 nZEDb`  
 `cd nZEDb`  
 `sudo chmod -R 755`   
@@ -261,8 +261,8 @@ You will also want to change some file permissions:
 `sudo chmod 777 /var/www/nZEDb/www/install`  
 `sudo chmod -R 777 /var/www/nZEDb/nzbfiles`  
 
-Installer requires the following default directories to write to so rights must be changed.
-`sudo chmod -R 777 /var/www/nZEDb/resources/nzb/`
+Installer requires the following default directories to write to so rights must be changed:  
+`sudo chmod -R 777 /var/www/nZEDb/resources/nzb/`  
 `sudo chmod -R 777 /var/www/nZEDb/resources/tmp/unrar/`
 
 ##Run the installer.
