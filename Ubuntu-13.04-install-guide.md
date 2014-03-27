@@ -255,7 +255,7 @@ You will also want to change some file permissions:
 `sudo chmod 777 nZEDb`  
 `cd nZEDb`  
 `sudo chmod -R 755`   
-`sudo chmod 777 /var/www/nZEDb/smarty/templates_c`  
+`sudo chmod 777 /var/www/nZEDb/libs/smarty/templates_c`  
 `sudo chmod -R 777 /var/www/nZEDb/www/covers`  
 `sudo chmod 777 /var/www/nZEDb/www`  
 `sudo chmod 777 /var/www/nZEDb/www/install`  
