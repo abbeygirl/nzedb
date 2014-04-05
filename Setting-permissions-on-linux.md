@@ -1,4 +1,3 @@
-Settings permissions on linux:
 Some of these commands might require root (sudo on ubuntu).
 
 YourUnixUserName is the user your use in the terminal. You can type > echo $USERNAME < to get it (without the brackets.)
