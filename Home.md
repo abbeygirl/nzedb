@@ -13,6 +13,7 @@ Forum: [nZEDb.com](http://nzedb.com)
 
 ***
 * [Database Tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning)
+* [Sharing](https://github.com/nZEDb/nZEDb/wiki/Sharing)
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
 * [NNTP Proxy](https://github.com/nZEDb/nZEDb/wiki/nntpproxy)
 * [Storage Engine Comparison](https://github.com/nZEDb/nZEDb/wiki/MySQL-Storage-Engine-Comparison)
