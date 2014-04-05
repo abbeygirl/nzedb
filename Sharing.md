@@ -7,6 +7,7 @@ First run
 
 `/misc/update/postprocess.php sharing true`
 
+
 Wait until that finishes.
 
 Next go to admin section of your web site, Sharing Settings.
@@ -18,6 +19,7 @@ Rerun
 `/misc/update/postprocess.php sharing true`
 
 First run might take a while.
+
 
 This will also run sharing:
 
