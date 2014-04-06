@@ -29,4 +29,4 @@ First run might take a while.
 
 This will also run sharing:
 
-`php /misc/update/update_releases 1 true`
+`php /misc/update/update_releases.php 1 true`
