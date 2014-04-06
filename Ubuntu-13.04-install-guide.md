@@ -27,7 +27,7 @@ Python 3.*
 ##Install and configure PHP
 
 Install php5 by running:  
- `sudo apt-get install -y php5 php5-dev php-pear php5-gd php5-mysqlnd php5-curl`
+ `sudo apt-get install -y php5 php5-dev php-pear php5-gd php5-mysqlnd php5-curl php5-json`
 
 Configure PHP using the nano text editor:  
 `sudo nano /etc/php5/cli/php.ini`
