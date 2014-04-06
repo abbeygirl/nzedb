@@ -8,7 +8,7 @@ To use Sharing:
 
 First run 
 
-`/misc/update/postprocess.php sharing true`
+`php /misc/update/postprocess.php sharing true`
 
 
 Wait until that finishes.
