@@ -21,7 +21,7 @@ Set up the options you want.
 <br>
 Rerun 
 
-`/misc/update/postprocess.php sharing true`
+`php /misc/update/postprocess.php sharing true`
 
 First run might take a while.
 
