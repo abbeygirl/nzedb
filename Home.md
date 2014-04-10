@@ -17,6 +17,7 @@ Forum: [nZEDb.com](http://nzedb.com)
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
 * [NNTP Proxy](https://github.com/nZEDb/nZEDb/wiki/nntpproxy)
 * [Storage Engine Comparison](https://github.com/nZEDb/nZEDb/wiki/MySQL-Storage-Engine-Comparison)
+* [Linux Permissions] (https://github.com/nZEDb/nZEDb/wiki/Setting-permissions-on-linux)
 
 ***
 * [Post-Processing Queue Management](https://github.com/nZEDb/nZEDb/wiki/Post-Processing-Queue-Management)
