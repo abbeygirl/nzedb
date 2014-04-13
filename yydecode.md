@@ -22,7 +22,7 @@
 
 `make clean`
 
-`cd ~`
+`cd ~/`
 
 `rm -rf yydecode-0.2.10/`
 
