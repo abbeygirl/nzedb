@@ -1,4 +1,4 @@
-### Compiling and setting up yydecode on linux:
+### Setting up yydecode with nZEDb for increased yEnc decode speed.:
 
 `cd ~/`
 
