@@ -1,20 +1,28 @@
 ### Setting up yydecode with nZEDb for increased yEnc decode speed.:
 
+* Move to your home folder:
+
 `cd ~/`
+
+* Create a temp folder to work in and move into it:
 
 `mkdir tempyydecode`
 
 `cd tempyydecode`
 
+* Download and extract yydecode source code:
+
 `wget http://downloads.sourceforge.net/project/yydecode/yydecode/0.2.10/yydecode-0.2.10.tar.gz`
 
 `tar -xvf yydecode-0.2.10.tar.gz`
+
+* Move into the yydecode folder and prepare for compiling:
 
 `cd yydecode-0.2.10/`
 
 `./configure`
 
-* Run the following as root (sudo in ubuntu):
+* Run the following commands as root (sudo in ubuntu):
 
 `make`
 
@@ -22,9 +30,9 @@
 
 `make clean`
 
-`cd ~/`
+* Delete the temp yydecode folder we made and all the contents inside.
 
-`rm -rf yydecode-0.2.10/`
+`rm -rf ~/tempyydecode/`
 
 * Check if it installed (if you see all the commands list then it's installed):
 
