@@ -10,7 +10,7 @@
 
 `cd tempyydecode`
 
-* Download and extract yydecode source code:
+* Download and extract the yydecode source code:
 
 `wget http://downloads.sourceforge.net/project/yydecode/yydecode/0.2.10/yydecode-0.2.10.tar.gz`
 
