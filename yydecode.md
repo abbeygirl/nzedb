@@ -26,7 +26,7 @@
 
 `make`
 
-`make install`
+`sudo make install`
 
 `make clean`
 
