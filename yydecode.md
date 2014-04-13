@@ -10,7 +10,7 @@
 
 `tar -xvf yydecode-0.2.10.tar.gz`
 
-`cd yydecode-0.2.10`
+`cd yydecode-0.2.10/`
 
 `./configure`
 
@@ -21,6 +21,10 @@
 `make install`
 
 `make clean`
+
+`cd ~`
+
+`rm -rf yydecode-0.2.10/`
 
 * Check if it installed (if you see all the commands list then it's installed):
 
