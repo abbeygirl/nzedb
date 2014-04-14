@@ -1,5 +1,11 @@
 ## Intro
 
+NOTE: This nntp-proxy in it's current state has bugs and is no longer actively maintained. Any interested python coders are welcome to jump in & help!. 
+
+If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well.
+
+------
+
 The primary purpose is to reduce the number of connections nZEDb has to make to update.  A proxy connection is established with the news server, and then nZEDb will use that established connection to request files for downloads. This an important concept to understand how the configuration works, in case this guide is unclear.
 
 Currently you can either run this under tmux or you must manually run this script under screen. The proxy is `nntpproxy.py` and a tmux helper script is available `nntpproxy.php`.
