@@ -1,6 +1,6 @@
 ## Intro
 
-NOTE: This nntp-proxy in it's current state has bugs and is no longer actively maintained. Any interested python coders are welcome to jump in & help!. 
+NOTE: This nntp-proxy in it's current state has bugs and is no longer actively maintained. Any interested python coders are welcome to jump in & help!
 
 If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well.
 
