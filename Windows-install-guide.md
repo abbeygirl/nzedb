@@ -30,7 +30,7 @@ pause
 
 * Open your browser and visit http://localhost/, follow on screen setup prompts.  
 
-* Download and install extras like http://www.rarlab.com/download.htm for password detection and http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing if wanted.
+* Download and install extras like http://www.rarlab.com/download.htm for password detection, http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing, and http://getgnuwin32.sourceforge.net/ for some unix features if wanted.
 
 From there the work is just getting started but this will give you a working nZEDb site running under XAMPP on Windows. How you fine tune your site is up to you.
 
