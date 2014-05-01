@@ -118,9 +118,9 @@ Open up the firewall for http & https ports. Be sure to edit the Permanent Confi
 
 Enable memcache in /var/www/nZEDb/config.php
 
-## Use simple_php_yenc_decode (php extension for fast yEnc decoding)
+### Use simple_php_yenc_decode (php extension for fast yEnc decoding)
 
-[simple_php_yenc_decode](https://github.com/kevinlekiller/simple_php_yenc_decode)
+See kevinlekiller's git page: [simple_php_yenc_decode](https://github.com/kevinlekiller/simple_php_yenc_decode)
 
 As root:
 * yum install boost-regex swig gcc-c++
@@ -137,6 +137,7 @@ As root:
 * mkdir /usr/lib64/php/extensions
 * cp -p /var/www/nZEDb/simple_php_yenc_decode/source/simple_php_yenc_decode.so  /usr/lib64/php/extensions
 * vi /etc/php.ini
+
 Add
 * extension=/usr/lib64/php/extensions/simple_php_yenc_decode.so
 
