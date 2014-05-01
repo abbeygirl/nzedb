@@ -118,7 +118,7 @@ Open up the firewall for http & https ports. Be sure to edit the Permanent Confi
 
 Enable memcache in /var/www/nZEDb/config.php
 
-### Use simple_php_yenc_decode (php extension for fast yEnc decoding)
+### simple_php_yenc_decode (custom extension for FAST yEnc decodes)
 
 See kevinlekiller's git page: [simple_php_yenc_decode](https://github.com/kevinlekiller/simple_php_yenc_decode)
 
@@ -139,6 +139,7 @@ As root:
 * vi /etc/php.ini    
 
 and add..
+
 `extension=/usr/lib64/php/extensions/simple_php_yenc_decode.so`
 
 ## Post-Processing extras (optional)
