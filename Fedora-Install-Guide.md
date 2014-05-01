@@ -122,6 +122,8 @@ Enable memcache in /var/www/nZEDb/config.php
 
 See kevinlekiller's git page: [simple_php_yenc_decode](https://github.com/kevinlekiller/simple_php_yenc_decode)
 
+Installations running with a relatively weak CPU will need this extension.
+
 As root:
 * yum install boost-regex swig gcc-c++
 
