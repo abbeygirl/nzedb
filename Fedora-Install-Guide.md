@@ -136,8 +136,9 @@ git clone & compile
 As root:
 * mkdir /usr/lib64/php/extensions
 * cp -p /var/www/nZEDb/simple_php_yenc_decode/source/simple_php_yenc_decode.so  /usr/lib64/php/extensions
-* vi /etc/php.ini    # and add..
+* vi /etc/php.ini    
 
+and add..
 `extension=/usr/lib64/php/extensions/simple_php_yenc_decode.so`
 
 ## Post-Processing extras (optional)
