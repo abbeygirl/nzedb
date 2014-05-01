@@ -109,7 +109,7 @@ Create nZEDb VirtualHost config
 Open up the firewall for http & https ports. Be sure to edit the Permanent Configuration.
 * firewall-config
 
-## Configure memcached (optional)
+### Configure memcached (optional)
 * yum install memcached    (done above)
 * vi /etc/sysconfig/memcached   (configure as desired)
 * systemctl start memcached.service
@@ -118,7 +118,7 @@ Open up the firewall for http & https ports. Be sure to edit the Permanent Confi
 
 Enable memcache in /var/www/nZEDb/config.php
 
-## Custom PHP extension for FAST yEnc decodes
+### Custom PHP extension for FAST yEnc decodes
 
 See kevinlekiller's git page: [simple_php_yenc_decode](https://github.com/kevinlekiller/simple_php_yenc_decode)
 
