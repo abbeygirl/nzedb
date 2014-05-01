@@ -122,7 +122,7 @@ Enable memcache in /var/www/nZEDb/config.php
 
 See kevinlekiller's git page: [simple_php_yenc_decode](https://github.com/kevinlekiller/simple_php_yenc_decode)
 
-Installations running with a relatively weak CPU will need benefit greatly by using this extension. If this preferred option fails, yydecode is not much slower.
+This extension speeds up yEnc decoding approx 400x. Should this preferred option fail, yydecode is not that much slower, however easier to install.
 
 As root:
 * yum install boost-regex swig gcc-c++
