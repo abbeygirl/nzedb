@@ -7,7 +7,7 @@ Install development packages (useful for compiling stuff later on)
 * yum groupinstall "Development Tools" "Development Libraries"
 
 Install general packages needed by nZEDb.
-* yum install yasm lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools p7zip php-memcached
+* yum install yasm lame php-pear-MDB2-Driver-mysql php-devel php php-pear php-gd php-mysql php-curl git tmux MySQL-python tmux MySQL-python python-sqlalchemy Cython python-setuptools p7zip php-memcached php-opcache
 
 Cython MySQL
 * python -m easy_install --upgrade cymysql
@@ -143,6 +143,12 @@ As root:
 and add..
 
 `extension=/usr/lib64/php/extensions/simple_php_yenc_decode.so`
+
+## Install php-opcache stats page
+* cd /var/www/nZEDb/www/admin
+* wget https://raw.github.com/rlerdorf/opcache-status/master/opcache.php
+* later browse to http://your-site/admin/opcache.php
+
 
 ## Post-Processing extras (optional)
 
