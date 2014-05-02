@@ -144,7 +144,7 @@ and add..
 
 `extension=/usr/lib64/php/extensions/simple_php_yenc_decode.so`
 
-## Install php-opcache stats page
+### Install php-opcache stats page (optional)
 * cd /var/www/nZEDb/www/admin
 * wget https://raw.github.com/rlerdorf/opcache-status/master/opcache.php
 * later browse to http://your-site/admin/opcache.php
