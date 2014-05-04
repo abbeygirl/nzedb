@@ -191,6 +191,10 @@ location ~* \.(?:ico|css|js|gif|inc|txt|gz|xml|png|jpe?g) {
 
 location / { try_files $uri $uri/ @rewrites; }
 
+location ^~ /covers/ {
+    root /var/www/nZEDb-li3/resources;
+}
+
 location @rewrites {
         rewrite ^/([^/\.]+)/([^/]+)/([^/]+)/? /index.php?page=$1&id=$2&subpage=$3 last;
         rewrite ^/([^/\.]+)/([^/]+)/?$ /index.php?page=$1&id=$2 last;
@@ -198,9 +202,7 @@ location @rewrites {
 }
 
 location /admin { }
-location /covers {
-    root /var/www/nZEDb/resources/covers/
-}
+
 location /install { }
 
 location ~ \.php$ {
