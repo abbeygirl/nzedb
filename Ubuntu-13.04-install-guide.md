@@ -114,6 +114,8 @@ Paste the following:
          allow from all
   </Directory>
 
+  Alias /covers /var/www/nZEDb/resources/covers
+
 </VirtualHost>
 ```
 
