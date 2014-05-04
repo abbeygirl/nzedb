@@ -2,7 +2,7 @@ If you are a beginner, it is advised to use the  [Ubuntu 13.04 install guide](ht
 
 ## Requirements 
 ### PHP  
-php version 5.4 or higher (currently 5.5 is recommended)
+php version 5.4 or higher (currently 5.5 is recommended)  
 sessions enabled  
 memory limit at 1024 or more  
 minimum execution time of 120+ seconds  
