@@ -198,6 +198,9 @@ location @rewrites {
 }
 
 location /admin { }
+location /covers {
+    root /var/www/nZEDb/resources/covers/
+}
 location /install { }
 
 location ~ \.php$ {
