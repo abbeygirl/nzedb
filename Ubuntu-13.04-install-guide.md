@@ -2,15 +2,22 @@ First thing you will need is a copy of Ubuntu. You can grab a copy of their serv
 
 Once it is installed, ensure everything is up to date by running:  
 `sudo apt-get update`   
-`sudo apt-get upgrade`
+`sudo apt-get upgrade`  
+You can optionally upgrade the kernel and various other things:
+`sudo apt-get dist-upgrade`
 
 If you didn't install ssh during the install, you can install it now using:  
 `sudo apt-get install ssh`
 
-Apparmor interferes with some of our files, here is how to disable it:  
+Apparmor interferes with some of our files, THIS IS MANDATORY. 
+You can disable it and remove it:  
 `sudo /etc/init.d/apparmor stop`  
-`sudo /etc/init.d/apparmor teardown`   
+`sudo /etc/init.d/apparmor teardown`  
 `sudo update-rc.d -f apparmor remove`  
+Or, you can make it ignore mysql:  
+`sudo apt-get install apparmor-utils`  
+`sudo aa-complain /usr/sbin/mysqld`  
+You must reboot after doing this to take effect.
 
 For the threaded scripts you will require the Python MySQLdb module:  
 Python 2.* or 3.* - If Python is installed, the module also must be installed:
