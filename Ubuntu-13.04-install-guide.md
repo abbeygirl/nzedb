@@ -3,7 +3,7 @@ First thing you will need is a copy of Ubuntu. You can grab a copy of their serv
 Once it is installed, ensure everything is up to date by running:  
 `sudo apt-get update`   
 `sudo apt-get upgrade`  
-You can optionally upgrade the kernel and various other things:
+You can optionally upgrade the kernel and various other things:  
 `sudo apt-get dist-upgrade`
 
 If you didn't install ssh during the install, you can install it now using:  
