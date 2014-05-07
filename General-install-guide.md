@@ -16,8 +16,8 @@ exif support (check the ini file).
 ### PEAR
 
 ### MySQL  
-max_allowed_packet=12582912  
-group_concat_max_len=8192  
+max_allowed_packet = 16M  
+group_concat_max_len = 8192  
 timezone set to php's 
 
 ### Apache  
@@ -29,12 +29,15 @@ mod_rewrite enabled
 tmdb (signup @ http://api.themoviedb.org/2.1/)  
 amazon (signup @ https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html)  
 rottentomatoes (signup @ http://developer.rottentomatoes.com)  
+trakt.tv (https://trakt.tv/api-docs)  
+anidb (http://anidb.net)  
 
 ### Deep rar password inspection  
 unrar version 3.9 or higher  
+7zip  
 
 ### Thumbnailing and media info (if deep rar inspection is enabled)  
-ffmpeg  
+ffmpeg or avconv  
 mediainfo  
 lame
 
