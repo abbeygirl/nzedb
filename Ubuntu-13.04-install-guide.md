@@ -9,7 +9,7 @@ You can optionally upgrade the kernel and various other things:
 If you didn't install ssh during the install, you can install it now using:  
 `sudo apt-get install ssh`
 
-Apparmor interferes with some of our files, THIS IS MANDATORY. 
+Apparmor interferes with some of our files, THIS IS MANDATORY.  
 You can disable it and remove it:  
 `sudo /etc/init.d/apparmor stop`  
 `sudo /etc/init.d/apparmor teardown`  
