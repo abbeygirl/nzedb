@@ -1,4 +1,4 @@
-If you want to use Linux and you are just starting to use Linux, Ubuntu 13.04 server is recommended.
+If you want to use Linux and you are just starting to use Linux, Ubuntu 14.04 server is recommended.
 
 ## Install Guides
 
