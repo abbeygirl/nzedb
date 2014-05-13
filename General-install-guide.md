@@ -16,6 +16,7 @@ exif support (check the ini file).
 ### PEAR
 
 ### MySQL  
+minimum version 5.5.3  
 max_allowed_packet = 16M  
 group_concat_max_len = 8192  
 timezone set to php's 
@@ -33,7 +34,7 @@ trakt.tv (https://trakt.tv/api-docs)
 anidb (http://anidb.net)  
 
 ### Deep rar password inspection  
-unrar version 3.9 or higher  
+unrar version 3.9 or higher (unrar 5 highly recommended for newer releases)  
 7zip  
 
 ### Thumbnailing and media info (if deep rar inspection is enabled)  
