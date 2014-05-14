@@ -52,9 +52,7 @@ Python 2.*
 Python 3.*    
 `apt-get install python3-setuptools`    
 `python3 -m easy_install pip`   
-`pip-3.2 install cymysql` (Ubuntu 12.10)  
--or-   
-`pip-3.3 install cymysql` (Ubuntu 13.10)
+`pip3 install cymysql`
 
 ## INSTALLATION  
 There is an installer in \install\ try it first by creating your website,  
