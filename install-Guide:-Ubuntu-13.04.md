@@ -1,3 +1,6 @@
+An alternative guid for Ubuntu 12.04 to Ubuntu 14.04 is available here :
+https://github.com/nZEDb/nZEDb/blob/dev/docs/Ubuntu%2013.10%20INSTALL%20GUIDE.md
+
 First thing you will need is a copy of Ubuntu. You can grab a copy of their server edition [here](http://www.ubuntu.com/download/server)
 
 Once it is installed, ensure everything is up to date by running:  
