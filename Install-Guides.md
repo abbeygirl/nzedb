@@ -3,7 +3,6 @@ If you want to use Linux and you are just starting to use Linux, Ubuntu 14.04 se
 ## Install Guides
 
 * [General install guide](https://github.com/nZEDb/nZEDb/wiki/General-install-guide)  
-
 * [CentOS](https://github.com/nZEDb/nZEDb/wiki/CentOS-Install-Guide)
 * [Fedora](https://github.com/nZEDb/nZEDb/wiki/Fedora-Install-Guide)
 * [OSX](https://github.com/nZEDb/nZEDb/wiki/OSX-Install-Guide)
