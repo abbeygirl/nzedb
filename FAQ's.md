@@ -263,7 +263,7 @@ A: Disable update binaries, backfill, and import.  Let update releases run to cl
 Q: Is there was a script that would remove releases based on the fact that the nzb for them is missing?  
 A: Yes, clean_nzbs.php which can be located at /var/www/nZEDb/misc/testing/Dev (linux)  
 
-Q: How do I search for 3 character releases?
+Q: How do I search for 3 character releases?  
 A: searching uses fulltext - you will need to change the min word size in my.cnf
    if myisam - ft_min_word_len=3 - add that to your my.cnf and restart mysql
    if innodb - innodb_ft_min_token_size = 3
