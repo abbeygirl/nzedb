@@ -6,6 +6,6 @@ By default MySQL sets the InnoDB FT result cache limit quite high at 2000000000 
 
 `SET GLOBAL innodb_ft_result_cache_limit = 500000000;`
 
-When you find a good spot for memory usage set it in your my.cnf file.
-
 Or whatever you find appropriate for your platform.  Be careful, if you set this value too low MySQL will not be able to store the results of the MATCH query and will drop it altogether.  You will see FT result cache limit errors if you have set it too low (and debug is turned on).
+
+When you find a good spot for memory usage set it in your my.cnf file.
