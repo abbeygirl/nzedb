@@ -13,6 +13,7 @@ Forums: [forums.nzedb.com](http://forums.nzedb.com)
 
 ***
 * [Database Tuning](https://github.com/nZEDb/nZEDb/wiki/Database-tuning)
+* [Full Text Search Usage] (https://github.com/nZEDb/nZEDb/wiki/Full-Text-Search-Usage)
 * [Sharing](https://github.com/nZEDb/nZEDb/wiki/Sharing)
 * [Linux Hardening](https://github.com/nZEDb/nZEDb/wiki/Linux-harding)
 * [NNTP Proxy](https://github.com/nZEDb/nZEDb/wiki/nntpproxy)
