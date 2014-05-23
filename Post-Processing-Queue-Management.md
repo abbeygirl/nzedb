@@ -35,7 +35,7 @@ _Count Queued_
  
 _Find Queued_
 ```
-> SELECT ID,nfostatus,name FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
+> SELECT ID,nfostatus,guid,searchname FROM releases WHERE nfostatus IN ( -6, -5, -4, -3, -2, -1 );
 ```
 
 _Clear Queued_
