@@ -276,6 +276,7 @@ You will also want to change some file permissions:
 `sudo chmod -R 777 /var/www/nZEDb/www/covers`  
 `sudo chmod 777 /var/www/nZEDb/www`  
 `sudo chmod 777 /var/www/nZEDb/www/install`  
+`sudo mkdir /var/www/nZEDb/nzbfiles`  
 `sudo chmod -R 777 /var/www/nZEDb/nzbfiles`  
 
 Installer requires the following default directories to write to so rights must be changed:  
