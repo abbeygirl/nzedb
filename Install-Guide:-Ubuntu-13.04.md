@@ -1,5 +1,5 @@
 An alternative guide for Ubuntu 12.04 to Ubuntu 14.04 is available here :
-https://github.com/nZEDb/nZEDb/blob/dev/docs/Ubuntu_Install_Guide.md
+https://github.com/nZEDb/nZEDb_Misc/blob/master/Install_Guides/Ubuntu/Guide.md
 
 First thing you will need is a copy of Ubuntu. You can grab a copy of their server edition [here](http://www.ubuntu.com/download/server)
 
