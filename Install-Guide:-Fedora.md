@@ -158,7 +158,7 @@ Download latest tarball from rarlab http://www.rarlab.com/download.htm
 * wget http://www.rarlab.com/rar/rarlinux-x64-5.1.0.tar.gz
 * tar -xzf rarlinux-x64-5.1.0.tar.gz 
 * cd rar
-* sudo cp -p unrar /usr/local/bin
+* sudo cp -p unrar /usr/local/bin/
 
 Once nZEDB is up & running you point to this unrar version in Site -> Edit
 
