@@ -152,6 +152,16 @@ and add..
 
 ## Post-Processing extras (optional)
 
+### unrar
+Download latest tarball from rarlab http://www.rarlab.com/download.htm
+
+* wget http://www.rarlab.com/rar/rarlinux-x64-5.1.0.tar.gz
+* tar -xzf rarlinux-x64-5.1.0.tar.gz 
+* cd rar
+* sudo cp -p unrar /usr/local/bin
+
+Once nZEDB is up & running you point to this unrar version in Site -> Edit
+
 ### ffmpeg
 
 Download latest tarball from http://ffmpeg.org or the static build here: http://johnvansickle.com/ffmpeg/
