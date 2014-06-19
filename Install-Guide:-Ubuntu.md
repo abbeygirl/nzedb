@@ -104,7 +104,7 @@ memory_limit = 1024M
 date.timezone = Europe/London  
 
 Create the site config:  
-`sudo nano /etc/apache2/sites-available/nZEDb`
+`sudo nano /etc/apache2/sites-available/nZEDb.conf`
 
 Paste the following:  
 ```
