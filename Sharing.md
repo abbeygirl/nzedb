@@ -1,6 +1,3 @@
-**Note**: This feature currently in development testing.
-
-
 To use Sharing:
 
 1. NNTPProxy currently does not support all the NNTP commands required, so you will not be able to use it with this.
