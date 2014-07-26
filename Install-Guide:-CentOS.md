@@ -48,7 +48,8 @@ unrar-4.2.3-1
 ```
 
 ### netinstall
-```download http://isoredirect.centos.org/centos/6/isos/x86_64/
+```
+download http://isoredirect.centos.org/centos/6/isos/x86_64/
 url_setup
 http://mirror.centos.org/centos/6/os/x86_64/
 ```
