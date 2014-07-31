@@ -59,13 +59,11 @@ example
         "port": 9991
     },
     "pool": {
-        "size": 20,
-        "pooling-time": 30
+        "size": 20
     }
 }
 ```
 The pool size is not a max or limiter. It just maintains that number of connections when the scripts are idle.
-Pooling-time is the amount of seconds to keep the NNTP connection alive when it is un-used.
 
 
 If you intend to use more than one NNTP you will need to repeat the config steps creating a second config file nntpproxy_a.conf and ensure you use a different port (I suggest 9992)
