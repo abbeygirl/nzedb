@@ -1,7 +1,5 @@
 ## Intro
 
-**NOTE**: The built-in nntp-proxy in it's current state has bugs and is no longer actively maintained. Any interested python coders are welcome to jump in & help!
-
 If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well.
 
 ------
@@ -35,7 +33,6 @@ Then add the required modules. This is best installed as the user that will run 
 ```
 sudo apt-get install -yqq python-setuptools python-pip python-dev python-software-properties
 pip install --user socketpool
-pip install --user pynntp
 ```
 Copy the sample config  
 ```
@@ -60,11 +57,13 @@ example
         "port": 9991
     },
     "pool": {
-        "size": 20
+        "size": 20,
+        "pooling-time": 30
     }
 }
 ```
 The pool size is not a max or limiter. It just maintains that number of connections when the scripts are idle.
+Pooling-time is the amount of seconds to keep the NNTP connection alive when it is un-used.
 
 
 If you intend to use more than one NNTP you will need to repeat the config steps creating a second config file nntpproxy_a.conf and ensure you use a different port (I suggest 9992)
