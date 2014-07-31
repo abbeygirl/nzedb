@@ -2,6 +2,8 @@
 
 If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well.
 
+Note: nnptproxy is missing the POST command, which is required for "sharing" if you want to upload comments. If you want to upload comments, do not use nnptproxy.
+
 ------
 
 The primary purpose is to reduce the number of connections nZEDb has to make to update.  A proxy connection is established with the news server, and then nZEDb will use that established connection to request files for downloads. This an important concept to understand how the configuration works, in case this guide is unclear.
