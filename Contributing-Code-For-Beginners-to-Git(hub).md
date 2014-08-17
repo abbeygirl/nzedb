@@ -27,6 +27,7 @@ Contributing code fixes or new features should be done something like the follow
 `./commit`
 
 When your fixes/feature are ready you first need to make sure dev didn't change while you were working.
+
 `git checkout dev`
 
 `git pull upstream dev`
