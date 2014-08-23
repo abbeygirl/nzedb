@@ -7,7 +7,7 @@ There are several ways to reduce this happening. Firstly ensure all 3rd party ap
 
 Below example commands to assist *nix users to find hung post-processing scripts. These example assumed you are using the PHP versions of the multi-threaded PP scripts as these are now recommended over the python versions.
 
-### List PHP PP-Additional processes
+**List PHP PP-Additional processes**
 ```
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep ProcessAdditional.php
 ```
@@ -18,7 +18,7 @@ The last field is the release ID number.
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 ProcessAdditional.php | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) > 5) print $2}'
 ```
 
-### List PHP NFO processes active
+**List PHP NFO processes active**
 ```
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep "switch.php php  pp_nfo"
 ```
@@ -28,14 +28,14 @@ ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep "swi
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 "switch.php php  pp_nfo" | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) > 5) print $2}'
 ```
 
-### Displaying details about a particular release
+**Displaying details about a particular release**
 
 This SQL query will display the Release ID, name, GUID and searchname
 ```
 > SELECT ID,passwordstatus,guid,name,searchname FROM releases WHERE ID = nnnnnnn;
 ```
 
-### Deleting a single release
+**Deleting a single release**
 
 To delete a particular release, use the misc/testing/DB/delete_releases.php script to remove the collection from the DB and the related meta objects.
 ```
