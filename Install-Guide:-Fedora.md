@@ -182,14 +182,14 @@ Get latest version from https://mediaarea.net
 * wget http://mediaarea.net/download/binary/mediainfo/0.7.64/mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 * rpm -ivh libmediainfo0-0.7.64-1.x86_64.Fedora_19.rpm libzen0-0.4.29-1.x86_64.Fedora_19.rpm mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 
-## Sphinx Search (Optional)
+## Sphinx Search (optional)
 
 * yum install sphinx
 
 Check the installed MariaDB plugins
-* > SHOW ENGINES;
+* MariaDB [(none)]> SHOW ENGINES;
 
-If the Sphinx engine is not present use this to one-time to load the dynamic module 
+If the Sphinx engine is not present use this once to load the dynamic module 
 * MariaDB [(none)]> INSTALL SONAME 'ha_sphinx';
 
 ... to be continued ...
