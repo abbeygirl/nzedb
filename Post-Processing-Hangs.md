@@ -30,7 +30,7 @@ ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 
 
 **Displaying details about a particular release**
 
-This SQL query will display details about a specific release
+Use this example SQL query 
 ```
 > SELECT ID,passwordstatus,guid,fromname,name,searchname FROM releases WHERE ID = nnnnnnn;
 ```
