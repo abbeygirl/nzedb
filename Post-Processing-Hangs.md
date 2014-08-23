@@ -38,7 +38,7 @@ The GUID output here can be used below.
 
 **Deleting a single release**
 
-To delete a particular release, use the delete_releases.php script to delete the release from the database along with its meta objects.
+To delete a particular release, use the delete_releases.php script to remove the release from the database along with its related meta objects.
 ```
 php ~/misc/testing/Release/delete_releases.php guid=equals=NNNNNNNNNNNNNNNNNNNNNNNNN
 ```
