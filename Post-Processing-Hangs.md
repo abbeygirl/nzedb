@@ -30,9 +30,9 @@ ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 
 
 **Displaying details about a particular release**
 
-This SQL query will display the Release ID, name, GUID and searchname
+This SQL query will display details about a specific release
 ```
-> SELECT ID,passwordstatus,guid,name,searchname FROM releases WHERE ID = nnnnnnn;
+> SELECT ID,passwordstatus,guid,fromname,name,searchname FROM releases WHERE ID = nnnnnnn;
 ```
 
 **Deleting a single release**
