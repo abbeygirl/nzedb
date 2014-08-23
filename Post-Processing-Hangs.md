@@ -37,7 +37,7 @@ An example SQL query
 
 **Deleting a single release**
 
-To delete a particular release, use the misc/testing/DB/delete_releases.php script to remove the collection from the DB and the related meta objects.
+To delete a particular release, use the delete_releases.php script to remove the collection from the DB and the related meta objects.
 ```
 php ~/misc/testing/Release/delete_releases.php guid=equals=NNNNNNNNNNNNNNNNNNNNNNNNN
 ```
