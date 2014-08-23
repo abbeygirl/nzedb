@@ -9,8 +9,15 @@ Below example commands to assist *nix users to find hung post-processing scripts
 
 List PHP PP-Additional processes
 ```
-ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 ProcessAdditional.php
+ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep ProcessAdditional.php
 ```
+
+Output the PID of the first PHP PP-Additional process running longer than 5 minutes
+```
+ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 ProcessAdditional.php | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) > 5) print $2}'
+```
+
+
 
 
 An example *nix ps command to display any post-processing task taking longer than 60 seconds:
