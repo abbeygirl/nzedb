@@ -6,6 +6,7 @@ This SQL query provides a simple overview:
 SELECT passwordstatus, count(*) FROM releases WHERE haspreview = -1 GROUP BY passwordstatus;
 ```
 
+
 ***
 
 ## Various SQL Queries for the Post-Processing Queues
