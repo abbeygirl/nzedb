@@ -182,6 +182,19 @@ Get latest version from https://mediaarea.net
 * wget http://mediaarea.net/download/binary/mediainfo/0.7.64/mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 * rpm -ivh libmediainfo0-0.7.64-1.x86_64.Fedora_19.rpm libzen0-0.4.29-1.x86_64.Fedora_19.rpm mediainfo-0.7.64-1.x86_64.Fedora_19.rpm
 
+## Sphinx Search (Optional)
+
+* yum install sphinx
+
+Check the installed MariaDB plugins
+* > SHOW ENGINES;
+
+If the Sphinx engine is not present use this to one-time to load the dynamic module 
+* MariaDB [(none)]> INSTALL SONAME 'ha_sphinx';
+
+... to be continued ...
+
+
 ## Create nzedb user-id & git pull the source
 
 It is strongly recommended that you run nZEDb as a non-root user.
