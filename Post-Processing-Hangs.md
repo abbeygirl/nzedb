@@ -34,6 +34,7 @@ An example SQL query
 ```
 > SELECT ID,passwordstatus,guid,fromname,name,searchname FROM releases WHERE ID = nnnnnnn;
 ```
+The GUID output here can be used below.
 
 **Deleting a single release**
 
