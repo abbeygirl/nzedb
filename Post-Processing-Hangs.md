@@ -5,6 +5,13 @@ There are several ways to reduce this happening. Firstly ensure all 3rd party ap
 ### Finding looping/hung tasks
 
 
+Below example commands to assist *nix users to find hung post-processing scripts. These example assumed you are using the PHP versions of the multi-threaded PP scripts as these are now recommended over the python versions.
+
+List PHP PP-Additional processes
+```
+ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 ProcessAdditional.php
+```
+
 
 An example *nix ps command to display any post-processing task taking longer than 60 seconds:
 ```
