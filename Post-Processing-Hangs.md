@@ -1,11 +1,11 @@
-The nZEDb post-processing scripts analyse compressed binary files using various in-built routines and 3rd party applications. Given the variety of content posted (some of it totally encrypted) it does occur that some posts cause the post-processing to hang or crash, often within an external application not managed directly by the nZEDb team.
+The nZEDb post-processing scripts perform analysis using various in-built routines and 3rd party applications. Given the variety of content posted (some of it totally encrypted) it does occur that some posts cause the post-processing to hang or crash, often within an external application not managed directly by the nZEDb team.
 
 There are several ways to reduce this happening. Firstly ensure all 3rd party applications are updated to their latest versions. The version shipped with your distribution is often not robust enough. Check all those defined in Site-Edit->3rd Party Applications. Also configure the timeout application in that section.
 
 ## Finding looping/hung tasks
 
 
-Below example commands to assist *nix users to find hung post-processing scripts. These example assumed you are using the PHP versions of the multi-threaded PP scripts as these are now recommended over the python versions.
+Below example commands to assist *nix users to find hung post-processing scripts. These examples assume you are using the PHP versions of the multi-threaded PP scripts as these are now recommended over the python versions.
 
 **List PHP PP-Additional processes**
 ```
