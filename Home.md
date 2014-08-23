@@ -23,6 +23,7 @@ Forums: [forums.nzedb.com](http://forums.nzedb.com)
 
 ***
 * [Post-Processing Queue Management](https://github.com/nZEDb/nZEDb/wiki/Post-Processing-Queue-Management)
+* [Post-Processing Hangs](https://github.com/nZEDb/nZEDb/wiki/Post-Processing-Hangs)
 * [Release Management](https://github.com/nZEDb/nZEDb/wiki/Release Management)
 * [Database Administration](https://github.com/nZEDb/nZEDb/wiki/Database Administration)
 * [nZEDb Administration Scripts](https://github.com/nZEDb/nZEDb/wiki/nZEDb-Administration-Scripts)
