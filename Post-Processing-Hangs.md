@@ -2,33 +2,43 @@ The nZEDb post-processing scripts analyse compressed binary files using various 
 
 There are several ways to reduce this happening. Firstly ensure all 3rd party applications are updated to their latest versions. The version shipped with your distribution is often not robust enough. Check all those defined in Site-Edit->3rd Party Applications. Also configure the timeout application in that section.
 
-### Finding looping/hung tasks
+## Finding looping/hung tasks
 
 
 Below example commands to assist *nix users to find hung post-processing scripts. These example assumed you are using the PHP versions of the multi-threaded PP scripts as these are now recommended over the python versions.
 
-List PHP PP-Additional processes
+### List PHP PP-Additional processes
 ```
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep ProcessAdditional.php
 ```
+The last field is the release ID number.
 
-Output the PID of the first PHP PP-Additional process running longer than 5 minutes
+### Output the PID of the first PHP PP-Additional process running longer than 5 minutes
 ```
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 ProcessAdditional.php | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) > 5) print $2}'
 ```
 
-
-
-
-An example *nix ps command to display any post-processing task taking longer than 60 seconds:
+### List PHP NFO processes active
 ```
-ps aux | grep postprocess_new.php | grep -v grep | sed -e 's/://g' | awk '{if ($10 > 60) print $13,$15 }'
+ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep "switch.php php  pp_nfo"
 ```
 
-This outputs the ID and guid of the release. This SQL query will display the name
+### Output the PID of the first PHP PP-NFO processing running longer than 5 minutes
 ```
-> SELECT ID,passwordstatus,name,searchname FROM releases WHERE ID = nnnnnnn;
+ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 "switch.php php  pp_nfo" | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) 
+> 9) print $2}'
 ```
-nnnnnnn = ID, the first number displayed by the ps command
+
+### Displaying details about a particular release
+
+This SQL query will display the Release ID, name, GUID and searchname
+```
+> SELECT ID,passwordstatus,guid,name,searchname FROM releases WHERE ID = nnnnnnn;
+```
+
+### Deleting a single release
 
 To delete a particular release, use the misc/testing/DB/delete_releases.php script to remove the collection from the DB and the related meta objects.
+```
+php ~/misc/testing/Release/delete_releases.php fromname=guid=NNNNNNNNNNNNNNNNNNNNNNNNN
+```
