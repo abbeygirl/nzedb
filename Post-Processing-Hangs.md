@@ -5,7 +5,7 @@ There are several ways to reduce this happening. Firstly ensure all 3rd party ap
 ## Finding looping/hung tasks
 
 
-Below example commands to assist *nix users finding hung post-processing scripts. These examples assume you're using the PHP versions of the multi-threaded PP scripts. They're recommended over the python versions.
+Below example commands for *nix users finding hung post-processing scripts. These examples assume you're using the PHP versions of the multi-threaded PP scripts. They're recommended over the python versions.
 
 **List PHP PP-Additional processes**
 ```
