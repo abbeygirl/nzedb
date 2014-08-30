@@ -13,7 +13,7 @@ ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep Proc
 ```
 The last field is the release ID number.
 
-**Output PID of first PHP PP-Additional process running longer than 5 minutes**
+**PID of first PHP PP-Additional process running longer than 5 minutes**
 ```
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 ProcessAdditional.php | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) > 5) print $2}'
 ```
@@ -23,7 +23,7 @@ ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep "switch.php php  pp_nfo"
 ```
 
-**Output PID of first PHP PP-NFO process running longer than 5 minutes**
+**PID of first PHP PP-NFO process running longer than 5 minutes**
 ```
 ps aux | grep -v grep | grep nzedb | sed -e 's/:/ /g' | sort -nk9,10 | grep -m1 "switch.php php  pp_nfo" | awk -v min=$( date +%M ) -v hour=$( date +%H ) '{if (hour > $9) min=min+60} {if ((min - $10) > 5) print $2}'
 ```
