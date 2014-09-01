@@ -9,6 +9,8 @@ An example of fetching the file on linux and giving it rwx permissions:
 `sudo wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem`  
 `sudo chmod 744 /etc/ssl/certs/cacert.pem`
 
+If the bundle does not contain the certificate, you will need to manually download it into your certs folder.
+
 # For existing installations of nZEDb (prior to october 2014):
 Open up www/config.php in a text editor.
 Add the following in the file (before `require_once 'automated.config.php';`):
