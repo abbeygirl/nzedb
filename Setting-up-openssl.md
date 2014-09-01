@@ -13,7 +13,7 @@ An example of fetching the file on linux and giving it rwx permissions:
 Open up www/config.php in a text editor.
 Add the following in the file (before `require_once 'automated.config.php';`):
 
-|START COPYING UNDER THIS LINE|
+START COPYING UNDER THIS LINE:
 ***
 
 
@@ -28,8 +28,8 @@ Add the following in the file (before `require_once 'automated.config.php';`):
 `/* Allow self signed certificates. */`  
 `define('nZEDb_SSL_ALLOW_SELF_SIGNED', '1');`
 
-|STOP COPYING ABOVE THIS LINE|
 ***
+STOP COPYING ABOVE THIS LINE.
 
 
 `nZEDb_SSL_CAFILE` would be the ca file you downloaded. ie '/etc/ssl/certs/ca-bundle.crt'
