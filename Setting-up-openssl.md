@@ -6,14 +6,14 @@ On linux you can put this bundle in the /etc/ssl/certs/ folder, make sure it's r
 
 An example of fetching the file on linux and giving it rwx permissions:
 
-sudo wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem
-sudo chmod 744 /etc/ssl/certs/cacert.pem
+`sudo wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem`
+`sudo chmod 744 /etc/ssl/certs/cacert.pem`
 
 # For existing installations of nZEDb (prior to october 2014):
 Open up www/config.php in a text editor.
 Add the following in the file (before require_once 'automated.config.php';):
 
-// Location to CA bundle file on your system. You can download one here: http://curl.haxx.se/docs/caextract.html  
+`// Location to CA bundle file on your system. You can download one here: http://curl.haxx.se/docs/caextract.html  
 define('nZEDb_SSL_CAFILE', '');  
 // Path where openssl cert files are stored on your system, this is a fall back if the CAFILE is not found.  
 define('nZEDb_SSL_CAPATH', '');  
@@ -22,7 +22,7 @@ define('nZEDb_SSL_VERIFY_PEER', '0');
 // Verify the host is who they say they are.  
 define('nZEDb_SSL_VERIFY_HOST', '0');  
 // Allow self signed certificates.  
-define('nZEDb_SSL_ALLOW_SELF_SIGNED', '1');
+define('nZEDb_SSL_ALLOW_SELF_SIGNED', '1');`
 
 nZEDb_SSL_CAFILE would be the ca file you downloaded. ie '/etc/ssl/certs/ca-bundle.crt'
 
