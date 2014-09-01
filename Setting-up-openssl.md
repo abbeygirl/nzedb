@@ -11,7 +11,9 @@ An example of fetching the file on linux and giving it rwx permissions:
 
 # For existing installations of nZEDb (prior to october 2014):
 Open up www/config.php in a text editor.
-Add the following in the file (before require_once 'automated.config.php';):
+Add the following in the file (before `require_once 'automated.config.php';`):
+
+|START COPYING UNDER THIS LINE|
 
 `/* Location to CA bundle file on your system. You can download one here: http://curl.haxx.se/docs/caextract.html */`  
 `define('nZEDb_SSL_CAFILE', '');`  
@@ -23,6 +25,8 @@ Add the following in the file (before require_once 'automated.config.php';):
 `define('nZEDb_SSL_VERIFY_HOST', '0');`  
 `/* Allow self signed certificates. */`  
 `define('nZEDb_SSL_ALLOW_SELF_SIGNED', '1');`
+
+|STOP COPYING ABOVE THIS LINE|
 
 `nZEDb_SSL_CAFILE` would be the ca file you downloaded. ie '/etc/ssl/certs/ca-bundle.crt'
 
