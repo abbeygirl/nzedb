@@ -11,7 +11,7 @@ An example of fetching the file on linux and giving it rwxr--r-- permissions:
 
 If the bundle does not contain the certificate, you will need to manually download it into your certs folder.
 
-# For existing installations of nZEDb (prior to october 2014):
+# For existing installations of nZEDb (prior to October 2014):
 Open up www/config.php in a text editor.
 Add the following in the file (before `require_once 'automated.config.php';`):
 
