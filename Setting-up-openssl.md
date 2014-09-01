@@ -1,5 +1,5 @@
 # Prerequisites:
-All that is required is a certificate bundle to verify remote server certificates for authenticity.
+You require a certificate bundle to verify remote server certificates for authenticity.
 You can download pre-made bundles or create your own bundle here: http://curl.haxx.se/docs/caextract.html
 
 On linux you can put this bundle in the /etc/ssl/certs/ folder, make sure it's readable by all users.
