@@ -25,7 +25,7 @@ START COPYING UNDER THIS LINE:
 `define('nZEDb_SSL_VERIFY_PEER', '0');`  
 `/* Verify the host is who they say they are. */`  
 `define('nZEDb_SSL_VERIFY_HOST', '0');`  
-`/* Allow self signed certificates. */`  
+`/* Allow self signed certificates. Note this does not work on CURL as CURL does not have this option. */`  
 `define('nZEDb_SSL_ALLOW_SELF_SIGNED', '1');`
 
 ***
