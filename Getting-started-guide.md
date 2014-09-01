@@ -8,3 +8,4 @@ Once you have decided what hardware and if you want to run it under Windows or L
 * [Ubuntu 13.04 install guide](https://github.com/nZEDb/nZEDb/wiki/install-Guide:-Ubuntu-13.04)
 * [Windows install guide](https://github.com/nZEDb/nZEDb/wiki/install-Guide:-Windows)
 
+__
