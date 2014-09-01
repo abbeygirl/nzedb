@@ -4,7 +4,7 @@ You can download pre-made bundles or create your own bundle here: http://curl.ha
 
 On linux you can put this bundle in the /etc/ssl/certs/ folder, make sure it's readable by all users.
 
-An example of fetching the file on linux and giving it rwx permissions:
+An example of fetching the file on linux and giving it rwxr--r-- permissions:
 
 `sudo wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem`  
 `sudo chmod 744 /etc/ssl/certs/cacert.pem`
