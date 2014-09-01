@@ -6,7 +6,7 @@ On linux you can put this bundle in the /etc/ssl/certs/ folder, make sure it's r
 
 An example of fetching the file on linux and giving it rwx permissions:
 
-`sudo wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem`
+`sudo wget -P /etc/ssl/certs/ http://curl.haxx.se/ca/cacert.pem`  
 `sudo chmod 744 /etc/ssl/certs/cacert.pem`
 
 # For existing installations of nZEDb (prior to october 2014):
