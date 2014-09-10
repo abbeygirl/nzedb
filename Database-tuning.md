@@ -6,7 +6,7 @@ Once you have a base config, use tools such as the phpmyadmin adviser, **[MySQLt
 
 If you are using the multi-threaded scripts it is advised to convert you tables to InnoDB to avoid table locks. There is a script under misc/testing/DB to help you with this.
 
-**Before migrating from MyISAM to InnoDB** be sure to set **innodb_file_per_table** in my.cnf. If that was not done first follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
+**Before migrating from MyISAM to InnoDB** be sure to set **innodb_file_per_table** in my.cnf. If its too late, follow these steps to convert: [Howto Clean a MySQL Storage Engine](http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine)
 
 ## MySQL Buffer Sizes
 At the latest, once the database contains more than 1 million releases you'll need start tuning. The two queries below can provide a simple recommendation. There is also this nZEDb script
