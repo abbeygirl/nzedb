@@ -13,7 +13,7 @@ If the bundle does not contain the certificate, you will need to manually downlo
 
 # For existing installations of nZEDb (prior to October 2014):
 Open up www/config.php in a text editor.
-Add the following in the file (before `require_once 'automated.config.php';`):
+Add the following in the file (*BEFORE* `require_once 'automated.config.php';`):
 
 START COPYING UNDER THIS LINE:
 ***
