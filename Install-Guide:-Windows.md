@@ -2,7 +2,7 @@ Although windows is not offically supported, you can run it under the XAMMP stac
 
 * Download https://www.apachefriends.org/download.html and install to "C:\XAMPP\"   
 
-* Download http://code.google.com/p/msysgit/downloads/list Git for Windows and install to "C:\XAMPP\git\"  
+* Download http://git-scm.com/download/win Git for Windows and install to "C:\XAMPP\git\"  
 
 * Create file "C:\XAMPP\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github.
 
