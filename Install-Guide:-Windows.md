@@ -37,9 +37,9 @@ pause
 
 * Open your browser and visit http://localhost/, follow on screen setup prompts.  
 
-* Download and install extras like http://www.rarlab.com/download.htm for password detection, http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing, and http://getgnuwin32.sourceforge.net/ for some unix features if wanted.
+* Download and install extras like http://www.rarlab.com/download.htm for password detection, http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing.
 
-* Download GNU file for windows : http://gnuwin32.sourceforge.net/packages/file.htm extract it and put the exe in C:\Windows
+* It's highly recommended to install getgnuwin32 http://getgnuwin32.sourceforge.net/ for file and which and various other unix utilities that are used widely in nZEDb (file is used for finding NFO's / video's / etc). Make sure you set them to be accessible by the whole system. You can find how to do this in the HOWTO_Add_GnuWin32_To_System_Path.png file on their sourceforge download page.  
 
 From there the work is just getting started but this will give you a working nZEDb site running under XAMPP on Windows. How you fine tune your site is up to you.
 
