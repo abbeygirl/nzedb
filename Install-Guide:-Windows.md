@@ -2,10 +2,10 @@ Although windows is not offically supported, you can run it under the XAMMP stac
 
 * Download XAMPP from https://www.apachefriends.org/download.html and install to "C:\xampp\"   
 
-* Download Git for Windows from http://git-scm.com/download/win and install it. After installation, go to a command line or run window by pressing Windows key + r, type `control sysdm.cpl` and run it, go to the Advanced tab, click Environment Variables, in System variables, scroll down to the Path variable, click edit, in Variable Value, scroll to the far right, add the path to the git cmd folder like this for example: `;C:\Program Files (x86)\Git\cmd`
-
-IMPORTANT: PICK THIS OPTION WHILE INSTALLING GIT OR THE INSTALL OF nZEDb WILL FAIL (you have been warned) : 
+* Download Git for Windows from http://git-scm.com/download/win and install it. IMPORTANT: PICK THIS OPTION WHILE INSTALLING GIT OR THE INSTALL OF nZEDb WILL FAIL (you have been warned) : 
 Checkout as-is, commit Unix-style line endings
+
+* After installation of git, go to a command line or run window by pressing Windows key + r, type `control sysdm.cpl` and run it, go to the Advanced tab, click Environment Variables, in System variables, scroll down to the Path variable, click edit, in Variable Value, scroll to the far right, add the path to the git cmd folder like this for example: `;C:\Program Files (x86)\Git\cmd`  
 
 * Download Which from http://downloads.sourceforge.net/gnuwin32/which-2.20-bin.zip extract it, copy which.exe from the bin folder to C:\Windows
 
@@ -38,6 +38,8 @@ pause
 * Open your browser and visit http://localhost/, follow on screen setup prompts.  
 
 * Download and install extras like http://www.rarlab.com/download.htm for password detection, http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing, and http://getgnuwin32.sourceforge.net/ for some unix features if wanted.
+
+* Download GNU file for windows : http://gnuwin32.sourceforge.net/packages/file.htm extract it and put the exe in C:\Windows
 
 From there the work is just getting started but this will give you a working nZEDb site running under XAMPP on Windows. How you fine tune your site is up to you.
 
