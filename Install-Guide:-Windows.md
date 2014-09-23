@@ -10,7 +10,7 @@ Although windows is not offically supported, you can run it under the XAMMP stac
 
 ```
 @echo off  
-C:\Program Files (x86)\Git\bin\git.exe clone git://github.com/nZEDb/nZEDb.git C:\XAMPP\htdocs\nZEDb  
+"C:\Program Files (x86)\Git\bin\git.exe" clone git://github.com/nZEDb/nZEDb.git C:\XAMPP\htdocs\nZEDb  
 pause  
 ```
 
@@ -18,7 +18,7 @@ pause
 
 ```
 @echo off  
-C:\Program Files (x86)\Git\bin\git.exe pull  
+"C:\Program Files (x86)\Git\bin\git.exe" pull  
 pause  
 ```
 
