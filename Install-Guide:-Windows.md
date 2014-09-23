@@ -1,22 +1,24 @@
 Although windows is not offically supported, you can run it under the XAMMP stack. However you will not be able to utilize the tmux scripts.
 
-* Download https://www.apachefriends.org/download.html and install to "C:\XAMPP\"   
+* Download XAMPP from https://www.apachefriends.org/download.html and install to "C:\XAMPP\"   
 
-* Download http://git-scm.com/download/win Git for Windows and install to "C:\XAMPP\git\"  
+* Download Git for Windows from http://git-scm.com/download/win and during installation, pick the SYSTEM PATH setting, to make it available to all users. If you already installed git, you can add it to the SYSTEM PATH by going to a command line, run `control sysdm.cpl` go to the Advanced tab, click Environment Variables, in System variables, scroll down to the Path variable, click edit, in Variable Value, scroll to the end, add the path to the git cmd folder like this for example: `;C:\Program Files (x86)\Git\cmd`
 
-* Create file "C:\XAMPP\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github.
+* Download Which from http://downloads.sourceforge.net/gnuwin32/which-2.20-bin.zip extract it, copy which.exe from the bin folder to C:\Windows
+
+* Create file "C:\XAMPP\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github. Change the path to git based on where you installed it.
 
 ```
 @echo off  
-C:\XAMPP\git\bin\git.exe clone git://github.com/nZEDb/nZEDb.git C:\XAMPP\htdocs\nZEDb  
+C:\Program Files (x86)\Git\bin\git.exe clone git://github.com/nZEDb/nZEDb.git C:\XAMPP\htdocs\nZEDb  
 pause  
 ```
 
-* Create file "C:\XAMPP\htdocs\nZEDb\nzedb-update.bat", run this file in the future to update to the latest git version of nZEDb.
+* Create file "C:\XAMPP\htdocs\nZEDb\nzedb-update.bat", run this file in the future to update to the latest git version of nZEDb. Change the path to git based on where you installed it.
 
 ```
 @echo off  
-C:\XAMPP\git\bin\git.exe pull  
+C:\Program Files (x86)\Git\bin\git.exe pull  
 pause  
 ```
 
