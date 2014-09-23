@@ -24,7 +24,7 @@ pause
 
 * Edit "C:\xampp\apache\conf\httpd.conf" and change DocumentRoot "/xampp/htdocs/" to DocumentRoot "/xampp/htdocs/nZEDb/www/"  
 
-* Edit "C:\xampp\php\php.ini" and change max_execution_time = 30 to max_execution_time = 120 and memory_limit = 128M to memory_limit = 1024M  
+* Edit "C:\xampp\php\php.ini" and change max_execution_time = 30 to max_execution_time = 120 and memory_limit = 128M to memory_limit = 1024M and date.timezone to your local one listed here: http://php.net/manual/en/timezones.php example : date.timezone=America/New_York  
 
 * Open "C:\xampp\passwords.txt" and review default XAMPP passwords.  
 
