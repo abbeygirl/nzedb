@@ -28,6 +28,8 @@ pause
 
 * Open "C:\xampp\passwords.txt" and review default XAMPP passwords.  
 
+* Edit "C:\xampp\mysql\bin\my.ini" and add local_infile = 1 to the [mysqld] section, change max_allowed_packet to 16M , change key_buffer to 256M , add group_concat_max_len = 8192 to the [mysqld] section.
+
 * Run XAMPP Control Panel and start Apache and MySQL.  
 
 * Open your browser and visit http://localhost/, follow on screen setup prompts.  
