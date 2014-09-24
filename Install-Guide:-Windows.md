@@ -13,11 +13,11 @@ After you finish installing it, add `;C:\GetGnuWin32\bin` to your Environment Va
 
 * You can run the the download.bat and install.bat scripts in C:\GetGnuWin32\ to install all the packages (it can take a while depending on the speed of your internet connection), otherwise you can follow the next 3 parts of the guide to install the main required packages:
 
-* Download file : http://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-bin.zip , extract the zip, copy file.exe and magic1.dll from the bin folder to "C:\GnuWin32\bin" overwrite all files if asked.  
+* Download file : http://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-bin.zip , extract the zip, copy file.exe and magic1.dll from the bin folder to "C:\GetGnuWin32\bin" overwrite all files if asked.  
 
-* Download the file dependencies: http://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-dep.zip , extract the zip, copy regex2.dll and zlib1.dll from the bin folder to "C:\GnuWin32\bin" overwrite all files files if asked.  
+* Download the file dependencies: http://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-dep.zip , extract the zip, copy regex2.dll and zlib1.dll from the bin folder to "C:\GetGnuWin32\bin" overwrite all files files if asked.  
 
-* Download which: http://sourceforge.net/projects/gnuwin32/files/which/2.20/which-2.20-bin.zip , extract the zip, copy which.ext from the bin folder to "C:\GnuWin32\bin" overwrite all files files if asked.  
+* Download which: http://sourceforge.net/projects/gnuwin32/files/which/2.20/which-2.20-bin.zip , extract the zip, copy which.ext from the bin folder to "C:\GetGnuWin32\bin" overwrite all files files if asked.  
 
 * You should now reboot your server to allow windows to recognize your Environment Variable changes.
 
