@@ -21,7 +21,7 @@ After you finish installing it, add `;C:\GetGnuWin32\bin` to your Environment Va
 
 * You should now reboot your server to allow windows to recognize your Environment Variable changes.
 
-* Create a file here: "C:\xampp\htdocs\nzedb-pull.bat" and run it to pull nZEDb from Github. Change the path to git based on where you installed it. Add the following text into the file:
+* Create a file here: "C:\xampp\htdocs\nzedb-pull.bat" , Add the text below, change the path to git based on where you installed it. After saving it, double click it to download nZEDb.
 
 ```
 @echo off  
@@ -29,7 +29,7 @@ After you finish installing it, add `;C:\GetGnuWin32\bin` to your Environment Va
 pause  
 ```
 
-* Create a file here: "C:\xampp\htdocs\nZEDb\nzedb-update.bat", run this file in the future to update to the latest git version of nZEDb. Change the path to git based on where you installed it. Add the following text into the file:
+* Create a file here: "C:\xampp\htdocs\nZEDb\nzedb-update.bat" , Add the text below, change the path to git based on where you installed it. Run this file in the future to update to the latest git version of nZEDb.  
 
 ```
 @echo off  
