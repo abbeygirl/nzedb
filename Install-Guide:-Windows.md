@@ -13,6 +13,8 @@ After you finish installing it, add this: `;C:\GetGnuWin32\gnuwin32\bin` to your
 
 * You must now run (in "C:\GetGnuWin32") download.bat to download the packages and install.bat to install the gnuwin32 packages. Use all the default options when asked.  
 
+* Download the latest version of ansicon : http://adoxa.altervista.org/ansicon/ , extract it. Create a folder "C:\ansicon" , copy the contents of x64 or x86 depending on your Windows version (64 bits or 32 bits), to  "C:\ansicon" , open a command prompt with admin rights, type `cd c:\ansicon` , press enter. Type ` ansicon -i` , press enter. Add `;C:\ansicon` to your Environment Variables Path variable (as we did above for git). This will properly display text on the command line when running php scripts.
+
 * You should now reboot your server to allow windows to recognize your Environment Variable changes.  
 
 * Create a file here: "C:\xampp\htdocs\nzedb-pull.bat" , Add the text below, change the path to git based on where you installed it. After saving it, double click it to download nZEDb.    
