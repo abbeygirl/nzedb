@@ -8,7 +8,7 @@ Click **Internet Information Services**, accept the defaults as we do not need a
 ![](http://i.imgur.com/7MxiUWz.png)
 
 
-* Then drill through - **Internet Information Services > World Wide Wide Services > Application Development Features** and Select **CGI**.
+* Then drill through - **Internet Information Services > World Wide Services > Application Development Features** and Select **CGI**.
 
 ![](http://i.imgur.com/5069WEd.png)
 * Click OK to install these features. Windows may ask to restart. Do so. On reboot, IIS has been installed. 
