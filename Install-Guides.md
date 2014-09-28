@@ -8,3 +8,4 @@ If you want to use Linux and you are just starting to use Linux, Ubuntu 14.04 se
 * [OSX](https://github.com/nZEDb/nZEDb/wiki/Install-Guide:-OS-X)
 * [Ubuntu](https://github.com/nZEDb/nZEDb/wiki/Install-Guide:-Ubuntu)
 * [Windows](https://github.com/nZEDb/nZEDb/wiki/install-Guide:-Windows)
+* [Windows with IIS and FastCGI](https://github.com/nZEDb/nZEDb/wiki/Windows-IIS-with-FastCGI)
