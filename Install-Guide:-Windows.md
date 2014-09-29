@@ -17,6 +17,10 @@ After you finish installing it, add this: `;C:\GetGnuWin32\gnuwin32\bin` to your
 
 * You should now reboot your server to allow windows to recognize your Environment Variable changes.  
 
+* To make sure git downloads nZEDb with the correct line endings, type this in a cmd prompt: `git config --global core.autocrlf input`
+
+* Type `which git` , if you get the file location of git.exe, then you can continue, if not, you messed up either installing git or gnuwin32 or setting the PATH variable and you have to redo the above steps.
+
 * Create a file here: "C:\xampp\htdocs\nzedb-pull.bat" , Add the text below, change the path to git based on where you installed it. After saving it, double click it to download nZEDb.    
 
 ```
