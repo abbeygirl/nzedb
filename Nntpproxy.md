@@ -1,8 +1,7 @@
-## Intro
-
+## Deprecated!
 If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well.
 
-Note: nnptproxy is missing the POST command, which is required for "sharing" if you want to upload comments. If you want to upload comments, do not use nnptproxy.
+**Note**: nnptproxy is missing the POST command, which is required for "sharing" if you want to upload comments.
 
 ------
 
