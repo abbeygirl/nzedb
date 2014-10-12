@@ -356,6 +356,6 @@ quit
 ```
 yum -y install time tmux
 run nZEDb as normal user
-cd /var/www/html/nZEDb/misc/update_scripts/nix/tmux
+cd /var/www/html/nZEDb/misc/update/nix/tmux
 php start.php
 ```
