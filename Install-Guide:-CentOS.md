@@ -247,7 +247,7 @@ ln -s /opt/python3/bin/python3 /usr/bin/python3
 ### Install distribute
 
 ```
-curl -O https://pypi.python.org/packages/source/d/distribute/distribute-0.6.49.tar
+curl -O https://pypi.python.org/packages/source/d/distribute/distribute-0.6.49.tar.gz
 tar xvf distribute-0.6.49.tar.gz && cd distribute-0.6.49 && python3 setup.py install
 ```
 
