@@ -101,5 +101,5 @@ _Clear Queued_
 ### Console
 _Count Queued_
 ```
-> SELECT COUNT(*) FROM releases r, category c WHERE r.categoryid = c.id AND c.parentid = 1000 AND consoleinfoid IS NULL;
+> SELECT COUNT(*) FROM releases WHERE nzbstatus = 1 AND categoryid BETWEEN 1000 AND 1999 AND consoleinfoid IS NULL;
 ```
