@@ -60,6 +60,11 @@ _Clear Queued_
 ```
 
 ### Movies
+_Count Queued_
+```
+> select count(*) FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999 AND nzbstatus = 1;
+```
+
 _Find Queued_
 ```
 > select id,passwordstatus,name FROM releases WHERE imdbID IS NULL and categoryID BETWEEN 2000 AND 2999 AND nzbstatus = 1;
