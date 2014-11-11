@@ -46,12 +46,12 @@ _Clear Queued_
 ### TV
 _Count Queued_
 ```
-> SELECT COUNT(*) FROM releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
+> SELECT COUNT(*) FROM releases WHERE nzbstatus = 1 AND categoryid BETWEEN 5000 AND 5999 AND rageid = -1;
 ```
 
 _Find Queued_
 ```
-> SELECT r.ID,passwordstatus,name from releases r, category c WHERE r.categoryid = c.id AND c.parentid = 5000 AND rageid = -1;
+> SELECT r.ID,passwordstatus,name from WHERE nzbstatus = 1 AND categoryid BETWEEN 5000 AND 5999 AND rageid = -1;
 ```
 
 _Clear Queued_
