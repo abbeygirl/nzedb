@@ -51,7 +51,7 @@ _Count Queued_
 
 _Find Queued_
 ```
-> SELECT r.ID,passwordstatus,name from WHERE nzbstatus = 1 AND categoryid BETWEEN 5000 AND 5999 AND rageid = -1;
+> SELECT r.ID,passwordstatus,name from releases WHERE nzbstatus = 1 AND categoryid BETWEEN 5000 AND 5999 AND rageid = -1;
 ```
 
 _Clear Queued_
