@@ -28,14 +28,19 @@ _Clear Queued_
 ```
 
 ### Audio
+_Count Queued_
+```
+> select count(*) from releases WHERE musicinfoID IS NULL and nzbstatus = 1 and categoryID BETWEEN 3000 AND 3999;
+```
+
 _Find Queued_
 ```
-> select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
+> select ID,musicinfoID,name from releases WHERE musicinfoID IS NULL and nzbstatus = 1 and categoryID BETWEEN 3000 AND 3999;
 ```
 
 _Clear Queued_
 ```
-> update releases set musicinfoID = '-2' where musicinfoID IS NULL and relnamestatus != 0 and categoryID in (3010, 3040, 3050);
+> update releases set musicinfoID = '-2' where musicinfoID IS NULL and nzbstatus = 1 and categoryID BETWEEN 3000 AND 3999;
 ```
 
 ### TV
