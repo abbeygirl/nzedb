@@ -2,7 +2,7 @@ If you are a beginner, it is advised to use the  [Ubuntu 13.04 install guide](ht
 
 ## Requirements 
 ### PHP  
-php version 5.4 or higher (currently 5.5 is recommended)  
+php version 5.5 or higher (PHP 5.6+ is required for 32 bit Operating Systems, as it fixes a bug in a feature nZEDb uses)  
 sessions enabled  
 memory limit at 1024 or more  
 minimum execution time of 120+ seconds  
