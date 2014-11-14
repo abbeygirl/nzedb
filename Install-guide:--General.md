@@ -1,4 +1,4 @@
-If you are a beginner, it is advised to use the  [Ubuntu 13.04 install guide](https://github.com/nZEDb/nZEDb/wiki/install-Guide:-Ubuntu-13.04). The info here is brief and intended for those who have their own preferred Linux flavor.
+If you are a beginner, it is advised to use the  [Ubuntu install guide](https://github.com/nZEDb/nZEDb_Misc/blob/master/Guides/Installation/Ubuntu/Guide.md). The info here is brief and intended for those who have their own preferred Linux flavor.
 
 ## Requirements 
 ### PHP  
