@@ -51,7 +51,7 @@ pause
 
 * Download and install extras like http://www.rarlab.com/download.htm for password detection, http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing.  
 
-* After the install, you need to go in the admin section and add the magic file info stuff, this is required.
+* After the install, you need to go in the admin, site edit section and add the magic file path (magic.dll which comes with gnuwin32, it's somewhere in c:\GetGnuWin32\gnuwin32) you need to put the whole location to the file, ie c:\example\magic.dll YOU MUST DO THIS OR THE SCRIPTS WILL CRASH.
 
 From there the work is just getting started but this will give you a working nZEDb site running under XAMPP on Windows. How you fine tune your site is up to you.
 
