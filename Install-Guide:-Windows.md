@@ -51,5 +51,7 @@ pause
 
 * Download and install extras like http://www.rarlab.com/download.htm for password detection, http://ffmpeg.zeranoe.com/builds/ & http://mediainfo.sourceforge.net/en/Download/Windows for post processing.  
 
+* After the install, you need to go in the admin section and add the magic file info stuff, this is required.
+
 From there the work is just getting started but this will give you a working nZEDb site running under XAMPP on Windows. How you fine tune your site is up to you.
 
