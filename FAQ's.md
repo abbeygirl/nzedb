@@ -155,8 +155,8 @@ updatereleases.bat
 **To Update nZEDb (Ubuntu)**  
  1. cd /var/www/nZEDb  
  2. sudo git pull  
- 3. cd /var/www/nZEDb/misc/testing/DB  
- 4. php patchDB.php  
+ 3. cd /var/www/nZEDb/cli  
+ 4. php update_db.php true
 
 **Backing up nZEDb (ubuntu)** (by trev_)  
  1. Stop tmux from processing.  Make sure all panes are dead.  
