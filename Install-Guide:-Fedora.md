@@ -131,7 +131,7 @@ git clone & compile
 * git clone https://github.com/kevinlekiller/simple_php_yenc_decode.git
 * cd simple_php_yenc_decode/source
 * swig -php -c++ yenc_decode.i
-* g++ `php-config --includes` -fpic -c yenc_decode_wrap.cpp
+* g++ `` `php-config --includes` `` -fpic -c yenc_decode_wrap.cpp
 * g++ -fpic -c yenc_decode.cpp -lboost_regex
 * g++ -shared *.o -o simple_php_yenc_decode.so -lboost_regex
 
