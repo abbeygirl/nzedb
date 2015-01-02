@@ -45,7 +45,6 @@ If you're planning to use the "Table Per Group" feature the number of open file 
 Under [server]
 ```
 open_files_limit=24576
-innodb_open_files=24576    <= If using InnoDB
 ```
 
 Increase the total system limit and call "sysctl -p" after this edit:
@@ -63,8 +62,8 @@ mysql hard nofile 32384
 
 The systemd start scripts should also be adjusted
 ```
-vi /etc/systemd/system/mysqld.service
-.include /lib/systemd/system/mysqld.service
+vi /etc/systemd/system/mariadb.service
+.include /lib/systemd/system/mariadb.service
 [Service]
 LimitNOFILE=24576
 
