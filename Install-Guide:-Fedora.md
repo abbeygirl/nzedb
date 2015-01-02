@@ -125,7 +125,7 @@ See kevinlekiller's git page: [simple_php_yenc_decode](https://github.com/kevinl
 This extension speeds up yEnc decoding approx 400x. Should you not successfully be able to use this perferred option, yydecode is a good alternative.
 
 As root:
-* yum install boost-regex swig gcc-c++
+* yum install boost-regex boost-devel swig gcc-c++
 
 git clone & compile
 * git clone https://github.com/kevinlekiller/simple_php_yenc_decode.git
