@@ -74,3 +74,8 @@ _View_
 ```
 SELECT r.ID,r.passwordstatus,name FROM releases r left join category c on c.ID = r.categoryID where (r.passwordstatus between -6 and -1) and (r.haspreview = -1 and c.disablepreview = 0);
 ```
+
+#### Fix predb dates (2016-01 to 2015-01)
+```
+update predb set predate = CONCAT('2015', substr(predate, 5)) WHERE predate like '2016-01%' ;
+```
