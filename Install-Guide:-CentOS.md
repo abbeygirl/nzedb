@@ -237,7 +237,7 @@ yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel r
 ### Install python3 to /opt/python3/ 
 
 ```
-curl -O http://www.python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
+curl -O https://www.python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2
 bzip2 -cd Python-3.3.3.tar.bz2 | tar xvf -  (tar xf Python-3.3.3.tar.bz2)
 cd Python-3.3.3 && ./configure --prefix=/opt/python3
 make && make install
