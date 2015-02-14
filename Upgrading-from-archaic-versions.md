@@ -19,7 +19,7 @@
 
 
 // Reset to latest commit
-
+// It often helps to switch to another branch and back at this point.
     git reset --soft HEAD
 
 
