@@ -42,6 +42,8 @@ Remove the leading `;` from these lines:
 `zend_extension=opcache.so`, `extension=openssl.so`, `extension=pdo_mysql.so`,
 `extension=posix.so`, `extension=sockets.so`, `extension=zip.so`
 
+Add `:/usr/bin/` to the end of `open_basedir`
+
 Save / close the file.
 
 ### Configure MariaDB ###
