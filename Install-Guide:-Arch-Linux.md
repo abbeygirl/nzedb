@@ -98,7 +98,7 @@ Create the nginx.conf : `sudo nano /etc/nginx/nginx.conf`
 
 Paste the following:
 
-`
+``
 worker_processes  1;
 
 events {
@@ -162,7 +162,7 @@ http {
         }
     }
 }
-`
+``
 
 Save/close the file.
 
