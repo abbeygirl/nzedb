@@ -98,71 +98,70 @@ Create the nginx.conf : `sudo nano /etc/nginx/nginx.conf`
 
 Paste the following:
 
-``
-worker_processes  1;
+    worker_processes  1;
 
-events {
-    worker_connections  1024;
-}
+    events {
+        worker_connections  1024;
+    }
 
-http {
-    include       mime.types;
-    default_type  application/octet-stream;
-    sendfile        on;
-    keepalive_timeout  65;
+    http {
+        include       mime.types;
+        default_type  application/octet-stream;
+        sendfile        on;
+        keepalive_timeout  65;
 
-    server {
-        # Change these settings to match your machine.
-        listen 80 default_server;
-        server_name localhost;
+        server {
+            # Change these settings to match your machine.
+            listen 80 default_server;
+            server_name localhost;
 
-        # These are the log locations, you should not have to change these.
-        access_log /var/log/nginx/access.log;
-        error_log /var/log/nginx/error.log;
+            # These are the log locations, you should not have to change these.
+            access_log /var/log/nginx/access.log;
+            error_log /var/log/nginx/error.log;
 
-        # This is the root web folder for nZEDb, you shouldn't have to change this.
-        root /srv/http/nZEDb/www/;
-        index index.html index.htm index.php;
+            # This is the root web folder for nZEDb, you shouldn't have to change this.
+            root /srv/http/nZEDb/www/;
+            index index.html index.htm index.php;
 
-        # Everything below this should not be changed unless noted.
-        location ~* \.(?:css|eot|gif|gz|ico|inc|jpe?g|js|ogg|png|svg|ttf|txt|woff|xml)$ {
-            expires max;
-            add_header Pragma public;
-            add_header Cache-Control "public, must-revalidate, proxy-revalidate";
-        }
+            # Everything below this should not be changed unless noted.
+            location ~* \.(?:css|eot|gif|gz|ico|inc|jpe?g|js|ogg|png|svg|ttf|txt|woff|xml)$ {
+                expires max;
+                add_header Pragma public;
+                add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+            }
 
-        location / {
-            try_files $uri $uri/ @rewrites;
-        }
+            location / {
+                try_files $uri $uri/ @rewrites;
+            }
 
-        location ^~ /covers/ {
-            # This is where the nZEDb covers folder should be in.
-            root /srv/http/nZEDb/resources;
-        }
+            location ^~ /covers/ {
+                # This is where the nZEDb covers folder should be in.
+                root /srv/http/nZEDb/resources;
+            }
 
-        location @rewrites {
-            rewrite ^/([^/\.]+)/([^/]+)/([^/]+)/? /index.php?page=$1&id=$2&subpage=$3 last;
-            rewrite ^/([^/\.]+)/([^/]+)/?$ /index.php?page=$1&id=$2 last;
-            rewrite ^/([^/\.]+)/?$ /index.php?page=$1 last;
-        }
+            location @rewrites {
+                rewrite ^/([^/\.]+)/([^/]+)/([^/]+)/? /index.php?page=$1&id=$2&subpage=$3 last;
+                rewrite ^/([^/\.]+)/([^/]+)/?$ /index.php?page=$1&id=$2 last;
+                rewrite ^/([^/\.]+)/?$ /index.php?page=$1 last;
+            }
 
-       location /admin {
-        }
+            location /admin {
+            }
 
-        location /install {
-        }
+            location /install {
+            }
 
-        location ~ \.php$ {
-            include /etc/nginx/fastcgi_params;
-            fastcgi_pass unix:/run/php-fpm/php-fpm.sock;
+            location ~ \.php$ {
+                include /etc/nginx/fastcgi_params;
+                fastcgi_pass unix:/run/php-fpm/php-fpm.sock;
 
-            # The next two lines should go in your fastcgi_params
-            fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                # The next two lines should go in your fastcgi_params
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
         }
     }
-}
-``
+
 
 Save/close the file.
 
