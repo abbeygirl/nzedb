@@ -167,9 +167,13 @@ Paste the following:
 
 Save/close the file.
 
-Restart php-fpm: `sudo systemctl restart php-fpm.service`
+Enable php-fpm: `sudo systemctl enable php-fpm.service`
 
-Restart nginx: `sudo systemctl restart nginx.service`
+Enable nginx: `sudo systemctl enable nginx.service`
+
+Start php-fpm: `sudo systemctl start php-fpm.service`
+
+Start nginx: `sudo systemctl start nginx.service`
 
 ### Install nZEDb ###
 
