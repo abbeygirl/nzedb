@@ -16,4 +16,5 @@ Again, in the php.ini, under the php options section add:
 `memory_limit = 1024M` change to whatever you require.
 `max_execution_time = 120`
 
+When running scripts, you can use hhvm instead of php (ie: hhvm script.php)
 
