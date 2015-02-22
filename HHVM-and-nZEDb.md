@@ -1,6 +1,8 @@
 HHVM can be used to run the CLI scripts, there might be some issues however as HHVM is not 100% compliant with PHP.
 
-You need to edit the php.ini for HHVM, in linux by default it should be in /etc/hhvm/php.ini
+Install HHVM: https://github.com/facebook/hhvm/wiki/Prebuilt%20Packages%20for%20HHVM
+
+You need to edit the php.ini for HHVM, in linux by default it should be in `/etc/hhvm/php.ini`
 
 In a command line, type the following: `php -r 'var_dump(get_include_path());'`
 
