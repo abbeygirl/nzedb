@@ -199,7 +199,9 @@ Add your username to nginx's group:
 
 `sudo chmod -R 777 /srv/http/nZEDb/resources/`
 
-`sudo chmod -R 775 /srv/http/nZEDb/www/`
+`sudo chmod -R 777 /srv/http/nZEDb/www/`
+
+(You can set 664 to most files and 775 to folders after the install otherwise MySQL's LOAD FILE will fail since it 's a different group than http.)
 
 Open a browser, if on the same computer, head to localhost/install, if not, use the hostname or IP you set in the nginx conf.
 
