@@ -18,3 +18,4 @@ Again, in the php.ini, under the php options section add:
 
 When running scripts, you can use hhvm instead of php (ie: hhvm script.php)
 
+To make it work on the web: https://github.com/facebook/hhvm/wiki/FastCGI
