@@ -106,7 +106,7 @@ rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
 yum -y install php55w php55w-opcache
 yum -y install yum-plugin-replace
 yum -y replace php-common --replace-with=php55w-common
-yum -y install php55w-opcache
+yum -y install php55w-opcache php55w-pear php55w-pdo php55w-gd php55w-mysql
 ```
 
 ### Compile FFmpeg on CentOS 6.x
@@ -276,11 +276,30 @@ sed -i -r 's/^;date.timezone =.*/date.timezone = Europe\/Amsterdam/' /etc/php.in
 ### Configure MySQL
 
 ```
+Verify the version of Mysql it should be 5.5 or above:
+rpm -qa | grep ^mysql | grep server
+
+If its not, then install it:
+yum install mysql55w mysql55w-devel mysql55w-libs
+
+If you already have mysql but its not right version:
+yum replace mysql --replace-with mysql55w
+
+Start mysql-server:
+/etc/init.d/mysqld start
+
+You will need to update your already present DBs:
+mysql_upgrade -u root -p
+
+Edit my.cnf:
 nano /etc/my.cnf
 [mysqld]
 # nzedb recommended
 max_allowed_packet      = 12582912
 group_concat_max_len    = 8192
+Save file.
+Restart mysql for changes to take effect:
+/etc/init.d/mysqld restart
 ```
 
 ### Configure nZEDb Apache Virtual Host
@@ -304,6 +323,7 @@ nano /etc/httpd/conf.d/nZEDb.conf
 ### Set startup services and selinux
 
 ```
+Ensure services are up and will start at boot time:
 service mysqld start ; chkconfig mysqld on
 service httpd start ; chkconfig httpd on
 service memcached start ; chkconfig memcached on
@@ -348,6 +368,7 @@ mysql -u root -p
 CREATE USER 'nzedb'@'localhost' IDENTIFIED BY 'nzedb';
 CREATE DATABASE nzedb;
 GRANT ALL PRIVILEGES ON nzedb.* TO 'nzedb'@'localhost' IDENTIFIED BY 'nzedb';
+GRANT FILE ON *.* TO 'nzedb'@'localhost' IDENTIFIED BY 'nzedb'
 quit
 ```
 
