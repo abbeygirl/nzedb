@@ -95,6 +95,13 @@ Create nZEDb VirtualHost config
                   Allow from all
                   Require all granted
       </Directory>
+      Alias /covers /data/nZEDb/resources/covers
+      <Directory "/data/nZEDb/resources/covers">
+                  AllowOverride All
+                  Options FollowSymLinks
+                  Order Deny,Allow
+                  Require all granted
+      </Directory>
       <Files ".ht*">
         Require all denied
       </Files>
