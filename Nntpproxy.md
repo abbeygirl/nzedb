@@ -1,5 +1,5 @@
-## Deprecated!
-If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well.
+## Deprecated and no longer supported!
+If you need a connection limiting (non-pooling) nntp-proxy, [this one](https://github.com/nieluj/nntp-proxy) works well [or this one](https://github.com/ovpn-to/oVPN.to-nntp2nntp).
 
 **Update**: The nZEDb python based nnptproxy code misses the POST command and sadly maintainers. Input welcome.
 
