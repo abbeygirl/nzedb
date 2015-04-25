@@ -1,4 +1,6 @@
-If you are a beginner, it is advised to use the  [Ubuntu install guide](https://github.com/nZEDb/nZEDb_Misc/blob/master/Guides/Installation/Ubuntu/Guide.md). The info here is brief and intended for those who have their own preferred Linux flavor.
+If you don't find a specific guide for your OS, it is advised to use the [Ubuntu install guide](https://github.com/nZEDb/nZEDb_Misc/blob/master/Guides/Installation/Ubuntu/Guide.md). The info here is brief and intended for a general overview of the software components needed. 
+
+Note: The nntp-proxy feature is deprecated. To get started use the PHP versions of the scripts. Installation of python is optional.
 
 ## Requirements 
 ### PHP  
