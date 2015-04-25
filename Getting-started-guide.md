@@ -4,6 +4,4 @@ You can run it on just about any hardware, however if you want to use nZEDb to i
 
 Once you have decided what hardware and if you want to run it under Windows or Linux, the next step is to start getting things setup. If you want to use Linux and you are just starting to use Linux, Ubuntu 13.04 server is recommended.
 
-* [General install guide](https://github.com/nZEDb/nZEDb/wiki/install-guide:--General)
-* [Ubuntu install guide](https://github.com/nZEDb/nZEDb_Misc/blob/master/Guides/Installation/Ubuntu/Guide.md)
-* [Windows install guide](https://github.com/nZEDb/nZEDb/wiki/install-Guide:-Windows)
+* [Install Guides](https://github.com/nZEDb/nZEDb/wiki/Install-Guides)
