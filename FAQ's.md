@@ -219,7 +219,7 @@ define('NNTP_SSLENABLED_A', true);  <--or false if your not using SSL
 
 Q. I need to change NNTP Usenet provider (USP)     
 A. You need to reset groups and truncate some tables. A script exists to handle this for you.   
-  ```php (path to nZEDb)/misc/testing/DB/change_USP_provider.php```
+  ```php (path to nZEDb)/misc/testing/Usenet/change_usenet_provider.php```
 
 Run the script without option for instructions.
 
