@@ -40,7 +40,9 @@ When your fixes/feature are ready you first need to make sure dev didn't change 
 
 Fix any merge conflicts.
 
-`./commit`
+`git add -i`
+
+`git commit`
 
 ### Push changes to your Repository
 
