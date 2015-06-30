@@ -1,5 +1,6 @@
 If you are familiar with git/github you can probably skip this, you may want to skim it anyhow.
 
+Please ensure your code complies with our code style standard (see http://li3.me/docs/specs/accepted/LSR-0-coding.md).
 Contributing code fixes or new features should be done something like the following:
 
 * Fork the project. See https://help.github.com/articles/fork-a-repo
