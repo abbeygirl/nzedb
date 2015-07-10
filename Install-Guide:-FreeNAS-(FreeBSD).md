@@ -19,3 +19,17 @@ NOTE: This guide implies you have a working FreeNAS 9.3 instance running with at
 **_Installing Optional Prerequisites:_**
 
 `pkg install –y unrar p7zip ffmpeg mediainfo screen tmux coreutils`
+
+**_Configure PHP options:_**
+
+`cd /usr/local/etc`
+
+`cp php.ini-production php.ini`
+
+`nano php.ini`
+
+Update the following settings:
+
+* Set `date.timezone` to your timezone (refer to http://ca3.php.net/manual/en/timezones.php) – e.g. `America/New_York`
+
+* Set `memory_limit` to 1024M or more (depending on system resources available)
