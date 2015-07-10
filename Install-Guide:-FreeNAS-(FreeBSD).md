@@ -80,3 +80,50 @@ Update the following settings:
 
 `nano conf.d/cgi.conf`
 
+Update the following settings:
+
+* Update `".py"  => "/usr/local/bin/python" )` to `".py"  => "/usr/local/bin/python",`
+
+* Add `".php" => "/usr/local/bin/php-cgi" )`
+
+`nano modules.conf`
+
+Update the following settings:
+
+* Uncomment `"mod_alias",`
+
+* Uncomment `"mod_rewrite",`
+
+`sysrc lighttpd_enable=YES`
+
+_**Deploying the nZEDb code from GitHub:**_
+
+`cd /usr/local/www`
+
+`git clone https://github.com/nZEDb/nZEDb.git`
+
+`chown –R www:www nZEDb`
+
+`service lighttpd start`
+
+## PART TWO – THE SQL DATABASE
+
+**_Installing Prerequisites:_**
+
+`pkg install –y mariadb55-server mariadb55-client nano`
+
+`sysrc mysql_enable=YES`
+
+`service mysql-server start`
+
+`service mysql-server stop`
+
+**_Configuring MariaDB:_**
+
+`cd /usr/local/share/mysql`
+
+`cp my-small.cnf my.cnf`
+
+`nano my.cnf`
+
+Make the following changes:
