@@ -1,6 +1,6 @@
 NOTE: This guide implies you have a working FreeNAS 9.3 instance running with at least two standard jails – one for the web application and one for the SQL database. Both jails should be setup to allow you to SSH into them as opposed to going through the FreeNAS first. Anything appearing `like this` can be considered commands that can be entered directly into the command line prompt.
 
-# **PART ONE – THE WEB APPLICATION**
+## PART ONE – THE WEB APPLICATION
 
 **_Installing Base Prerequisites:_**
 
