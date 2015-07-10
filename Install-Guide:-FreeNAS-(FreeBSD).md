@@ -129,3 +129,65 @@ _**Deploying the nZEDb code from GitHub:**_
 `nano my.cnf`
 
 Make the following changes:
+
+* Set `max_allowed_packet` to 16M
+
+* Add `group_concat_max_len = 8192`
+
+* Set `key_buffer_size` to 256M
+
+`/usr/local/bin/mysql_secure_installation`
+
+* `Set root password? [Y/n] = Y (and set accordingly)`
+
+* `Remove anonymous users? [Y/n] = Y`
+
+* `Disallow root login remotely? [Y/n] = Y`
+
+* `Remove test database and access to it? [Y/n] = Y`
+
+* `Reload privilege tables now? [Y/n] = Y`
+
+service mysql-server start
+
+**_Adding SQL user and table:_**
+
+`mysql –u root –p`
+
+`CREATE USER 'nzedb' IDENTIFIED BY 'PASSWORD';` (Replace PASSWORD with whatever you want)
+
+`CREATE DATABASE nzedb`
+
+`GRANT ALL on nzedb.* TO 'nzedb';`
+
+quit
+
+## PART THREE – SETUP NZEDB
+
+* Open your web browser and point to http://[nzedb-app] where [nzedb-app] is the name of the jail/server setup in Part One
+
+* Click the Pre-flight checklist button to proceed
+
+* Step 1 should show everything as OK except for mod rewrite for lighttpd, which is a warning that can be ignored it steps above were followed
+
+* Step 2 is the SQL setup, fill in the required information and, if done correctly, should connect to the database on the second FreeNAS jail
+
+* Step 3 refers to SSL (only do if you plan on connecting remotely)
+
+* Step 4 is Usenet setup (enter server information accordingly
+
+* Step 5 saves the settings entered thus far
+
+* Step 6 is to create an ADMIN user
+
+* Step 7 is to confirm directories for nZEDb (OK to accept defaults)
+
+* Login to the admin console and add some groups (e.g. teevee)
+
+Back at the command prompt for the jail for the nZEDb web application…
+
+`cd /usr/local/www/nZEDb/misc/update/nix/screen/sequential`
+
+`screen sh simple.sh`
+
+ALL DONE :)
