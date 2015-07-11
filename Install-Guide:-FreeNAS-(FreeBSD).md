@@ -190,4 +190,4 @@ Back at the command prompt for the jail for the nZEDb web application…
 
 `screen sh simple.sh`
 
-ALL DONE :)
+From here, you should be able to add groups, change site settings, connect Sabnzbd, etc.
