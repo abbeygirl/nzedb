@@ -20,7 +20,7 @@ _Regardless of whether you're a Novice or FreeNAS Guru, do not be intimidated by
 
 **_Installing Optional Prerequisites:_**
 
-`pkg install –y unrar p7zip ffmpeg mediainfo screen tmux coreutils`
+`pkg install –y unrar p7zip ffmpeg mediainfo screen tmux coreutils yydecode`
 
 **_Configure PHP options:_**
 
