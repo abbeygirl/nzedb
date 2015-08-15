@@ -14,6 +14,8 @@ _Regardless of whether you're a Novice or FreeNAS Guru, do not be intimidated by
 
 `pkg install –y  php56 php56-curl php56-mcrypt php56-ctype php56-dba php56-exif php56-filter php56-gd php56-hash php56-iconv php56-json php56-mbstring php56-openssl php56-pdo php56-posix php56-session php56-simplexml php56-sockets php56-zlib php56-xml php56-mysql php56-pdo_mysql`
 
+`cd /media`
+
 `wget http://pear.php.net/go-pear.phar`
 
 `php go-pear.phar`
