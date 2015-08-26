@@ -6,7 +6,7 @@ _Regardless of whether you're a Novice or FreeNAS Guru, do not be intimidated by
 
 **_Installing Base Prerequisites:_**
 
-`pkg -r sqlite3`
+`pkg remove -y sqlite3`
 
 `pkg upgrade`
 
