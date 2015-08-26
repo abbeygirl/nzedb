@@ -52,12 +52,17 @@ Update the following settings:
 
 php.conf should contain the following:
 
-<FilesMatch "\.php$">
-    SetHandler application/x-httpd-php
-</FilesMatch>
-<FilesMatch "\.phps$">
-    SetHandler application/x-httpd-php-source
-</FilesMatch>
+`<FilesMatch "\.php$">`
+
+`    SetHandler application/x-httpd-php`
+
+`</FilesMatch>`
+
+`<FilesMatch "\.phps$">`
+
+`    SetHandler application/x-httpd-php-source`
+
+`</FilesMatch>`
 
 _**Deploying the nZEDb code from GitHub:**_
 
