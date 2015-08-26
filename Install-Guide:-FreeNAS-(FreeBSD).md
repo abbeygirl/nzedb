@@ -68,9 +68,9 @@ php.conf should contain the following:
 
 nZEDb.conf should have the following:
 
-`ServerAdmin XXXXXXXXXXXXX` where XXXXXXXXXXXXX is an email address
+`ServerAdmin ABC` where ABC is an email address
 
-`ServerName XXXXXXXXXXXXX` where XXXXXXXXXXXXX is either `localhost` or the name of the server
+`ServerName XYZ` where XYZ is either `localhost` or the name of the server
 
 `<VirtualHost *:80>`
 
