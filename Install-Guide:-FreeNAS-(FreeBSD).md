@@ -97,6 +97,8 @@ nZEDb.conf should have the following:
 
 `</VirtualHost>`
 
+Comment out default site in `/usr/local/etc/apache24/httpd.conf`
+
 _**Deploying the nZEDb code from GitHub:**_
 
 `cd /usr/local/www`
