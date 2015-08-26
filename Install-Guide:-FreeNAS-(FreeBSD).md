@@ -64,6 +64,39 @@ php.conf should contain the following:
 
 `</FilesMatch>`
 
+`nano /usr/local/etc/apache24/Includes/nZEDb.conf`
+
+nZEDb.conf should have the following:
+
+`ServerAdmin XXXXXXXXXXXXX` where XXXXXXXXXXXXX is an email address
+
+`ServerName XXXXXXXXXXXXX` where XXXXXXXXXXXXX is either `localhost` or the name of the server
+
+`<VirtualHost *:80>`
+
+`    DocumentRoot "/usr/local/www/nZEDb/www"`
+
+
+`    LogLevel warn`
+
+`    ServerSignature Off`
+
+`    ErrorLog /var/log/httpd-error.log`
+
+`    <Directory "/usr/local/www/nZEDb/www">`
+
+`        Options FollowSymLinks`
+
+`        AllowOverride All`
+
+`        Require all granted`
+
+`    </Directory>`
+
+`    Alias /covers /usr/local/www/nZEDb/resources/covers`
+
+`</VirtualHost>`
+
 _**Deploying the nZEDb code from GitHub:**_
 
 `cd /usr/local/www`
