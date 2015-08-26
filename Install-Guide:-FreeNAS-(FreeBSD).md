@@ -8,7 +8,7 @@ _Regardless of whether you're a Novice or FreeNAS Guru, do not be intimidated by
 
 `pkg remove -y sqlite3`
 
-`pkg upgrade`
+`pkg upgrade -y`
 
 `pkg install -y nano git wget python py27-setuptools apache24`
 
