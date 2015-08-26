@@ -48,61 +48,16 @@ Update the following settings:
 
 **_Configure Web Server:_**
 
-`cd /usr/local/etc/lighttpd`
+`nano /usr/local/etc/apache24/Includes/php.conf`
 
-`nano lighttpd.conf`
+php.conf should contain the following:
 
-Update the following settings:
-
-* Comment out `server.use-ipv6 = "enable"`
-
-* Set `server.document-root` to `/usr/local/www/nZEDb/www`
-
-* Add `alias.url = ( "/covers" => "/usr/local/www/nZEDb/resources/covers" )`
-
-* Set `server.stat-cache-engine` value to `“simple”`
-
-* Set `server.max-connections` to `64`
-
-* Add the following under URL rewrite section
-
-`url.rewrite-once = (`
-
-        "^/.*\.(css|eot|gif|gz|ico|inc|jpe?g|js|ogg|oga|ogv|mp4|m4a|mp3|png|svg|ttf|txt|woff|xml)$" => "$0",
-
-        "^/(admin|install).*$" => "$0",
-
-        "^/([^/\.]+)/?(?:\?(.*))$" => "index.php?page=$1&$2",
-
-        "^/([^/\.]+)/?$" => "index.php?page=$1",
-
-        "^/([^/\.]+)/([^/]+)/?(?:\?(.*))$" => "index.php?page=$1&id=$2&$3",
-
-        "^/([^/\.]+)/([^/]+)/?$" => "index.php?page=$1&id=$2",
-
-        "^/([^/\.]+)/([^/]+)/([^/]+)/?$" => "index.php?page=$1&id=$2&subpage=$3"
-
-`)`
-
-* Comment out `$SERVER["socket"] == "0.0.0.0:80" { }`
-
-`nano conf.d/cgi.conf`
-
-Update the following settings:
-
-* Update `".py"  => "/usr/local/bin/python" )` to `".py"  => "/usr/local/bin/python",`
-
-* Add `".php" => "/usr/local/bin/php-cgi" )`
-
-`nano modules.conf`
-
-Update the following settings:
-
-* Uncomment `"mod_alias",`
-
-* Uncomment `"mod_rewrite",`
-
-`sysrc lighttpd_enable=YES`
+`<FilesMatch "\.php$">`
+`    SetHandler application/x-httpd-php`
+`</FilesMatch>`
+`<FilesMatch "\.phps$">`
+`    SetHandler application/x-httpd-php-source`
+`</FilesMatch>`
 
 _**Deploying the nZEDb code from GitHub:**_
 
