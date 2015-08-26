@@ -6,9 +6,13 @@ _Regardless of whether you're a Novice or FreeNAS Guru, do not be intimidated by
 
 **_Installing Base Prerequisites:_**
 
+`pkg -r sqlite3`
+
+`pkg upgrade`
+
 `pkg install -y nano git wget python py27-setuptools apache24`
 
-`ln /usr/local/bin/git /usr/bin/git`
+`ln -s /usr/local/bin/git /usr/bin/git`
 
 **_Installing PHP Prerequisites:_**
 
